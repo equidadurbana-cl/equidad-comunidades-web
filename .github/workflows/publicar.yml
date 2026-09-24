@@ -37,7 +37,8 @@ jobs:
 
       - name: Instalar paquetes de R
         run: |
-          Rscript -e 'install.packages(c("readxl", "mapgl", "rvest", "jsonlite", "stringr", "rmarkdown"), repos = "https://cloud.r-project.org")'
+          Rscript -e 'install.packages(c("readxl", "mapgl", "rvest", "jsonlite", "stringr", "remotes"), repos = "https://cloud.r-project.org")'
+          Rscript -e 'if (!requireNamespace("rmarkdown", quietly = TRUE)) remotes::install_github("rstudio/rmarkdown", upgrade = "never"); stopifnot(requireNamespace("rmarkdown", quietly = TRUE))'
 
       - name: Actualizar noticias
         continue-on-error: true
