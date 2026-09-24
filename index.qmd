@@ -1,0 +1,53 @@
+---
+title: "Inicio"
+---
+
+::: {.hero-inicio}
+
+# Comunidad Organizada
+
+## Información, participación e innovación para fortalecer nuestro barrio.
+
+Esta plataforma busca acercar información pública, fortalecer la participación ciudadana y apoyar el trabajo de las organizaciones comunitarias mediante herramientas digitales simples.
+
+:::
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+### 🗺️ Explora el territorio
+
+Conoce los principales equipamientos de salud, educación y seguridad del barrio.
+
+[Ir al mapa](Mapa/prueba_mapgl.qmd)
+:::
+
+::: {.column width="50%"}
+### 📚 Biblioteca
+
+Accede a leyes, manuales y documentos útiles en materia de vivienda y barrio.
+
+[Ver biblioteca](biblioteca.qmd)
+:::
+:::::
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+### 🤖 Preguntas y respuestas frecuentes
+
+Responde las preguntas más comunes sobre normativas de vivienda y organización vecinal.
+
+[Consultar](preguntas_frecuentes.qmd)
+:::
+
+::: {.column width="50%"}
+### 📝 Fondos y convocatorias públicas
+
+Informate sobre fondos y beneficios públicos en vivienda, barrio y desarrollo comunitario.
+
+[Noticias](noticias.qmd)
+:::
+:::::

@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "0",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "capa": "comuna", "popup": "", "etiqueta": "" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -73.64097685124645, -49.167812422721155 ], [ -72.87309915982992, -49.169149622283626 ], [ -72.87493933084167, -49.812633636132368 ], [ -73.64376027666269, -49.794151225032671 ], [ -73.64097685124645, -49.167812422721155 ] ] ] } }
+]
+}

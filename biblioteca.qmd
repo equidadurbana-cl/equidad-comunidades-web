@@ -1,0 +1,196 @@
+---
+title: ""
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(readxl)
+
+biblioteca <- read_excel("data/biblioteca.xlsx")
+```
+
+# 📚 Biblioteca Comunitaria
+
+Encuentra información útil organizada por temas.
+
+<div class="buscador-biblioteca">
+
+<label for="buscador">🔎 ¿Qué estás buscando?</label>
+
+<input
+type="text"
+id="buscador"
+placeholder="Escribe una palabra o tema..."
+>
+
+</div>
+
+<div id="resultados-busqueda"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  var buscador = document.getElementById("buscador");
+  var resultados = document.getElementById("resultados-busqueda");
+
+  buscador.addEventListener("input", function() {
+
+    var texto = this.value.toLowerCase().trim();
+
+    /* Solo buscamos documentos que están dentro de las categorías */
+    var documentos = document.querySelectorAll(
+      ".categoria .documento"
+    );
+
+    var categorias = document.querySelectorAll(".categoria");
+
+    /* Sin búsqueda */
+    if (texto === "") {
+
+      categorias.forEach(function(categoria) {
+        categoria.style.display = "";
+      });
+
+      resultados.innerHTML = "";
+
+      return;
+    }
+
+    /* Ocultar las categorías */
+    categorias.forEach(function(categoria) {
+      categoria.style.display = "none";
+    });
+
+    resultados.innerHTML = "";
+
+    var encontrados = [];
+
+    documentos.forEach(function(documento) {
+
+      var contenido = documento.innerText.toLowerCase();
+
+      if (contenido.includes(texto)) {
+        encontrados.push(documento);
+      }
+
+    });
+
+    /* Sin resultados */
+    if (encontrados.length === 0) {
+
+      resultados.innerHTML =
+        '<p class="sin-resultados">' +
+        'No encontramos documentos relacionados con <strong>"' +
+        texto +
+        '"</strong>.' +
+        '</p>';
+
+      return;
+    }
+
+    /* Encabezado */
+    resultados.innerHTML =
+      '<h3>🔎 Resultados de búsqueda</h3>' +
+      '<p class="numero-resultados">' +
+      encontrados.length +
+      (encontrados.length === 1
+        ? ' documento encontrado'
+        : ' documentos encontrados') +
+      '</p>';
+
+    /* Mostrar resultados */
+    encontrados.forEach(function(documento) {
+
+      var copia = documento.cloneNode(true);
+
+      resultados.appendChild(copia);
+
+    });
+
+  });
+
+});
+</script>
+
+```{r}
+#| echo: false
+#| results: asis
+
+descripciones <- c(
+  "Copropiedad inmobiliaria" = "Aquí encontrarás información sobre la organización, administración y convivencia en condominios.",
+  
+  "Uso, cuidado y garantías de las viviendas" = "Aquí encontrarás información para el uso, cuidado, mantención y garantías de tu vivienda.",
+  
+  "Talleres PIS" = "Aquí encontrarás materiales e información desarrollados en los talleres del Programa de Integración Social.",
+  
+  "Subsidios" = "Aquí encontrarás información sobre subsidios habitacionales, sus características y principales requisitos.",
+  
+  "Organización Vecinal y Juntas de Vecinos" = "Aquí encontrarás información para organizarse, participar y fortalecer la vida comunitaria."
+)
+
+categorias <- unique(biblioteca$Categoria)
+
+for (categoria in categorias) {
+
+  documentos <- biblioteca[biblioteca$Categoria == categoria, ]
+
+  cat('<details class="categoria">')
+
+  cat('<summary>')
+  cat('<span class="categoria-titulo">📂 ', categoria, '</span>')
+  cat('</summary>')
+
+  cat('<div class="categoria-contenido">')
+
+  if (categoria %in% names(descripciones)) {
+
+    cat(
+      '<p class="categoria-descripcion">',
+      descripciones[categoria],
+      '</p>'
+    )
+
+  }
+
+  cat(
+    '<p class="numero-documentos">',
+    nrow(documentos),
+    ' documentos disponibles</p>'
+  )
+
+  for (i in 1:nrow(documentos)) {
+
+    cat('<div class="documento">')
+
+    cat(
+      '<h4>📄 ',
+      documentos$Titulo[i],
+      '</h4>'
+    )
+
+    cat(
+      '<p>',
+      documentos$Descripcion[i],
+      '</p>'
+    )
+
+    cat(
+      '<a class="boton-documento" href="',
+      documentos$Enlace[i],
+      '" target="_blank">',
+      'Consultar documento →',
+      '</a>'
+    )
+
+    cat('</div>')
+
+  }
+
+  cat('</div>')
+  cat('</details>')
+
+}
+```

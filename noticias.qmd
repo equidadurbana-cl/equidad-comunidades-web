@@ -1,0 +1,196 @@
+---
+title: "Fondos y convocatorias"
+format: html
+---
+
+```{=html}
+<style>
+.convocatorias-container { max-width: none; margin: 30px 0; font-family: Arial, sans-serif; }
+.convocatorias-header { background: linear-gradient(125deg, #0e5664, #177384 58%, #e28b28 160%); color: #fff; padding: 38px 34px; border-radius: 18px 18px 0 0; box-shadow: inset 0 -1px 0 rgba(255,255,255,.22); }
+.convocatorias-header h2 { margin: 0; font-size: 30px; }
+.convocatorias-header p { max-width: 760px; margin: 10px 0 0; line-height: 1.55; }
+.recursos-acordeon { margin:0; border:0; }.recursos-acordeon summary { display:flex; align-items:center; gap:16px; padding:22px 28px; cursor:pointer; list-style:none; border-bottom:1px solid rgba(31,83,79,.12); font-size:22px; font-weight:700; color:#174f5a; }.recursos-acordeon summary::-webkit-details-marker { display:none; }.recursos-acordeon summary::after { content:"+"; margin-left:auto; width:30px; height:30px; display:grid; place-items:center; border-radius:50%; color:#fff; background:#1b6b67; font-size:24px; font-weight:400; }.recursos-acordeon[open] summary::after { content:"−"; }.recursos-acordeon summary small { display:block; margin-top:3px; color:#5d716f; font-size:14px; font-weight:400; }.recursos-acordeon summary .simbolo { font-size:30px; line-height:1; }
+.seccion-recursos { padding:24px 28px 28px; }.seccion-recursos > p { margin:0 0 19px; color:#526866; line-height:1.55; max-width:850px; }
+.nacional { background:linear-gradient(105deg,#f4fbf8,#eef7f6); }.regional { background:#fffaf2; }.minvu-seccion { background:#eef6fb; }
+.portal-minvu { display:block; padding:24px; color:#fff !important; text-decoration:none !important; border-radius:14px; background:linear-gradient(135deg,#134e74,#287e9d); box-shadow:0 8px 20px rgba(19,78,116,.18); }
+.portal-minvu strong { display:block; font-size:21px; margin-bottom:6px; }.portal-minvu small { display:block; color:#eaf6f4; line-height:1.45; }
+.portales-grid, .gore-grid { display:grid; grid-template-columns:1fr; gap:10px; }
+.portal { display:grid; grid-template-columns:minmax(175px, .8fr) minmax(0, 2.2fr); align-items:center; gap:13px; padding:11px 14px; background:#fff; border:1px solid #d5e3e0; border-radius:9px; color:#245965 !important; text-decoration:none !important; box-shadow:0 2px 6px rgba(31,83,79,.05); font-size:14px; transition:transform .15s ease, box-shadow .15s ease; }.portal:hover { transform:translateX(4px); box-shadow:0 6px 14px rgba(31,83,79,.11); }.portal strong::after { content:" ↗"; color:#e38b27; }
+.portal small { display:block; color:#5f6d6a; font-size:12.5px; font-weight:normal; line-height:1.35; }.nacional .portal { border-color:#b9dbc9; border-left:5px solid #3b966d; }.regional .portal { border-left:4px solid #d79435; }
+.gore-grid a { color:#7b551d !important; border-color:#ead9b8; }.gore-grid a strong::after { color:#c87a22; }
+.noticias-seccion { margin:28px 0 0; background:#f3f6f5; }.noticias-seccion summary::after { background:#d98124; }.noticias-contenido { padding:4px 0 0; }
+.filtros { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; padding: 18px; background: #fff; border: 1px solid #ddd; }
+.filtro { padding: 12px; border: 1px solid #b9c6c8; border-radius: 8px; font-size: 15px; background: #fff; }
+.convocatorias-lista { background: #f3f6f5; border: 1px solid #ddd; border-top: 0; padding: 24px; border-radius: 0 0 16px 16px; }
+.contador { color: #456; font-size: 14px; margin: 0 0 14px; }
+.convocatoria { background: #fff; border-radius: 12px; padding: 22px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.08); border-left: 5px solid #f0941f; }
+.etiquetas { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 10px; }
+.etiqueta { font-size: 12px; font-weight: bold; padding: 5px 9px; border-radius: 999px; background: #e7f1ef; color: #196774; }
+.etiqueta.territorio { background: #fdf0df; color: #92580a; }
+.convocatoria h3 { color: #196774; font-size: 20px; line-height: 1.35; margin: 0 0 10px; }
+.convocatoria p { color: #444; line-height: 1.55; margin: 0 0 15px; }
+.metadatos { color: #6a6a6a; font-size: 13px; margin-bottom: 15px; }
+.boton-convocatoria { display: inline-block; background: #f0941f; color: #fff !important; padding: 10px 15px; border-radius: 7px; font-size: 14px; font-weight: bold; text-decoration: none; }
+.boton-convocatoria:hover { opacity: .9; }
+.sin-resultados { background: #fff; padding: 30px; text-align: center; color: #666; border-radius: 10px; }
+.nota-fuentes { color: #596466; font-size: 13px; margin: 18px 2px 0; line-height: 1.45; }
+@media (max-width: 700px) { .convocatorias-container { margin: 15px auto; } .convocatorias-header { padding: 24px; } .convocatorias-header h2 { font-size: 25px; } .recursos-acordeon summary { padding:18px; font-size:19px; gap:10px; }.seccion-recursos { padding:18px; }.portal { grid-template-columns:1fr; gap:4px; }.filtros { grid-template-columns: 1fr; } .convocatorias-lista { padding: 15px; } }
+</style>
+
+<div class="convocatorias-container">
+  <div class="convocatorias-header">
+    <h2>Fondos y convocatorias</h2>
+    <p>Una puerta de entrada clara a fondos, programas de vivienda y noticias útiles para las comunidades.</p>
+  </div>
+  <details class="recursos-acordeon nacional" open><summary><span class="simbolo">🌱</span><span>Fondos y concursos nacionales<small>Portales permanentes del Estado y sus ministerios</small></span></summary><section class="seccion-recursos"><p>Revisa los portales del Gobierno y ministerios con fondos y convocatorias permanentes para organizaciones y comunidades.</p><div id="portales-nacionales" class="portales-grid"><div class="sin-resultados">Cargando portales nacionales...</div></div></section></details>
+  <details class="recursos-acordeon regional"><summary><span class="simbolo">🗺️</span><span>Fondos y concursos regionales<small>Accesos directos a concursos de los gobiernos regionales</small></span></summary><section class="seccion-recursos"><p>Encuentra los fondos, concursos y programas disponibles en cada territorio. Cuando existe, el enlace dirige a la sección específica de fondos del Gobierno Regional.</p><div id="portales-gore" class="gore-grid"><div class="sin-resultados">Cargando portales regionales...</div></div></section></details>
+  <details class="recursos-acordeon minvu-seccion"><summary><span class="simbolo">🏠</span><span>Llamados a subsidios<small>Programas y llamados vigentes del MINVU</small></span></summary><section class="seccion-recursos"><p>Accede al portal del MINVU para conocer los llamados a sus diferentes programas y subsidios de vivienda.</p><div id="portal-minvu"><div class="sin-resultados">Cargando portal de subsidios...</div></div></section></details>
+  <details class="recursos-acordeon noticias-seccion"><summary><span class="simbolo">📰</span><span>Noticias de interés<small>Información publicada durante los últimos 31 días</small></span></summary><section class="noticias-contenido">
+  <div class="filtros">
+    <input id="buscar" class="filtro" type="search" placeholder="Buscar por fondo, subsidio, institución o tema">
+    <select id="filtro-tema" class="filtro"><option value="">Todos los temas</option></select>
+    <select id="filtro-territorio" class="filtro"><option value="">Todo el territorio</option></select>
+  </div>
+
+  <div class="convocatorias-lista" id="convocatorias-lista"><div class="sin-resultados">Cargando convocatorias...</div></div>
+  <p class="nota-fuentes">La información se enlaza siempre a su fuente oficial. Revisa las bases, requisitos y plazos directamente antes de postular.</p></section></details>
+</div>
+
+<script>
+const lista = document.getElementById("convocatorias-lista");
+const buscar = document.getElementById("buscar");
+const filtroTema = document.getElementById("filtro-tema");
+const filtroTerritorio = document.getElementById("filtro-territorio");
+let convocatorias = [];
+function crearPortal(item, destino, clase) {
+  const enlace = document.createElement("a");
+  enlace.className = clase;
+  enlace.href = item.link || item.url;
+  enlace.target = "_blank";
+  enlace.rel = "noopener noreferrer";
+  const titulo = document.createElement("strong");
+  titulo.textContent = item.titulo || item.nombre;
+  enlace.appendChild(titulo);
+  const detalle = item.bajada || item.cobertura;
+  if (detalle) {
+    const texto = document.createElement("small");
+    texto.textContent = detalle;
+    enlace.appendChild(texto);
+  }
+  destino.appendChild(enlace);
+}
+
+function normalizar(texto) {
+  return String(texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function fechaNoticia(texto) {
+  const partes = String(texto || "").match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  if (!partes) return null;
+  return new Date(Number(partes[3]), Number(partes[2]) - 1, Number(partes[1]));
+}
+
+function esNoticiaReciente(item) {
+  const fecha = fechaNoticia(item.fecha);
+  if (!fecha || Number.isNaN(fecha.getTime())) return false;
+  const hoy = new Date(); hoy.setHours(23, 59, 59, 999);
+  const inicio = new Date(hoy); inicio.setDate(inicio.getDate() - 31);
+  return fecha >= inicio && fecha <= hoy;
+}
+
+function temaDe(item) {
+  const texto = normalizar([item.titulo, item.bajada].join(" "));
+  if (/subsid|viviend|habitacion|arriendo|ds[ .-]?\d+|construcc|obra|urban|infraestructura|ciudad|condominio/.test(texto)) return "Vivienda y construcción";
+  return "Fondos comunitarios";
+}
+
+function territorioDe(item) {
+  return [item.comuna, item.region].filter(Boolean).join(" · ") || "Nacional";
+}
+
+function completarFiltros() {
+  const temas = [...new Set(convocatorias.map(temaDe))].sort();
+  const territorios = [...new Set(convocatorias.map(territorioDe))].sort();
+  temas.forEach(function(valor) { filtroTema.add(new Option(valor, valor)); });
+  territorios.forEach(function(valor) { filtroTerritorio.add(new Option(valor, valor)); });
+}
+
+function mostrarConvocatorias() {
+  const texto = normalizar(buscar.value);
+  const tema = filtroTema.value;
+  const territorio = filtroTerritorio.value;
+  const filtradas = convocatorias.filter(function(item) {
+    const buscable = normalizar([item.titulo, item.bajada, item.fuente, item.region, item.comuna].join(" "));
+    return (!texto || buscable.includes(texto)) && (!tema || temaDe(item) === tema) && (!territorio || territorioDe(item) === territorio);
+  });
+
+  lista.innerHTML = "";
+  if (!filtradas.length) {
+    lista.innerHTML = "<div class='sin-resultados'>No encontramos convocatorias con esos filtros.</div>";
+    return;
+  }
+  const contador = document.createElement("div");
+  contador.className = "contador";
+  contador.textContent = filtradas.length + " resultado(s)";
+  lista.appendChild(contador);
+
+  filtradas.forEach(function(item) {
+    const tarjeta = document.createElement("article");
+    tarjeta.className = "convocatoria";
+    const etiquetas = document.createElement("div"); etiquetas.className = "etiquetas";
+    [temaDe(item), territorioDe(item)].forEach(function(valor, indice) {
+      const etiqueta = document.createElement("span");
+      etiqueta.className = "etiqueta" + (indice === 1 ? " territorio" : "");
+      etiqueta.textContent = valor;
+      etiquetas.appendChild(etiqueta);
+    });
+    const titulo = document.createElement("h3"); titulo.textContent = item.titulo;
+    const bajada = document.createElement("p"); bajada.textContent = item.bajada || "Revisa la publicación oficial para conocer sus detalles.";
+    const meta = document.createElement("div"); meta.className = "metadatos";
+    meta.textContent = [item.fecha, item.fuente].filter(Boolean).join(" · ");
+    const enlace = document.createElement("a"); enlace.className = "boton-convocatoria"; enlace.href = item.link; enlace.target = "_blank"; enlace.rel = "noopener noreferrer"; enlace.textContent = "Ver información oficial";
+    tarjeta.append(etiquetas, titulo, bajada, meta, enlace);
+    lista.appendChild(tarjeta);
+  });
+}
+
+fetch("data/noticias.json")
+  .then(function(respuesta) { if (!respuesta.ok) throw new Error("No se encontró el archivo de convocatorias."); return respuesta.json(); })
+  .then(function(datos) { convocatorias = (Array.isArray(datos) ? datos : []).filter(function(item){ return item.fecha !== "Consulta permanente" && esNoticiaReciente(item); }); completarFiltros(); mostrarConvocatorias(); })
+  .catch(function(error) { console.error(error); lista.innerHTML = "<div class='sin-resultados'>No se pudo cargar la información. Intenta volver a renderizar el sitio.</div>"; });
+
+buscar.addEventListener("input", mostrarConvocatorias);
+filtroTema.addEventListener("change", mostrarConvocatorias);
+filtroTerritorio.addEventListener("change", mostrarConvocatorias);
+
+Promise.all([
+  fetch("data/convocatorias_permanentes.json").then(function(respuesta) { if (!respuesta.ok) throw new Error("No se encontraron los portales nacionales."); return respuesta.json(); }),
+  fetch("data/fuentes_convocatorias.json").then(function(respuesta) { if (!respuesta.ok) throw new Error("No se encontraron los portales regionales."); return respuesta.json(); })
+]).then(function(datos) {
+  const permanentes = datos[0];
+  const fuentes = datos[1];
+  const destinoMinvu = document.getElementById("portal-minvu");
+  const destinoNacional = document.getElementById("portales-nacionales");
+  const destinoGore = document.getElementById("portales-gore");
+  destinoMinvu.innerHTML = "";
+  destinoNacional.innerHTML = "";
+  destinoGore.innerHTML = "";
+
+  const minvu = permanentes.find(function(item) { return item.fuente === "MINVU"; });
+  if (minvu) crearPortal(minvu, destinoMinvu, "portal-minvu");
+
+  permanentes.filter(function(item) {
+    return item.fuente !== "MINVU" && !item.region && !item.comuna;
+  }).forEach(function(item) { crearPortal(item, destinoNacional, "portal"); });
+
+  (fuentes.fuentes_gobiernos_regionales || []).forEach(function(item) {
+    crearPortal(item, destinoGore, "portal");
+  });
+}).catch(function(error) {
+  console.error(error);
+  document.getElementById("portales-nacionales").innerHTML = "<div class='sin-resultados'>No se pudieron cargar los portales en este momento.</div>";
+  document.getElementById("portales-gore").innerHTML = "<div class='sin-resultados'>No se pudieron cargar los portales en este momento.</div>";
+  document.getElementById("portal-minvu").innerHTML = "<div class='sin-resultados'>No se pudo cargar el portal de subsidios.</div>";
+});
+</script>
+```

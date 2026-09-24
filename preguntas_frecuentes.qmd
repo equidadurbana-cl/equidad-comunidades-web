@@ -1,0 +1,184 @@
+---
+title: "Preguntas frecuentes PIS"
+format: html
+---
+
+```{=html}
+<style>
+.faq-pis { max-width: none; margin: 30px 0; font-family: Arial, sans-serif; }
+.faq-cabecera { background: linear-gradient(135deg, #196774, #0f4e59); color: #fff; border-radius: 16px 16px 0 0; padding: 30px; }
+.faq-cabecera h2 { margin: 0; font-size: 30px; }
+.faq-cabecera p { margin: 10px 0 0; line-height: 1.5; max-width: 760px; }
+.faq-controles { padding: 16px; display: flex; gap: 12px; background: #fff; border: 1px solid #d8dddd; }
+.faq-buscar, .faq-tema { padding: 12px; border: 1px solid #b9c6c8; border-radius: 8px; font-size: 15px; }
+.faq-buscar { flex: 1; }
+.faq-tema { min-width: 240px; background: #fff; }
+.faq-contenido { display: grid; grid-template-columns: minmax(460px, 1.05fr) minmax(0, 1.55fr); min-height: 500px; border: 1px solid #d8dddd; border-top: 0; border-radius: 0 0 16px 16px; overflow: hidden; }
+.faq-lista { background: #f3f6f5; padding: 16px; overflow-y: auto; max-height: 720px; }
+.faq-contador { color: #556; font-size: 13px; margin: 0 0 12px; }
+.faq-tema-grupo { margin: 0 0 12px; border: 1px solid #b9d1ce; border-radius: 10px; background: #fff; overflow: hidden; }
+.faq-tema-grupo > summary { cursor: pointer; list-style: none; color: #fff; font-size: 15px; font-weight: bold; padding: 13px 38px 13px 14px; background: #196774; position: relative; }
+.faq-tema-grupo > summary::-webkit-details-marker { display: none; }
+.faq-tema-grupo > summary::after { content: "+"; position: absolute; right: 14px; font-size: 21px; font-weight: normal; top: 8px; }
+.faq-tema-grupo[open] > summary::after { content: "−"; }
+.faq-tema-contenido { padding: 10px; background: #f8fbfa; }
+.faq-grupo { margin: 0 0 10px; border: 1px solid #d7e2e0; border-radius: 9px; background: #fff; overflow: hidden; }
+.faq-grupo > summary { cursor: pointer; list-style: none; color: #196774; font-size: 14px; font-weight: bold; padding: 12px 36px 12px 12px; background: #e8f1f0; position: relative; }
+.faq-grupo > summary::-webkit-details-marker { display: none; }
+.faq-grupo > summary::after { content: "+"; position: absolute; right: 13px; font-size: 20px; font-weight: normal; top: 8px; }
+.faq-grupo[open] > summary::after { content: "−"; }
+.faq-grupo > summary:hover { background: #dcebea; }
+.faq-grupo-contenido { padding: 10px 10px 2px; }
+.faq-pregunta { display: block; width: 100%; text-align: left; background: #fff; color: #245965; border: 1px solid #dde5e4; border-radius: 8px; padding: 13px; margin: 0 0 9px; font-size: 14px; line-height: 1.4; cursor: pointer; }
+.faq-pregunta:hover, .faq-pregunta.activa { border-color: #f0941f; box-shadow: 0 1px 4px rgba(0,0,0,.10); }
+.faq-pregunta.activa { background: #fff6eb; }
+.faq-respuesta { padding: 34px; background: #fff; }
+.faq-etiqueta { color: #196774; font-size: 13px; font-weight: bold; }
+.faq-respuesta h3 { color: #196774; font-size: 24px; line-height: 1.35; margin: 12px 0 18px; }
+.faq-respuesta p { color: #3f4647; line-height: 1.7; font-size: 16px; margin: 0 0 1.15rem; }
+.faq-ilustracion { width: 100%; margin: 4px 0 25px; border-radius: 10px; border: 1px solid #d9e5e2; }
+.faq-ilustracion-lienzo { height: 260px; object-fit: contain; background: #f5faf8; }
+.faq-vacio { color: #666; padding: 20px 4px; text-align: center; }
+@media (max-width: 760px) { .faq-pis { margin: 15px auto; } .faq-cabecera { padding: 23px; } .faq-cabecera h2 { font-size: 25px; } .faq-controles, .faq-contenido { display: block; } .faq-tema, .faq-buscar { box-sizing: border-box; width: 100%; margin-bottom: 10px; } .faq-lista { max-height: 300px; } .faq-respuesta { padding: 23px; } }
+</style>
+
+<div class="faq-pis">
+  <div class="faq-cabecera">
+    <h2>Preguntas frecuentes del Plan de Integración Social</h2>
+    <p>Respuestas orientativas del Manual de Resolución de Dudas Frecuentes PIS. Selecciona una pregunta o utiliza el buscador.</p>
+  </div>
+  <div class="faq-controles">
+    <input id="faq-buscar" class="faq-buscar" type="search" placeholder="Buscar una pregunta o palabra clave">
+    <select id="faq-tema" class="faq-tema"><option value="">Todos los temas</option></select>
+  </div>
+  <div class="faq-contenido">
+    <div id="faq-lista" class="faq-lista"><div class="faq-vacio">Cargando preguntas...</div></div>
+    <article id="faq-respuesta" class="faq-respuesta"><div class="faq-vacio">Selecciona una pregunta para ver su respuesta.</div></article>
+  </div>
+</div>
+
+<script>
+const listaFaq = document.getElementById("faq-lista");
+const respuestaFaq = document.getElementById("faq-respuesta");
+const buscarFaq = document.getElementById("faq-buscar");
+const temaFaq = document.getElementById("faq-tema");
+let preguntasFaq = [];
+let seleccionada = null;
+const imagenesFaq = {
+  "1.1 Proceso constructivo de la obra": ["assets/flujo-construccion.png", "Flujo del proceso constructivo"],
+  "1.2 Aspectos generales de entrega de viviendas": ["assets/flujo-entrega-vivienda.png", "Flujo de entrega de vivienda"],
+  "2.1 Garantías y modificaciones de las viviendas": ["assets/flujo-garantias.png", "Etapas de garantía de la vivienda"],
+  "4.1 Organizaciones comunitarias": ["assets/flujo-junta-vecinos.png", "Flujo de formación de una junta de vecinos"]
+};
+const imagenesPorTemaFaq = {
+  "0. Introducción": ["assets/tema-introduccion-pis.png", "Plan de Integración Social y comunidad"],
+  "1. Visita a la obra": ["assets/flujo-construccion.png", "Proceso constructivo de la obra"],
+  "2. Uso, cuidado y mantención": ["assets/flujo-garantias.png", "Uso, cuidado y garantías de la vivienda"],
+  "3. Derechos y deberes": ["assets/tema-derechos-deberes.png", "Derechos y deberes en comunidad"],
+  "4. Organización comunitaria": ["assets/flujo-junta-vecinos.png", "Organización comunitaria"]
+};
+
+function normalizarFaq(texto) {
+  return String(texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function palabrasBusquedaFaq(texto) {
+  const palabrasVacias = new Set(["de", "la", "el", "los", "las", "y", "en", "un", "una", "para", "por", "que", "con", "del", "al", "como"]);
+  return normalizarFaq(texto).match(/[a-z0-9]+/g)?.filter(function(palabra) {
+    return palabra.length > 2 && !palabrasVacias.has(palabra);
+  }) || [];
+}
+
+function resultadosFaq() {
+  const palabras = palabrasBusquedaFaq(buscarFaq.value);
+  const tema = temaFaq.value;
+  return preguntasFaq.map(function(item, indice) {
+    const texto = normalizarFaq([item.pregunta, item.respuesta, item.tema, item.subtema].join(" "));
+    const pregunta = normalizarFaq(item.pregunta);
+    const puntaje = palabras.reduce(function(total, palabra) {
+      if (pregunta.includes(palabra)) return total + 3;
+      if (texto.includes(palabra)) return total + 1;
+      return total;
+    }, 0);
+    return { item: item, indice: indice, puntaje: puntaje };
+  }).filter(function(resultado) {
+    return (!palabras.length || resultado.puntaje > 0) && (!tema || resultado.item.tema === tema);
+  }).sort(function(a, b) {
+    return b.puntaje - a.puntaje || a.indice - b.indice;
+  }).map(function(resultado) { return resultado.item; });
+}
+
+function mostrarRespuesta(item) {
+  seleccionada = item;
+  respuestaFaq.innerHTML = "";
+  const etiqueta = document.createElement("div"); etiqueta.className = "faq-etiqueta"; etiqueta.textContent = item.subtema;
+  const titulo = document.createElement("h3"); titulo.textContent = item.pregunta;
+  const imagenEspecifica = imagenesFaq[item.subtema];
+  const imagen = imagenEspecifica || imagenesPorTemaFaq[item.tema];
+  if (imagen) { const figura = document.createElement("img"); figura.className = "faq-ilustracion" + (imagenEspecifica ? "" : " faq-ilustracion-lienzo"); figura.src = imagen[0]; figura.alt = imagen[1]; respuestaFaq.appendChild(figura); }
+  String(item.respuesta || "").split(/\n\s*\n/).filter(Boolean).forEach(function(bloque) {
+    const texto = document.createElement("p"); texto.textContent = bloque.trim();
+    respuestaFaq.appendChild(texto);
+  });
+  respuestaFaq.prepend(etiqueta, titulo);
+  mostrarLista();
+}
+
+function mostrarLista() {
+  const resultados = resultadosFaq();
+  listaFaq.innerHTML = "";
+  if (!resultados.length) { listaFaq.innerHTML = "<div class='faq-vacio'>No encontramos preguntas con esos criterios.</div>"; return; }
+  const contador = document.createElement("div"); contador.className = "faq-contador"; contador.textContent = resultados.length + " pregunta(s)"; listaFaq.appendChild(contador);
+  const temas = resultados.reduce(function(acumulado, item) {
+    const clave = item.tema || "Otros temas";
+    if (!acumulado[clave]) acumulado[clave] = [];
+    acumulado[clave].push(item);
+    return acumulado;
+  }, {});
+  Object.keys(temas).forEach(function(tema, indiceTema) {
+    const temaGrupo = document.createElement("details"); temaGrupo.className = "faq-tema-grupo";
+    temaGrupo.open = temas[tema].includes(seleccionada) || (!seleccionada && indiceTema === 0);
+    const tituloTema = document.createElement("summary");
+    tituloTema.textContent = tema + " · " + temas[tema].length + " pregunta(s)";
+    const contenidoTema = document.createElement("div"); contenidoTema.className = "faq-tema-contenido";
+    temaGrupo.appendChild(tituloTema);
+    const grupos = temas[tema].reduce(function(acumulado, item) {
+      const clave = item.subtema || tema;
+      if (!acumulado[clave]) acumulado[clave] = [];
+      acumulado[clave].push(item);
+      return acumulado;
+    }, {});
+    Object.keys(grupos).forEach(function(subtema) {
+      const grupo = document.createElement("details"); grupo.className = "faq-grupo";
+      grupo.open = grupos[subtema].includes(seleccionada) || (!seleccionada && indiceTema === 0);
+      const tituloGrupo = document.createElement("summary");
+      tituloGrupo.textContent = subtema + " · " + grupos[subtema].length + " pregunta(s)";
+      const contenidoGrupo = document.createElement("div"); contenidoGrupo.className = "faq-grupo-contenido";
+      grupo.appendChild(tituloGrupo);
+      grupos[subtema].forEach(function(item) {
+        const boton = document.createElement("button"); boton.type = "button"; boton.className = "faq-pregunta" + (seleccionada === item ? " activa" : ""); boton.textContent = item.pregunta;
+        boton.addEventListener("click", function() { mostrarRespuesta(item); });
+        contenidoGrupo.appendChild(boton);
+      });
+      grupo.appendChild(contenidoGrupo);
+      contenidoTema.appendChild(grupo);
+    });
+    temaGrupo.appendChild(contenidoTema);
+    listaFaq.appendChild(temaGrupo);
+  });
+  if (!seleccionada || !resultados.includes(seleccionada)) mostrarRespuesta(resultados[0]);
+}
+
+fetch("data/faq_pis.json")
+  .then(function(respuesta) { if (!respuesta.ok) throw new Error("No se pudo cargar faq_pis.json"); return respuesta.json(); })
+  .then(function(datos) {
+    preguntasFaq = Array.isArray(datos) ? datos : [];
+    [...new Set(preguntasFaq.map(function(item) { return item.tema; }))].sort().forEach(function(tema) { temaFaq.add(new Option(tema, tema)); });
+    mostrarLista();
+  })
+  .catch(function(error) { console.error(error); listaFaq.innerHTML = "<div class='faq-vacio'>No se pudieron cargar las preguntas frecuentes.</div>"; });
+
+buscarFaq.addEventListener("input", function() { seleccionada = null; mostrarLista(); });
+temaFaq.addEventListener("change", function() { seleccionada = null; mostrarLista(); });
+</script>
+```

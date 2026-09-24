@@ -1,0 +1,17 @@
+# Archivos locales y resultados que Quarto vuelve a generar
+_site/
+.quarto/
+.Rproj.user/
+tmp/
+Mapa_files/
+
+# Sesiones y datos locales de R
+.RData
+.Rhistory
+
+# Fuente geoespacial original: el sitio usa los GeoJSON preparados en Mapa/datos
+Mapa/mapa_comunidad.gpkg
+
+# El chatbot ya no forma parte de la versión pública
+chatbot.qmd
+chatbot.piloto2.qmd

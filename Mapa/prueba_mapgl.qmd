@@ -1,0 +1,29 @@
+---
+title: "Redes del territorio"
+format:
+  html:
+    include-in-header: mapa_buscador.js
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(mapgl)
+
+mapa <- maplibre(
+  style = "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
+  center = c(-70.65, -33.45),
+  zoom = 4,
+  projection = "mercator"
+) |>
+  add_navigation_control()
+
+htmlwidgets::onRender(
+  mapa,
+  "function(el) {
+    window.iniciarMapaComunas(el);
+  }"
+)
+```

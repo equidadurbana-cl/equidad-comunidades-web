@@ -1,0 +1,57 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "!chatbot.qmd"
+    - "!chatbot.piloto2.qmd"
+  resources:
+    - Bilbioteca/indice_biblioteca.json
+    - Mapa/datos/**
+    - data/noticias.json
+    - data/convocatorias_permanentes.json
+    - data/fuentes_convocatorias.json
+    - data/faq_pis.json
+    - assets/comunidad-portada.png
+    - assets/flujo-construccion.png
+    - assets/flujo-entrega-vivienda.png
+    - assets/flujo-garantias.png
+    - assets/flujo-junta-vecinos.png
+    - assets/tema-introduccion-pis.png
+    - assets/tema-derechos-deberes.png
+    
+website:
+  title: "comunidad organizada"
+  navbar:
+    left:
+      - href: index.qmd
+        text: 🏠 Inicio
+        
+      - href: Mapa/prueba_mapgl.qmd
+        text: 🗺Redes del territorio
+
+      - href: biblioteca.qmd
+        text: 📚 Biblioteca
+
+      - href: preguntas_frecuentes.qmd
+        text: ❓ Preguntas frecuentes PIS
+
+      - href: noticias.qmd
+        text: 📅 Fondos y convocatorias
+
+      - href: about.qmd
+        text: ℹ️ Acerca de
+
+
+format:
+  html:
+    grid:
+      body-width: 1200px
+      margin-width: 0px
+      gutter-width: 1.5rem
+    theme:
+      light: cosmo
+    css: styles.css
+    toc: false
+
+
+editor: visual
