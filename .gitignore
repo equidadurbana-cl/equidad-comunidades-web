@@ -1,5 +1,4 @@
 # Archivos locales y resultados que Quarto vuelve a generar
-_site/
 .quarto/
 .Rproj.user/
 tmp/
@@ -15,3 +14,6 @@ Mapa/mapa_comunidad.gpkg
 # El chatbot ya no forma parte de la versión pública
 chatbot.qmd
 chatbot.piloto2.qmd
+_site/chatbot.html
+_site/chatbot.piloto2.html
+_site/Mapa/datos/

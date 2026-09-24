@@ -1,0 +1,74 @@
+[
+  {
+    "titulo": "Busca fondos concursables del Estado",
+    "bajada": "Portal centralizado con los concursos vigentes de organismos del Estado, filtrables por tema, institución y territorio.",
+    "fecha": "Consulta permanente",
+    "region": "",
+    "comuna": "",
+    "fuente": "Portal Único de Fondos Concursables",
+    "link": "https://www.fondos.gob.cl/"
+  },
+  {
+    "titulo": "Postulaciones a subsidios de vivienda y construcción",
+    "bajada": "Revisa llamados, requisitos y canales de postulación del Ministerio de Vivienda y Urbanismo.",
+    "fecha": "Consulta permanente",
+    "region": "",
+    "comuna": "",
+    "fuente": "MINVU",
+    "link": "https://www.minvu.gob.cl/postulaciones/"
+  },
+  {
+    "titulo": "Mejoramiento de viviendas, barrios y equipamiento comunitario",
+    "bajada": "Consulta los llamados y requisitos del programa DS 27 para proyectos de vivienda, condominios y equipamiento comunitario.",
+    "fecha": "Consulta permanente",
+    "region": "",
+    "comuna": "",
+    "fuente": "MINVU",
+    "link": "https://www.minvu.gob.cl/programa-de-mejoramiento-de-viviendas-y-barrios/"
+  },
+  {
+    "titulo": "Fondo de Fortalecimiento de Organizaciones de Interés Público",
+    "bajada": "Concurso anual para organizaciones comunitarias, juntas de vecinos, fundaciones y corporaciones que impulsen el desarrollo social.",
+    "fecha": "Consulta permanente",
+    "region": "",
+    "comuna": "",
+    "fuente": "FFOIP",
+    "link": "https://fondodefortalecimiento.gob.cl/"
+  },
+  {
+    "titulo": "Fondos para organizaciones y proyectos sociales",
+    "bajada": "Fondos y material de apoyo para iniciativas de organizaciones de la sociedad civil y desarrollo social.",
+    "fecha": "Consulta permanente",
+    "region": "",
+    "comuna": "",
+    "fuente": "Ministerio de Desarrollo Social y Familia",
+    "link": "https://www.midesof.gob.cl/sociedad-civil/fondos-concursables/fondos-concursables/"
+  },
+  {
+    "titulo": "Fondos ambientales para proyectos comunitarios",
+    "bajada": "Consulta fondos, bases y convocatorias para iniciativas ambientales desarrolladas por comunidades y organizaciones.",
+    "fecha": "Consulta permanente",
+    "region": "",
+    "comuna": "",
+    "fuente": "Ministerio del Medio Ambiente",
+    "link": "https://fondos.mma.gob.cl/"
+  },
+  {
+    "titulo": "Fondo Comunidad Activa",
+    "bajada": "Revisa las noticias, líneas de financiamiento y actividades de apoyo del Gobierno de Santiago para organizaciones de la Región Metropolitana.",
+    "fecha": "Consulta permanente",
+    "region": "Metropolitana de Santiago",
+    "comuna": "",
+    "fuente": "Gobierno de Santiago",
+    "link": "https://www.gobiernosantiago.cl/"
+  },
+  {
+    "titulo": "Fondos concursables de la Municipalidad de Santiago",
+    "bajada": "Consulta bases, resultados y próximos procesos de financiamiento para organizaciones de la comuna de Santiago.",
+    "fecha": "Consulta permanente",
+    "region": "Metropolitana de Santiago",
+    "comuna": "Santiago",
+    "fuente": "Municipalidad de Santiago",
+    "link": "https://www.munistgo.cl/fondos/"
+  }
+]
