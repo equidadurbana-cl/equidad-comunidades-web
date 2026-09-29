@@ -17,3 +17,6 @@ chatbot.piloto2.qmd
 _site/chatbot.html
 _site/chatbot.piloto2.html
 _site/Mapa/datos/
+
+/.quarto/
+**/*.quarto_ipynb

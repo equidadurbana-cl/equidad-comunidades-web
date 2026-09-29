@@ -137,7 +137,8 @@ function mostrarLista() {
   }, {});
   Object.keys(temas).forEach(function(tema, indiceTema) {
     const temaGrupo = document.createElement("details"); temaGrupo.className = "faq-tema-grupo";
-    temaGrupo.open = temas[tema].includes(seleccionada) || (!seleccionada && indiceTema === 0);
+    const hayFiltroActivo = buscarFaq.value.trim() !== "" || temaFaq.value !== "";
+    temaGrupo.open = temas[tema].includes(seleccionada) || hayFiltroActivo;
     const tituloTema = document.createElement("summary");
     tituloTema.textContent = tema + " · " + temas[tema].length + " pregunta(s)";
     const contenidoTema = document.createElement("div"); contenidoTema.className = "faq-tema-contenido";
@@ -150,7 +151,7 @@ function mostrarLista() {
     }, {});
     Object.keys(grupos).forEach(function(subtema) {
       const grupo = document.createElement("details"); grupo.className = "faq-grupo";
-      grupo.open = grupos[subtema].includes(seleccionada) || (!seleccionada && indiceTema === 0);
+      grupo.open = grupos[subtema].includes(seleccionada) || hayFiltroActivo;
       const tituloGrupo = document.createElement("summary");
       tituloGrupo.textContent = subtema + " · " + grupos[subtema].length + " pregunta(s)";
       const contenidoGrupo = document.createElement("div"); contenidoGrupo.className = "faq-grupo-contenido";
