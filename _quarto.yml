@@ -12,6 +12,8 @@ project:
     - data/fuentes_convocatorias.json
     - data/faq_pis.json
     - assets/comunidad-portada.png
+    - assets/comunidad-portada.jpg
+    - assets/logo-equidad-urbana.png
     - assets/flujo-construccion.png
     - assets/flujo-entrega-vivienda.png
     - assets/flujo-garantias.png
@@ -20,8 +22,9 @@ project:
     - assets/tema-derechos-deberes.png
     
 website:
-  title: "comunidad organizada"
+  title: "Equidad-comunidades"
   navbar:
+    logo: assets/logo-equidad-urbana.png
     left:
       - href: index.qmd
         text: 🏠 Inicio

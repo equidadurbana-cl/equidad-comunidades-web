@@ -82,6 +82,10 @@ function normalizarFaq(texto) {
   return String(texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+function nombreTemaFaq(tema) {
+  return tema === "0. Introducción" ? "0. Plan de Integración Social (PIS)" : tema;
+}
+
 function palabrasBusquedaFaq(texto) {
   const palabrasVacias = new Set(["de", "la", "el", "los", "las", "y", "en", "un", "una", "para", "por", "que", "con", "del", "al", "como"]);
   return normalizarFaq(texto).match(/[a-z0-9]+/g)?.filter(function(palabra) {
@@ -140,7 +144,7 @@ function mostrarLista() {
     const hayFiltroActivo = buscarFaq.value.trim() !== "" || temaFaq.value !== "";
     temaGrupo.open = temas[tema].includes(seleccionada) || hayFiltroActivo;
     const tituloTema = document.createElement("summary");
-    tituloTema.textContent = tema + " · " + temas[tema].length + " pregunta(s)";
+    tituloTema.textContent = nombreTemaFaq(tema) + " · " + temas[tema].length + " pregunta(s)";
     const contenidoTema = document.createElement("div"); contenidoTema.className = "faq-tema-contenido";
     temaGrupo.appendChild(tituloTema);
     const grupos = temas[tema].reduce(function(acumulado, item) {
@@ -167,14 +171,17 @@ function mostrarLista() {
     temaGrupo.appendChild(contenidoTema);
     listaFaq.appendChild(temaGrupo);
   });
-  if (!seleccionada || !resultados.includes(seleccionada)) mostrarRespuesta(resultados[0]);
+  if (!seleccionada || !resultados.includes(seleccionada)) {
+    seleccionada = null;
+    respuestaFaq.innerHTML = "<div class='faq-vacio'>Selecciona una pregunta para ver su respuesta.</div>";
+  }
 }
 
 fetch("data/faq_pis.json")
   .then(function(respuesta) { if (!respuesta.ok) throw new Error("No se pudo cargar faq_pis.json"); return respuesta.json(); })
   .then(function(datos) {
     preguntasFaq = Array.isArray(datos) ? datos : [];
-    [...new Set(preguntasFaq.map(function(item) { return item.tema; }))].sort().forEach(function(tema) { temaFaq.add(new Option(tema, tema)); });
+    [...new Set(preguntasFaq.map(function(item) { return item.tema; }))].sort().forEach(function(tema) { temaFaq.add(new Option(nombreTemaFaq(tema), tema)); });
     mostrarLista();
   })
   .catch(function(error) { console.error(error); listaFaq.innerHTML = "<div class='faq-vacio'>No se pudieron cargar las preguntas frecuentes.</div>"; });
