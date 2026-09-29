@@ -47,15 +47,24 @@ body {
   color: var(--eu-profundo) !important;
 }
 
+.navbar-brand-logo {
+  /* El logo y el nombre son enlaces distintos en la barra de Quarto. */
+  margin-right: 1.15rem !important;
+}
+
 .navbar-brand .navbar-logo {
   max-height: 34px;
   width: auto;
-  margin-right: .55rem;
 }
 
 .navbar-brand .navbar-title {
   font-weight: 700;
   letter-spacing: -.02em;
+}
+
+/* Acerca suavemente el bloque de marca al buscador, sin descentrar la barra. */
+#quarto-search {
+  margin-left: .35rem;
 }
 
 .navbar-nav .nav-link:hover,
@@ -85,7 +94,7 @@ body {
     linear-gradient(90deg, rgba(15, 78, 89, .96) 0%, rgba(15, 78, 89, .88) 42%, rgba(15, 78, 89, .18) 74%, rgba(15, 78, 89, .02) 100%),
     url("assets/comunidad-portada.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 68%;
 }
 
 .page-hero .eyebrow {
@@ -166,7 +175,8 @@ body {
   background-image:
     linear-gradient(90deg, rgba(15, 78, 89, .97) 0%, rgba(15, 78, 89, .88) 45%, rgba(15, 78, 89, .2) 74%, rgba(15, 78, 89, .02) 100%),
     url("assets/comunidad-portada.jpg");
-  background-position: center;
+  /* Prioriza el grupo de personas en la parte central-baja de la fotografía. */
+  background-position: center 68%;
   background-size: cover;
   color: #f4fbfa;
 }

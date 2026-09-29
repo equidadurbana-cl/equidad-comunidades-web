@@ -5,6 +5,8 @@ format:
     include-in-header: mapa_buscador.js
 ---
 
+Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector.
+
 ```{r}
 #| echo: false
 #| warning: false

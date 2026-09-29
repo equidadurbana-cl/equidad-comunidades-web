@@ -18,7 +18,7 @@ Esta plataforma busca acercar información pública, fortalecer la participació
 ::: {.column width="50%"}
 ### 🗺️ Explora el territorio
 
-Conoce los principales equipamientos de salud, educación y seguridad del barrio.
+Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector.
 
 [Ir al mapa](Mapa/prueba_mapgl.qmd)
 :::
@@ -38,7 +38,7 @@ Accede a leyes, manuales y documentos útiles en materia de vivienda y barrio.
 ::: {.column width="50%"}
 ### 🤖 Preguntas y respuestas frecuentes
 
-Responde las preguntas más comunes sobre normativas de vivienda y organización vecinal.
+Revisa respuestas a preguntas frecuentes sobre copropiedad, uso, cuidado y mantención de las viviendas, derechos, deberes y organización comunitaria.
 
 [Consultar](preguntas_frecuentes.qmd)
 :::
@@ -46,7 +46,7 @@ Responde las preguntas más comunes sobre normativas de vivienda y organización
 ::: {.column width="50%"}
 ### 📝 Fondos y convocatorias públicas
 
-Informate sobre fondos y beneficios públicos en vivienda, barrio y desarrollo comunitario.
+Busca fondos, concursos y llamados a subsidios, y accede directamente a sus portales de postulación e información.
 
 [Noticias](noticias.qmd)
 :::
