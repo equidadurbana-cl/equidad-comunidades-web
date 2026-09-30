@@ -561,7 +561,7 @@ map.addControl(controlLeyenda, "bottom-right");
 
         contenedor.style.cssText = "background:#fff;padding:10px 12px;border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.25);font:13px Arial,sans-serif;min-width:180px;";
 
-        contenedor.innerHTML = "<strong style='display:block;margin-bottom:6px;'>Filtrar capas</strong>";
+        contenedor.innerHTML = "<strong style='display:block;margin-bottom:3px;'>Filtrar capas</strong><small style='display:block;color:#526866;margin-bottom:6px;'>Activa o desactiva la información que quieres ver.</small>";
 
         const opciones = [
 
@@ -599,6 +599,8 @@ map.addControl(controlLeyenda, "bottom-right");
 
               map.setFilter(id, visible ? filtrosOriginales[id] : ["==", ["get", "capa"], "__oculta__"]);
 
+              map.setLayoutProperty(id, "visibility", visible ? "visible" : "none");
+
             }
 
           });
@@ -633,7 +635,11 @@ map.addControl(controlLeyenda, "bottom-right");
 
     };
 
-    map.addControl(controlCapas, "top-right");
+    // Se ubica bajo el buscador para no superponerse con los botones de zoom
+
+    // ni con la simbología de la esquina inferior derecha.
+
+    map.addControl(controlCapas, "top-left");
 
 
 
@@ -846,8 +852,8 @@ map.addControl(controlLeyenda, "bottom-right");
 <p>Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-167e258e8f9e30aa6616" style="width:100%;height:480px;" class="maplibregl html-widget"></div>
-<script type="application/json" data-for="htmlwidget-167e258e8f9e30aa6616">{"x":{"style":"https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json","center":[-70.65000000000001,-33.45],"zoom":4,"bearing":0,"pitch":0,"projection":"mercator","additional_params":[],"navigation_control":{"show_compass":true,"show_zoom":true,"visualize_pitch":false,"position":"top-right","orientation":"vertical"}},"evals":[],"jsHooks":{"render":[{"code":"function(el) {\n    window.iniciarMapaComunas(el);\n  }","data":null}]}}</script>
+<div id="htmlwidget-a729ba2a5c5004e728ad" style="width:100%;height:480px;" class="maplibregl html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a729ba2a5c5004e728ad">{"x":{"style":"https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json","center":[-70.65000000000001,-33.45],"zoom":4,"bearing":0,"pitch":0,"projection":"mercator","additional_params":[],"navigation_control":{"show_compass":true,"show_zoom":true,"visualize_pitch":false,"position":"top-right","orientation":"vertical"}},"evals":[],"jsHooks":{"render":[{"code":"function(el) {\n    window.iniciarMapaComunas(el);\n  }","data":null}]}}</script>
 </div>
 </div>
 
@@ -1259,20 +1265,17 @@ map.addControl(controlLeyenda, "bottom-right");
   <div class="nav-footer">
     <div class="nav-footer-left">
 <div class="footer-marca">
-<img src="assets/logo-equidad-urbana-blanco.png" alt="Equidad Urbana">
-<div>
-<strong>Equidad-comunidades</strong><span>Información y herramientas para fortalecer la vida en comunidad.</span>
-</div>
+<img src="assets/logo-equidad-urbana-blanco.png" alt="Equidad Urbana"><span>Información, participación y herramientas para fortalecer la vida en comunidad.</span>
 </div>
 </div>   
     <div class="nav-footer-center">
 <div class="footer-contacto">
-<strong>Contacto</strong><a href="mailto:contacto@equidadurbana.org">contacto@equidadurbana.org</a>
+<strong>Contacto</strong><a href="mailto:contacto@equidadurbana.org">contacto@equidadurbana.org</a><span>Carlos Antúnez 2616, of. 32<br>Providencia, Santiago</span>
 </div>
 </div>
     <div class="nav-footer-right">
 <div class="footer-redes">
-<strong>Conversemos</strong><a href="https://equidadurbana.org" target="_blank" rel="noopener">🌐 Sitio web</a><a href="https://www.instagram.com/equidad.urbana/" target="_blank" rel="noopener">📷 <span class="citation" data-cites="equidad.urbana">@equidad.urbana</span></a><a href="https://cl.linkedin.com/company/equidad-urbana-consultora" target="_blank" rel="noopener">💼 LinkedIn</a>
+<strong>Síguenos</strong><a href="https://www.instagram.com/equidad.urbana/" target="_blank" rel="noopener">📷 Instagram · <span class="citation" data-cites="equidad.urbana">@equidad.urbana</span></a><a href="https://cl.linkedin.com/company/equidad-urbana-consultora" target="_blank" rel="noopener">💼 LinkedIn · Equidad Urbana</a><a href="https://equidadurbana.org" target="_blank" rel="noopener">🌐 Estudios y publicaciones</a>
 </div>
 </div>
   </div>

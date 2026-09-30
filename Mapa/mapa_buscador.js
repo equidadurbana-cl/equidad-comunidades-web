@@ -242,7 +242,7 @@ map.addControl(controlLeyenda, "bottom-right");
         const contenedor = document.createElement("div");
         contenedor.className = "maplibregl-ctrl";
         contenedor.style.cssText = "background:#fff;padding:10px 12px;border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.25);font:13px Arial,sans-serif;min-width:180px;";
-        contenedor.innerHTML = "<strong style='display:block;margin-bottom:6px;'>Filtrar capas</strong>";
+        contenedor.innerHTML = "<strong style='display:block;margin-bottom:3px;'>Filtrar capas</strong><small style='display:block;color:#526866;margin-bottom:6px;'>Activa o desactiva la información que quieres ver.</small>";
         const opciones = [
           ["ds19", "Proyectos DS19", ["ds19", "ds19-bordes", "ds19-etiquetas"]],
           ["colegios", "Educación básica y media", ["colegios"]],
@@ -261,6 +261,7 @@ map.addControl(controlLeyenda, "bottom-right");
               // Se cambia el filtro de cada capa, no solo su apariencia. Esto funciona
               // también con puntos y polígonos cargados dinámicamente por comuna.
               map.setFilter(id, visible ? filtrosOriginales[id] : ["==", ["get", "capa"], "__oculta__"]);
+              map.setLayoutProperty(id, "visibility", visible ? "visible" : "none");
             }
           });
           map.triggerRepaint();
@@ -278,7 +279,9 @@ map.addControl(controlLeyenda, "bottom-right");
       },
       onRemove: function () {}
     };
-    map.addControl(controlCapas, "top-right");
+    // Se ubica bajo el buscador para no superponerse con los botones de zoom
+    // ni con la simbología de la esquina inferior derecha.
+    map.addControl(controlCapas, "top-left");
 
     map.on("click", function (evento) {
       const elementos = map.queryRenderedFeatures(evento.point, {

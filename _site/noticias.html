@@ -172,6 +172,9 @@ ul.task-list li input[type="checkbox"] {
 .noticias-seccion { margin:28px 0 0; background:#f3f6f5; }.noticias-seccion summary::after { background:#d98124; }.noticias-contenido { padding:4px 0 0; }
 .busqueda-fondos { margin:0 0 18px; padding:16px; border:1px solid #b9d1ce; border-radius:12px; background:#f4fbf8; }
 .busqueda-fondos label { display:block; margin:0 0 7px; color:#174f5a; font-size:14px; font-weight:700; }
+.resultados-busqueda-fondos { display:none; margin:-7px 0 20px; padding:16px; border:1px solid #b9d1ce; border-radius:12px; background:#fff; }
+.resultados-busqueda-fondos.activo { display:block; }.resultados-busqueda-fondos > strong { display:block; margin:0 0 11px; color:#174f5a; font-size:15px; }
+.resultado-fondo { display:block; padding:11px 13px; margin:8px 0 0; border:1px solid #d5e3e0; border-left:4px solid #3b966d; border-radius:8px; color:#245965 !important; text-decoration:none !important; background:#fff; }.resultado-fondo:hover { background:#f4fbf8; }.resultado-fondo strong { display:block; }.resultado-fondo small { display:block; margin-top:3px; color:#5f6d6a; line-height:1.35; }.resultado-fondo.noticia { border-left-color:#d98124; }
 .filtros { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 18px; background: #fff; border: 1px solid #ddd; }
 .filtro { padding: 12px; border: 1px solid #b9c6c8; border-radius: 8px; font-size: 15px; background: #fff; }
 .convocatorias-lista { background: #f3f6f5; border: 1px solid #ddd; border-top: 0; padding: 24px; border-radius: 0 0 16px 16px; }
@@ -192,6 +195,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="convocatorias-container">
   <div class="busqueda-fondos"><label for="buscar">Busca fondos, subsidios, instituciones o noticias</label><input id="buscar" class="filtro" type="search" placeholder="Ej.: vivienda, comunidad, MINVU, seguridad…"></div>
+  <div id="resultados-busqueda-fondos" class="resultados-busqueda-fondos" aria-live="polite"></div>
   <details class="recursos-acordeon nacional"><summary><span class="simbolo">🌱</span><span>Fondos y concursos nacionales<small>Portales permanentes del Estado y sus ministerios</small></span></summary><section class="seccion-recursos"><p>Revisa los portales del Gobierno y ministerios con fondos y convocatorias permanentes para organizaciones y comunidades.</p><div id="portales-nacionales" class="portales-grid"><div class="sin-resultados">Cargando portales nacionales...</div></div></section></details>
   <details class="recursos-acordeon regional"><summary><span class="simbolo">🗺️</span><span>Fondos y concursos regionales<small>Accesos directos a concursos de los gobiernos regionales</small></span></summary><section class="seccion-recursos"><p>Encuentra los fondos, concursos y programas disponibles en cada territorio. Cuando existe, el enlace dirige a la sección específica de fondos del Gobierno Regional.</p><div id="portales-gore" class="gore-grid"><div class="sin-resultados">Cargando portales regionales...</div></div></section></details>
   <details class="recursos-acordeon minvu-seccion"><summary><span class="simbolo">🏠</span><span>Llamados a subsidios<small>Programas y llamados vigentes del MINVU</small></span></summary><section class="seccion-recursos"><p>Accede al portal del MINVU para conocer los llamados a sus diferentes programas y subsidios de vivienda.</p><div id="portal-minvu"><div class="sin-resultados">Cargando portal de subsidios...</div></div></section></details>
@@ -210,7 +214,11 @@ const lista = document.getElementById("convocatorias-lista");
 const buscar = document.getElementById("buscar");
 const filtroTema = document.getElementById("filtro-tema");
 const filtroTerritorio = document.getElementById("filtro-territorio");
+const resultadosBusqueda = document.getElementById("resultados-busqueda-fondos");
 let convocatorias = [];
+let portalesNacionales = [];
+let portalesRegionales = [];
+let portalMinvu = null;
 function crearPortal(item, destino, clase) {
   const enlace = document.createElement("a");
   enlace.className = clase;
@@ -231,6 +239,62 @@ function crearPortal(item, destino, clase) {
 
 function normalizar(texto) {
   return String(texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function textoBuscable(item) {
+  return normalizar([
+    item.titulo, item.nombre, item.bajada, item.cobertura, item.fuente,
+    item.region, item.comuna, Array.isArray(item.temas) ? item.temas.join(" ") : item.temas
+  ].join(" "));
+}
+
+function coincideBusqueda(item, texto) {
+  const palabras = normalizar(texto).split(/\s+/).filter(Boolean);
+  const contenido = textoBuscable(item);
+  return palabras.every(function(palabra) { return contenido.includes(palabra); });
+}
+
+function mostrarResultadosBusqueda() {
+  const texto = buscar.value.trim();
+  if (!texto) {
+    resultadosBusqueda.classList.remove("activo");
+    resultadosBusqueda.innerHTML = "";
+    return;
+  }
+
+  const portales = [portalMinvu].concat(portalesNacionales, portalesRegionales).filter(Boolean);
+  const resultados = portales.filter(function(item) { return coincideBusqueda(item, texto); })
+    .map(function(item) { return { item: item, tipo: "portal" }; })
+    .concat(convocatorias.filter(function(item) { return coincideBusqueda(item, texto); }).map(function(item) { return { item: item, tipo: "noticia" }; }));
+
+  resultadosBusqueda.innerHTML = "";
+  resultadosBusqueda.classList.add("activo");
+  const encabezado = document.createElement("strong");
+  encabezado.textContent = resultados.length ? "Resultados para \u201c" + texto + "\u201d (" + resultados.length + ")" : "Sin resultados para \u201c" + texto + "\u201d";
+  resultadosBusqueda.appendChild(encabezado);
+
+  if (!resultados.length) {
+    const aviso = document.createElement("span");
+    aviso.className = "sin-resultados";
+    aviso.textContent = "Prueba con una palabra más amplia, por ejemplo: vivienda, comunidad, MINVU, medio ambiente o región.";
+    resultadosBusqueda.appendChild(aviso);
+    return;
+  }
+
+  resultados.slice(0, 20).forEach(function(resultado) {
+    const item = resultado.item;
+    const enlace = document.createElement("a");
+    enlace.className = "resultado-fondo" + (resultado.tipo === "noticia" ? " noticia" : "");
+    enlace.href = item.link || item.url;
+    enlace.target = "_blank";
+    enlace.rel = "noopener noreferrer";
+    const titulo = document.createElement("strong");
+    titulo.textContent = item.titulo || item.nombre;
+    const detalle = document.createElement("small");
+    detalle.textContent = [item.bajada || item.cobertura, item.fuente || (item.region ? "Gobierno Regional" : "Portal oficial")].filter(Boolean).join(" · ");
+    enlace.append(titulo, detalle);
+    resultadosBusqueda.appendChild(enlace);
+  });
 }
 
 function fechaNoticia(texto) {
@@ -313,10 +377,10 @@ function filtrarPortales() {
 
 fetch("data/noticias.json")
   .then(function(respuesta) { if (!respuesta.ok) throw new Error("No se encontró el archivo de convocatorias."); return respuesta.json(); })
-  .then(function(datos) { convocatorias = (Array.isArray(datos) ? datos : []).filter(function(item){ return item.fecha !== "Consulta permanente" && esNoticiaReciente(item); }); completarFiltros(); mostrarConvocatorias(); })
+  .then(function(datos) { convocatorias = (Array.isArray(datos) ? datos : []).filter(function(item){ return item.fecha !== "Consulta permanente" && esNoticiaReciente(item); }); completarFiltros(); mostrarConvocatorias(); mostrarResultadosBusqueda(); })
   .catch(function(error) { console.error(error); lista.innerHTML = "<div class='sin-resultados'>No se pudo cargar la información. Intenta volver a renderizar el sitio.</div>"; });
 
-buscar.addEventListener("input", function () { mostrarConvocatorias(); filtrarPortales(); });
+buscar.addEventListener("input", function () { mostrarConvocatorias(); filtrarPortales(); mostrarResultadosBusqueda(); });
 filtroTema.addEventListener("change", mostrarConvocatorias);
 filtroTerritorio.addEventListener("change", mostrarConvocatorias);
 
@@ -334,16 +398,20 @@ Promise.all([
   destinoGore.innerHTML = "";
 
   const minvu = permanentes.find(function(item) { return item.fuente === "MINVU"; });
+  portalMinvu = minvu || null;
   if (minvu) crearPortal(minvu, destinoMinvu, "portal-minvu");
 
-  permanentes.filter(function(item) {
+  portalesNacionales = permanentes.filter(function(item) {
     return item.fuente !== "MINVU" && !item.region && !item.comuna;
-  }).forEach(function(item) { crearPortal(item, destinoNacional, "portal"); });
+  });
+  portalesNacionales.forEach(function(item) { crearPortal(item, destinoNacional, "portal"); });
 
-  (fuentes.fuentes_gobiernos_regionales || []).forEach(function(item) {
+  portalesRegionales = fuentes.fuentes_gobiernos_regionales || [];
+  portalesRegionales.forEach(function(item) {
     crearPortal(item, destinoGore, "portal");
   });
   filtrarPortales();
+  mostrarResultadosBusqueda();
 }).catch(function(error) {
   console.error(error);
   document.getElementById("portales-nacionales").innerHTML = "<div class='sin-resultados'>No se pudieron cargar los portales en este momento.</div>";
@@ -760,20 +828,17 @@ Promise.all([
   <div class="nav-footer">
     <div class="nav-footer-left">
 <div class="footer-marca">
-<img src="assets/logo-equidad-urbana-blanco.png" alt="Equidad Urbana">
-<div>
-<strong>Equidad-comunidades</strong><span>Información y herramientas para fortalecer la vida en comunidad.</span>
-</div>
+<img src="assets/logo-equidad-urbana-blanco.png" alt="Equidad Urbana"><span>Información, participación y herramientas para fortalecer la vida en comunidad.</span>
 </div>
 </div>   
     <div class="nav-footer-center">
 <div class="footer-contacto">
-<strong>Contacto</strong><a href="mailto:contacto@equidadurbana.org">contacto@equidadurbana.org</a>
+<strong>Contacto</strong><a href="mailto:contacto@equidadurbana.org">contacto@equidadurbana.org</a><span>Carlos Antúnez 2616, of. 32<br>Providencia, Santiago</span>
 </div>
 </div>
     <div class="nav-footer-right">
 <div class="footer-redes">
-<strong>Conversemos</strong><a href="https://equidadurbana.org" target="_blank" rel="noopener">🌐 Sitio web</a><a href="https://www.instagram.com/equidad.urbana/" target="_blank" rel="noopener">📷 <span class="citation" data-cites="equidad.urbana">@equidad.urbana</span></a><a href="https://cl.linkedin.com/company/equidad-urbana-consultora" target="_blank" rel="noopener">💼 LinkedIn</a>
+<strong>Síguenos</strong><a href="https://www.instagram.com/equidad.urbana/" target="_blank" rel="noopener">📷 Instagram · <span class="citation" data-cites="equidad.urbana">@equidad.urbana</span></a><a href="https://cl.linkedin.com/company/equidad-urbana-consultora" target="_blank" rel="noopener">💼 LinkedIn · Equidad Urbana</a><a href="https://equidadurbana.org" target="_blank" rel="noopener">🌐 Estudios y publicaciones</a>
 </div>
 </div>
   </div>

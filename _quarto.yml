@@ -34,11 +34,11 @@ website:
   title: "Equidad-comunidades"
   page-footer:
     left: |
-      <div class="footer-marca"><img src="assets/logo-equidad-urbana-blanco.png" alt="Equidad Urbana"><div><strong>Equidad-comunidades</strong><span>Información y herramientas para fortalecer la vida en comunidad.</span></div></div>
+      <div class="footer-marca"><img src="assets/logo-equidad-urbana-blanco.png" alt="Equidad Urbana"><span>Información, participación y herramientas para fortalecer la vida en comunidad.</span></div>
     center: |
-      <div class="footer-contacto"><strong>Contacto</strong><a href="mailto:contacto@equidadurbana.org">contacto@equidadurbana.org</a></div>
+      <div class="footer-contacto"><strong>Contacto</strong><a href="mailto:contacto@equidadurbana.org">contacto@equidadurbana.org</a><span>Carlos Antúnez 2616, of. 32<br>Providencia, Santiago</span></div>
     right: |
-      <div class="footer-redes"><strong>Conversemos</strong><a href="https://equidadurbana.org" target="_blank" rel="noopener">🌐 Sitio web</a><a href="https://www.instagram.com/equidad.urbana/" target="_blank" rel="noopener">📷 @equidad.urbana</a><a href="https://cl.linkedin.com/company/equidad-urbana-consultora" target="_blank" rel="noopener">💼 LinkedIn</a></div>
+      <div class="footer-redes"><strong>Síguenos</strong><a href="https://www.instagram.com/equidad.urbana/" target="_blank" rel="noopener">📷 Instagram · @equidad.urbana</a><a href="https://cl.linkedin.com/company/equidad-urbana-consultora" target="_blank" rel="noopener">💼 LinkedIn · Equidad Urbana</a><a href="https://equidadurbana.org" target="_blank" rel="noopener">🌐 Estudios y publicaciones</a></div>
   navbar:
     logo: assets/logo-equidad-urbana.png
     left:
