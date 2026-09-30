@@ -18,7 +18,9 @@ Accede a fondos, concursos, subsidios y noticias de interés para las comunidade
 .portal small { display:block; color:#5f6d6a; font-size:12.5px; font-weight:normal; line-height:1.35; }.nacional .portal { border-color:#b9dbc9; border-left:5px solid #3b966d; }.regional .portal { border-left:4px solid #d79435; }
 .gore-grid a { color:#7b551d !important; border-color:#ead9b8; }.gore-grid a strong::after { color:#c87a22; }
 .noticias-seccion { margin:28px 0 0; background:#f3f6f5; }.noticias-seccion summary::after { background:#d98124; }.noticias-contenido { padding:4px 0 0; }
-.filtros { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; padding: 18px; background: #fff; border: 1px solid #ddd; }
+.busqueda-fondos { margin:0 0 18px; padding:16px; border:1px solid #b9d1ce; border-radius:12px; background:#f4fbf8; }
+.busqueda-fondos label { display:block; margin:0 0 7px; color:#174f5a; font-size:14px; font-weight:700; }
+.filtros { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 18px; background: #fff; border: 1px solid #ddd; }
 .filtro { padding: 12px; border: 1px solid #b9c6c8; border-radius: 8px; font-size: 15px; background: #fff; }
 .convocatorias-lista { background: #f3f6f5; border: 1px solid #ddd; border-top: 0; padding: 24px; border-radius: 0 0 16px 16px; }
 .contador { color: #456; font-size: 14px; margin: 0 0 14px; }
@@ -37,12 +39,12 @@ Accede a fondos, concursos, subsidios y noticias de interés para las comunidade
 </style>
 
 <div class="convocatorias-container">
+  <div class="busqueda-fondos"><label for="buscar">Busca fondos, subsidios, instituciones o noticias</label><input id="buscar" class="filtro" type="search" placeholder="Ej.: vivienda, comunidad, MINVU, seguridad…"></div>
   <details class="recursos-acordeon nacional"><summary><span class="simbolo">🌱</span><span>Fondos y concursos nacionales<small>Portales permanentes del Estado y sus ministerios</small></span></summary><section class="seccion-recursos"><p>Revisa los portales del Gobierno y ministerios con fondos y convocatorias permanentes para organizaciones y comunidades.</p><div id="portales-nacionales" class="portales-grid"><div class="sin-resultados">Cargando portales nacionales...</div></div></section></details>
   <details class="recursos-acordeon regional"><summary><span class="simbolo">🗺️</span><span>Fondos y concursos regionales<small>Accesos directos a concursos de los gobiernos regionales</small></span></summary><section class="seccion-recursos"><p>Encuentra los fondos, concursos y programas disponibles en cada territorio. Cuando existe, el enlace dirige a la sección específica de fondos del Gobierno Regional.</p><div id="portales-gore" class="gore-grid"><div class="sin-resultados">Cargando portales regionales...</div></div></section></details>
   <details class="recursos-acordeon minvu-seccion"><summary><span class="simbolo">🏠</span><span>Llamados a subsidios<small>Programas y llamados vigentes del MINVU</small></span></summary><section class="seccion-recursos"><p>Accede al portal del MINVU para conocer los llamados a sus diferentes programas y subsidios de vivienda.</p><div id="portal-minvu"><div class="sin-resultados">Cargando portal de subsidios...</div></div></section></details>
   <details class="recursos-acordeon noticias-seccion"><summary><span class="simbolo">📰</span><span>Noticias de interés<small>Información publicada durante los últimos 31 días</small></span></summary><section class="noticias-contenido">
   <div class="filtros">
-    <input id="buscar" class="filtro" type="search" placeholder="Buscar por fondo, subsidio, institución o tema">
     <select id="filtro-tema" class="filtro"><option value="">Todos los temas</option></select>
     <select id="filtro-territorio" class="filtro"><option value="">Todo el territorio</option></select>
   </div>
@@ -149,12 +151,20 @@ function mostrarConvocatorias() {
   });
 }
 
+function filtrarPortales() {
+  const texto = normalizar(buscar.value);
+  document.querySelectorAll(".portal, .portal-minvu").forEach(function (portal) {
+    const contenido = normalizar(portal.textContent);
+    portal.style.display = !texto || contenido.includes(texto) ? "" : "none";
+  });
+}
+
 fetch("data/noticias.json")
   .then(function(respuesta) { if (!respuesta.ok) throw new Error("No se encontró el archivo de convocatorias."); return respuesta.json(); })
   .then(function(datos) { convocatorias = (Array.isArray(datos) ? datos : []).filter(function(item){ return item.fecha !== "Consulta permanente" && esNoticiaReciente(item); }); completarFiltros(); mostrarConvocatorias(); })
   .catch(function(error) { console.error(error); lista.innerHTML = "<div class='sin-resultados'>No se pudo cargar la información. Intenta volver a renderizar el sitio.</div>"; });
 
-buscar.addEventListener("input", mostrarConvocatorias);
+buscar.addEventListener("input", function () { mostrarConvocatorias(); filtrarPortales(); });
 filtroTema.addEventListener("change", mostrarConvocatorias);
 filtroTerritorio.addEventListener("change", mostrarConvocatorias);
 
@@ -181,6 +191,7 @@ Promise.all([
   (fuentes.fuentes_gobiernos_regionales || []).forEach(function(item) {
     crearPortal(item, destinoGore, "portal");
   });
+  filtrarPortales();
 }).catch(function(error) {
   console.error(error);
   document.getElementById("portales-nacionales").innerHTML = "<div class='sin-resultados'>No se pudieron cargar los portales en este momento.</div>";

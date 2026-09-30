@@ -62,6 +62,35 @@ body {
   letter-spacing: -.02em;
 }
 
+/* Cierre institucional del sitio */
+.page-footer, footer.footer, footer.footer.footer-dark {
+  margin-top: 4rem;
+  padding: 0;
+  border: 0;
+  background: #0b4f6c !important;
+  color: #fff !important;
+}
+.page-footer .nav-footer, footer.footer .nav-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr .75fr;
+  gap: 2rem;
+  align-items: center;
+}
+.page-footer .nav-footer, footer.footer .nav-footer { background: #0b4f6c !important; color: #fff !important; }
+.page-footer .nav-footer *, footer.footer .nav-footer * { color: #fff; }
+.page-footer .nav-footer a, footer.footer .nav-footer a { color: #fff !important; text-decoration: none; }
+.page-footer .nav-footer a:hover, footer.footer .nav-footer a:hover { color: #ffd28e; text-decoration: underline; }
+.page-footer .nav-footer-left, footer.footer .nav-footer-left { justify-self: start; text-align: left !important; }
+.footer-marca { display: flex; justify-content: flex-start; gap: 1rem; align-items: center; }
+.footer-marca img { width: 96px; height: auto; object-fit: contain; }
+.footer-marca strong, .footer-contacto strong, .footer-redes strong { display: block; color: #fff !important; margin-bottom: .35rem; }
+.footer-marca span { display: block; max-width: 325px; color: #fff !important; font-size: .9rem; line-height: 1.4; }
+.footer-contacto a, .footer-redes a { display: block; margin: .2rem 0; font-size: .92rem; }
+@media (max-width: 760px) { .page-footer .nav-footer, footer.footer .nav-footer { grid-template-columns: 1fr; gap: 1.35rem; padding: 1.75rem 1.25rem; } }
+
 /* Acerca suavemente el bloque de marca al buscador, sin descentrar la barra. */
 #quarto-search {
   margin-left: .35rem;

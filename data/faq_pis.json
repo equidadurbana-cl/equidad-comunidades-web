@@ -75,7 +75,7 @@
     "tema": "2. Uso, cuidado y mantención",
     "subtema": "2.1 Garantías y modificaciones de las viviendas",
     "pregunta": "¿Cuántos años de garantía tienen las viviendas?",
-    "respuesta": "La Ley General de Urbanismo y Construcciones estipula los plazos dentro de los cuales el primer vendedor debe hacerse responsable de las fallas que podría tener la vivienda, la construcción o el diseño. Los plazos varían desde los:\n\n10 años: desde la recepción municipal en fallas o defectos de elementos estructurantes soportantes del inmueble, tales como cimientos, fundaciones, muros soportantes, losas, vigas, cadenas, estructura de techumbres, pilares y entramados horizontales o verticales de carácter estructural.\n\n5 años: desde la recepción municipal en fallas o defectos de elementos constructivos o de las instalaciones, tales como cubiertas de techumbres, ventanas, estructuras no soportantes de muro y cielo, bases de pavimentos, estructuras o bases de pisos, impermeabilizaciones, aislamiento térmico y acústico, redes de instalaciones eléctricas, de corrientes débiles, de gas y sanitarias, entre otras.\n\n3 años: desde la inscripción de la vivienda en el Conservador de Bienes Raíces en fallas o defectos de terminaciones o acabado de las obras, tales como cielos, pisos, puertas, revestimientos y pinturas exteriores o interiores, barnices, alfombras, cerámicas, quincallería y muebles adosados o empotrados a la construcción.\n\nEn caso de que las fallas o defectos no correspondan a ninguno de los mencionados anteriormente, o bien que no sean asimilables o equivalentes a éstos, el plazo de prescripción de las acciones será de 5 años.",
+    "respuesta": "La Ley General de Urbanismo y Construcciones establece los plazos durante los cuales el primer vendedor responde por fallas de la vivienda, su construcción o diseño:\n\n10 años: desde la recepción municipal, por fallas o defectos de elementos estructurales, como cimientos, fundaciones, muros soportantes, losas, vigas, cadenas, estructura de techumbres, pilares y entramados horizontales o verticales de carácter estructural.\n\n5 años: desde la recepción municipal, por fallas o defectos de elementos constructivos o instalaciones, como cubiertas de techumbres, ventanas, estructuras no soportantes de muro y cielo, bases de pavimentos, impermeabilizaciones, aislamiento térmico y acústico, e instalaciones eléctricas, de gas y sanitarias, entre otras.\n\n3 años: desde la inscripción de la vivienda en el Conservador de Bienes Raíces, por fallas o defectos de terminaciones o acabados, como cielos, pisos, puertas, revestimientos, pinturas, barnices, alfombras, cerámicas, quincallería y muebles adosados o empotrados.\n\nPara otras fallas que no sean equivalentes a las categorías descritas, el plazo de prescripción de las acciones es de 5 años.",
     "pagina": 17,
     "documento": "1. Manual Resolución de dudas frecuentes PIS.pdf",
     "ruta": "Bilbioteca/3. Talleres PIS/1. Manual Resolución de dudas frecuentes PIS.pdf"
@@ -147,7 +147,7 @@
     "tema": "2. Uso, cuidado y mantención",
     "subtema": "2.1 Garantías y modificaciones de las viviendas",
     "pregunta": "¿Qué otras consideraciones son importantes sobre las garantías?",
-    "respuesta": "No es imputable al primer vendedor:\n\n• Defectos o fallas que se presentan a causa de los trabajos de transformación, ampliación o adecuación efectuados en la propiedad con posterioridad a la fecha señalada en la escritura de compraventa del inmueble.\n\n• Los defectos o fallas que se presentan en los bienes muebles y las cosas de comodidad y ornato de acuerdo a lo señalado por el artículo 572 del Código Civil.",
+    "respuesta": "El primer vendedor no responde por:\n\n• Defectos o fallas causados por trabajos de transformación, ampliación o adecuación realizados en la propiedad después de la compraventa.\n\n• Defectos o fallas en bienes muebles u objetos de comodidad y ornato.",
     "pagina": 22,
     "documento": "1. Manual Resolución de dudas frecuentes PIS.pdf",
     "ruta": "Bilbioteca/3. Talleres PIS/1. Manual Resolución de dudas frecuentes PIS.pdf"
@@ -246,7 +246,7 @@
     "tema": "3. Derechos y deberes",
     "subtema": "3.1 Patrimonio reservado de la mujer casada",
     "pregunta": "¿A la vivienda adquirida por subsidio puede aplicarse el Artículo 150 de Patrimonio reservado de la mujer casada?",
-    "respuesta": "Si se respetan los requisitos mencionados anteriormente, sí puede ser aplicado el Artículo 150 de Patrimonio reservado de la mujer casada, pensando en que el subsidio fue adquirido a partir de ahorros generados de forma independiente del cónyuge.",
+    "respuesta": "Sí puede aplicarse si la mujer está casada bajo el régimen de sociedad conyugal y la vivienda fue adquirida con ahorros generados a partir de su trabajo independiente del cónyuge. En ese caso, puede solicitar que la escritura señale expresamente que la compra se realiza bajo el artículo 150 del Código Civil.",
     "pagina": 27,
     "documento": "1. Manual Resolución de dudas frecuentes PIS.pdf",
     "ruta": "Bilbioteca/3. Talleres PIS/1. Manual Resolución de dudas frecuentes PIS.pdf"
@@ -453,7 +453,7 @@
     "tema": "3. Derechos y deberes",
     "subtema": "3.5 Reglamento de copropiedad",
     "pregunta": "¿Qué es reglamento?",
-    "respuesta": "Es un documento fundamental en un condominio porque es el instrumento que determina las bases para una convivencia vecinal sana. Éste regula el régimen administrativo interno, los derechos y obligaciones de los copropietarios/as existentes, así como el uso de los espacios comunes. Se inscribe en el registro de hipotecas y gravámenes del Conservador de Bienes Raíces.",
+    "respuesta": "Es un documento fundamental en un condominio porque establece las bases para una convivencia vecinal sana. Regula el régimen administrativo interno, los derechos y obligaciones de los copropietarios/as, así como el uso de los espacios comunes. Se inscribe en el registro de hipotecas y gravámenes del Conservador de Bienes Raíces.",
     "pagina": 36,
     "documento": "1. Manual Resolución de dudas frecuentes PIS.pdf",
     "ruta": "Bilbioteca/3. Talleres PIS/1. Manual Resolución de dudas frecuentes PIS.pdf"
@@ -489,7 +489,7 @@
     "tema": "3. Derechos y deberes",
     "subtema": "3.6 Gastos comunes",
     "pregunta": "¿Es obligación pagar los gastos comunes?",
-    "respuesta": "Si, todos/as los residentes tienen la obligación de pagar los gastos comunes. Si no utiliza la vivienda, sigue siendo una obligación pagar los gastos comunes.",
+    "respuesta": "Sí, todos/as los residentes tienen la obligación de pagar los gastos comunes. Aunque no se utilice la vivienda, esta obligación se mantiene.",
     "pagina": 38,
     "documento": "1. Manual Resolución de dudas frecuentes PIS.pdf",
     "ruta": "Bilbioteca/3. Talleres PIS/1. Manual Resolución de dudas frecuentes PIS.pdf"
@@ -516,7 +516,7 @@
     "tema": "3. Derechos y deberes",
     "subtema": "3.6 Gastos comunes",
     "pregunta": "¿Cómo se pagan los gastos comunes?",
-    "respuesta": "Todo condominio deberá mantener una cuenta corriente bancaria o una cuenta de ahorro, exclusiva de aquél, sobre la que podrán girar la o las personas que designe la asamblea de copropietarios. Luego se deberá enviar un comprobante de pago a la administración del condomino.",
+    "respuesta": "Todo condominio deberá mantener una cuenta corriente bancaria o una cuenta de ahorro exclusiva, sobre la que podrán girar las personas que designe la asamblea de copropietarios/as. Luego se deberá enviar un comprobante de pago a la administración del condominio.",
     "pagina": 39,
     "documento": "1. Manual Resolución de dudas frecuentes PIS.pdf",
     "ruta": "Bilbioteca/3. Talleres PIS/1. Manual Resolución de dudas frecuentes PIS.pdf"
