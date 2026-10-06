@@ -23,6 +23,7 @@
 { "type": "Feature", "properties": { "capa": "jardines", "popup": "<strong>NA</strong><br><br><strong>Dirección:</strong> NA ", "etiqueta": "" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -71.079138999586291, -30.230461000374255 ] ] } },
 { "type": "Feature", "properties": { "capa": "bomberos", "popup": "<strong>Cuerpo de Bomberos</strong><br><br><strong>Dirección:</strong> Luis Miranda Ansieta S/N", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -71.084071043535232, -30.234232970041081 ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>TCIA. ANDACOLLO</strong><br><br><strong>Dirección:</strong> DOMINGO SANTA MARIA S/N", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -71.081967067180599, -30.233682529461475 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Hospital Dr. José Arraño (Andacollo)</strong><br><br><strong>Tipo de atención:</strong> Hospital<br><strong>Dirección:</strong>  2", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -71.08549, -30.22757 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Hospital Dr. José Arraño (Andacollo)</strong><br><br><strong>Tipo de atención:</strong> Hospital<br><strong>Dirección:</strong>  2", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -71.08549, -30.22757 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Andacollo</strong><br><br><strong>Dirección:</strong> Plaza Videla Nº 50<br><strong>Región:</strong> Coquimbo", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -71.084839, -30.232633000999972 ] } }
 ]
 }

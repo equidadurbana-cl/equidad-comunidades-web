@@ -11,6 +11,7 @@
 { "type": "Feature", "properties": { "capa": "colegios", "popup": "<strong>LICEO ALDEA EDUCATIVA RAPA NUI</strong><br><br><strong>Dirección:</strong> CAMINO EX - COLONIA AGRICOLA 0", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -109.4166, -27.123316 ] } },
 { "type": "Feature", "properties": { "capa": "jardines", "popup": "<strong>LUCY MAHATU RIVA RIVA</strong><br><br><strong>Dirección:</strong> AVAREIPUA S/N ", "etiqueta": "" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -109.427474, -27.150925 ] ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>6TA. COM. ISLA PASCUA (F)</strong><br><br><strong>Dirección:</strong> MANUTARA S/N", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -109.436996141999941, -27.160773691999918 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Hospital Hanga Roa (Isla De Pascua)</strong><br><br><strong>Tipo de atención:</strong> Hospital<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -109.421035799999956, -27.150381 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Hospital Hanga Roa (Isla De Pascua)</strong><br><br><strong>Tipo de atención:</strong> Hospital<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -109.421035799999956, -27.150381 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Isla De Pascua</strong><br><br><strong>Dirección:</strong> Atamu Tekena s/n<br><strong>Región:</strong> Valparaíso", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -109.428017, -27.148327000999931 ] } }
 ]
 }

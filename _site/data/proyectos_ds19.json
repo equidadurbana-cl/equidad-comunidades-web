@@ -1,0 +1,108 @@
+{
+  "proyectos": [
+    {
+      "proyecto": "Pie Andino I",
+      "comuna": "Puente Alto",
+      "correo": "pieandino.integracionsocial@gmail.com"
+    },
+    {
+      "proyecto": "Pie Andino II",
+      "comuna": "Puente Alto",
+      "correo": "pieandino2.pis@gmail.com"
+    },
+    {
+      "proyecto": "Jardines de Buin",
+      "comuna": "Buin",
+      "correo": "barriojardinesdebuin.pis@gmail.com"
+    },
+    {
+      "proyecto": "Valles de Rengo III Etapa 1",
+      "comuna": "Rengo",
+      "correo": "vallesderengo3.pis@gmail.com"
+    },
+    {
+      "proyecto": "Pintor Gustavo Cabello",
+      "comuna": "Rancagua",
+      "correo": ""
+    },
+    {
+      "proyecto": "Jardines de San Bernardo 1",
+      "comuna": "San Bernardo",
+      "correo": ""
+    },
+    {
+      "proyecto": "Pataguas XI",
+      "comuna": "Lampa",
+      "correo": "ds19rm@socovesa.cl"
+    },
+    {
+      "proyecto": "Principal 1385",
+      "comuna": "Conchalí",
+      "correo": ""
+    },
+    {
+      "proyecto": "Samuel Román",
+      "comuna": "Rancagua",
+      "correo": "samuelromanrojas.pis@gmail.com"
+    },
+    {
+      "proyecto": "Santa Rosa",
+      "comuna": "La Pintana",
+      "correo": "ondominiosantarosa.pis@gmail.com"
+    },
+    {
+      "proyecto": "Panorámico 1 Torre A",
+      "comuna": "Antofagasta",
+      "correo": ""
+    },
+    {
+      "proyecto": "Gran Avenida",
+      "comuna": "El Bosque",
+      "correo": "Plands19@rvc.cl"
+    },
+    {
+      "proyecto": "Jardines de San Bernardo 2",
+      "comuna": "San Bernardo",
+      "correo": "pis.jardinesdesanbernardo2@gmail.com"
+    },
+    {
+      "proyecto": "Valles de Rengo III Etapa 2",
+      "comuna": "Rengo",
+      "correo": "pisvallesderengo3.2@gmail.com"
+    }
+  ],
+  "actividades": [
+    {
+      "proyecto": "Gran Avenida",
+      "comuna": "El Bosque",
+      "actividad": "Repetición Visita a la obra",
+      "fecha": "09/10/2026",
+      "horario": "Dos turnos: 15:00 y 16:30 horas",
+      "correo": "Plands19@rvc.cl"
+    },
+    {
+      "proyecto": "Valles de Rengo III Etapa 1",
+      "comuna": "Rengo",
+      "actividad": "Repetición Taller de Organización Comunitaria",
+      "fecha": "15/10/2026",
+      "horario": "",
+      "correo": "vallesderengo3.pis@gmail.com"
+    },
+    {
+      "proyecto": "Pataguas XI",
+      "comuna": "Lampa",
+      "actividad": "Taller de Organización Comunitaria",
+      "fecha": "17/10/2026",
+      "horario": "Tres turnos:",
+      "correo": "ds19rm@socovesa.cl"
+    },
+    {
+      "proyecto": "Principal 1385",
+      "comuna": "Conchalí",
+      "actividad": "Redes comunitarias",
+      "fecha": "21/10/2026",
+      "horario": "18:00 horas",
+      "correo": ""
+    }
+  ]
+}

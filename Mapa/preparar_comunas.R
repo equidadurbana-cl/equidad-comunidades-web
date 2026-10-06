@@ -1,9 +1,10 @@
 library(sf)
 library(jsonlite)
 
-# Este script se ejecuta desde la carpeta Mapa
-gpkg <- "mapa_comunidad.gpkg"
-salida <- "datos"
+# Puede ejecutarse desde la raíz del proyecto o desde la carpeta Mapa.
+carpeta_mapa <- if (file.exists(file.path("Mapa", "mapa_comunidad.gpkg"))) "Mapa" else "."
+gpkg <- file.path(carpeta_mapa, "mapa_comunidad.gpkg")
+salida <- file.path(carpeta_mapa, "datos")
 
 dir.create(salida, recursive = TRUE, showWarnings = FALSE)
 
@@ -51,6 +52,7 @@ jardines   <- leer_capa("jardines_infantiles2")
 bomberos   <- leer_capa("bomberos")
 comisarias <- leer_capa("comisarias")
 salud <- leer_capa("establecimientos_de_salud")
+municipios <- leer_capa("layer_municipios_20230915121302")
 
 # Textos emergentes
 ds19$popup <- paste0(
@@ -92,6 +94,12 @@ salud$popup <- paste0(
   salud$DIRECCIÓN, " ",  salud$NUMERO
 )
 
+municipios$popup <- paste0(
+  "<strong>Municipalidad de ", municipios$NOM_COM, "</strong><br><br>",
+  "<strong>Dirección:</strong> ", municipios$DIRECCION, "<br>",
+  "<strong>Región:</strong> ", municipios$NOM_REG
+)
+
 # Índice ligero que utilizará el buscador
 indice <- vector("list", nrow(comunas))
 
@@ -114,7 +122,8 @@ for (i in seq_len(nrow(comunas))) {
     como_capa(st_filter(jardines, comuna), "jardines"),
     como_capa(st_filter(bomberos, comuna), "bomberos"),
     como_capa(st_filter(comisarias, comuna), "comisarias"),
-    como_capa(st_filter(salud, comuna), "salud")
+    como_capa(st_filter(salud, comuna), "salud"),
+    como_capa(st_filter(municipios, comuna), "municipios")
   )
   
   datos_comuna <- do.call(rbind, piezas) |>

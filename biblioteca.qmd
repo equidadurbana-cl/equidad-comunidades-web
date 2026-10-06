@@ -10,6 +10,7 @@ title: ""
 library(readxl)
 
 biblioteca <- read_excel("data/biblioteca.xlsx")
+biblioteca$Categoria <- trimws(biblioteca$Categoria)
 ```
 
 # 📚 Biblioteca Comunitaria
@@ -128,7 +129,7 @@ descripciones <- c(
   
   "Subsidios" = "Aquí encontrarás información sobre subsidios habitacionales, sus características y principales requisitos.",
   
-  "Organización Vecinal y Juntas de Vecinos" = "Aquí encontrarás información para organizarse, participar y fortalecer la vida comunitaria."
+  "Organización vecinal y juntas de vecinos" = "Aquí encontrarás información para organizarse, participar y fortalecer la vida comunitaria."
 )
 
 categorias <- unique(biblioteca$Categoria)

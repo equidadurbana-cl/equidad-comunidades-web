@@ -18,6 +18,7 @@
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>RETEN ALCERRECA (F)</strong><br><br><strong>Dirección:</strong> RUTA A-23 KM 40", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.660406385999906, -17.992306252999928 ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>RETEN TACORA (F)</strong><br><br><strong>Dirección:</strong> RUTA A-23 KM 70", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.724397649999901, -17.771957191999952 ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>TCIA. VISVIRI (F)</strong><br><br><strong>Dirección:</strong> RUTA A-123 95", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.477020969999899, -17.595014119999927 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Visviri</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.48047, -17.59487 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Visviri</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.48047, -17.59487 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de General Lagos</strong><br><br><strong>Dirección:</strong> Ignacio Carrera Pinto s/n, Visviri.<br><strong>Región:</strong> Arica y Parinacota", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.481, -17.594262000999947 ] } }
 ]
 }

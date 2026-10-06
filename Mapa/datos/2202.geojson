@@ -8,6 +8,7 @@
 { "type": "Feature", "properties": { "capa": "jardines", "popup": "<strong>NA</strong><br><br><strong>Dirección:</strong> NA ", "etiqueta": "" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -68.254733999586946, -21.22422800031077 ] ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>RETEN ASCOTAN (F)</strong><br><br><strong>Dirección:</strong> RUTA CH-21 KM 122", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -68.275443483999936, -21.725129219999932 ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>TCIA. OLLAGUE (F)</strong><br><br><strong>Dirección:</strong> CHILE 30 A", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -68.251852988999914, -21.223569344999937 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Ollagüe</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -68.25563, -21.22489 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Ollagüe</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -68.25563, -21.22489 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Ollague</strong><br><br><strong>Dirección:</strong> Av. Los Héroes s/n Ollague<br><strong>Región:</strong> Antofagasta", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -68.256098, -21.225502000999946 ] } }
 ]
 }

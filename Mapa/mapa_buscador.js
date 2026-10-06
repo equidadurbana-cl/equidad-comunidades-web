@@ -122,6 +122,18 @@ window.iniciarMapaComunas = function (el) {
           "circle-radius": 7,
           "circle-opacity": 0.85
         }
+      },
+      {
+        id: "municipios",
+        type: "circle",
+        filter: ["==", ["get", "capa"], "municipios"],
+        paint: {
+          "circle-color": "#6D4C41",
+          "circle-radius": 7,
+          "circle-opacity": 0.9,
+          "circle-stroke-color": "#ffffff",
+          "circle-stroke-width": 1.2
+        }
       }
     ];
 
@@ -227,6 +239,7 @@ window.iniciarMapaComunas = function (el) {
       <span style="color:#d62828;font-size:20px;">●</span> Bomberos<br>
       <span style="color:#2e8b57;font-size:20px;">●</span> Carabineros<br>
       <span style="color:#1976D2;font-size:20px;">●</span> Centros de Salud <br>
+      <span style="color:#6D4C41;font-size:20px;">●</span> Municipalidades <br>
     `;
 
     return contenedor;
@@ -249,7 +262,8 @@ map.addControl(controlLeyenda, "bottom-right");
           ["jardines", "Jardines infantiles", ["jardines"]],
           ["bomberos", "Bomberos", ["bomberos"]],
           ["comisarias", "Carabineros", ["comisarias"]],
-          ["salud", "Centros de Salud", ["salud"]]
+          ["salud", "Centros de Salud", ["salud"]],
+          ["municipios", "Municipalidades", ["municipios"]]
         ];
         const filtrosOriginales = capas.reduce(function (resultado, capa) {
           resultado[capa.id] = capa.filter;

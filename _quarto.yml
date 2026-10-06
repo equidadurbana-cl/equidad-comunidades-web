@@ -6,11 +6,14 @@ project:
     - "!chatbot.piloto2.qmd"
   resources:
     - Bilbioteca/indice_biblioteca.json
+    - Bilbioteca/4. Subsidios/4.DS52.pdf
+    - Bilbioteca/4. Subsidios/5.DS27.pdf
     - Mapa/datos/**
     - data/noticias.json
     - data/convocatorias_permanentes.json
     - data/fuentes_convocatorias.json
     - data/faq_pis.json
+    - data/proyectos_ds19.json
     - assets/comunidad-portada.png
     - assets/comunidad-portada.jpg
     - assets/logo-equidad-urbana.png
@@ -56,6 +59,9 @@ website:
 
       - href: noticias.qmd
         text: 📅 Fondos y convocatorias
+
+      - href: proyectos_ds19.qmd
+        text: 🏘️ Proyectos DS19
 
       - href: about.qmd
         text: ℹ️ Acerca de

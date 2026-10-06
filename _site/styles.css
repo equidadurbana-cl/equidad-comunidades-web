@@ -58,8 +58,11 @@ body {
 }
 
 .navbar-brand .navbar-title {
-  font-weight: 700;
-  letter-spacing: -.02em;
+  display: none;
+}
+
+.navbar-brand-logo {
+  margin-right: .45rem !important;
 }
 
 /* Cierre institucional, inspirado en la composición del sitio Equidad Urbana. */

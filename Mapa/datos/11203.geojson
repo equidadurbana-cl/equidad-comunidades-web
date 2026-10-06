@@ -8,6 +8,7 @@
 { "type": "Feature", "properties": { "capa": "colegios", "popup": "<strong>ESCUELA DE REPOLLAL</strong><br><br><strong>Dirección:</strong> MELINKA - CAMINO A REPOLLAL 0", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -73.876518, -43.88736 ] } },
 { "type": "Feature", "properties": { "capa": "jardines", "popup": "<strong>NA</strong><br><br><strong>Dirección:</strong> NA ", "etiqueta": "" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -73.745277000731519, -43.898415000121098 ] ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>RETEN MELINKA</strong><br><br><strong>Dirección:</strong> COSTANERA S/N", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -73.748036169999907, -43.896667662999924 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Melinka</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -73.745897, -43.896661 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Melinka</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -73.745897, -43.896661 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Guaitecas</strong><br><br><strong>Dirección:</strong> Aeropuerto 101<br><strong>Región:</strong> Aysén del General Carlos Ibáñez del Campo", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -73.745, -43.89664400099997 ] } }
 ]
 }

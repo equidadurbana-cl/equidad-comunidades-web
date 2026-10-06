@@ -1,0 +1,48 @@
+[
+  {
+    "categoria": "Seguridad y emergencias",
+    "icono": "🚨",
+    "descripcion": "Contactos para actuar ante una emergencia, realizar denuncias o pedir orientación en seguridad.",
+    "contactos": [
+      {"nombre": "Carabineros de Chile", "detalle": "Emergencias policiales", "telefono": "133", "web": "https://www.carabineros.cl/"},
+      {"nombre": "Policía de Investigaciones (PDI)", "detalle": "Emergencias policiales e investigaciones", "telefono": "134", "web": "https://www.pdichile.cl/"},
+      {"nombre": "Bomberos", "detalle": "Incendios, rescates y otras emergencias", "telefono": "132", "web": "https://www.bomberos.cl/"},
+      {"nombre": "Denuncia Seguro", "detalle": "Entrega información sobre delitos de forma anónima y gratuita", "telefono": "*4242", "web": "https://www.denunciaseguro.cl/"},
+      {"nombre": "CONAF", "detalle": "Emergencias por incendios forestales", "telefono": "130", "web": "https://www.conaf.cl/"}
+    ]
+  },
+  {
+    "categoria": "Vivienda y ciudad",
+    "icono": "🏠",
+    "descripcion": "Información, orientación y canales de atención en vivienda, subsidios y trámites urbanos.",
+    "contactos": [
+      {"nombre": "MINVU Aló", "detalle": "Consultas sobre vivienda, subsidios y programas del MINVU", "telefono": "600 901 11 11", "web": "https://www.minvu.gob.cl/atencion-ciudadana/"},
+      {"nombre": "MINVU desde celulares", "detalle": "Atención ciudadana desde teléfonos móviles", "telefono": "2 2901 11 11", "web": "https://www.minvu.gob.cl/atencion-ciudadana/"},
+      {"nombre": "MINVU Conecta", "detalle": "Orientación digital sobre programas habitacionales", "telefono": "", "web": "https://www.minvuconecta.cl/"},
+      {"nombre": "Condominios MINVU", "detalle": "Información y herramientas sobre copropiedad inmobiliaria", "telefono": "", "web": "https://condominios.minvu.cl/"},
+      {"nombre": "OIRS SERVIU y SEREMI", "detalle": "Oficinas regionales para consultas, trámites y postulaciones", "telefono": "", "web": "https://www.minvu.gob.cl/sobre-minvu/oficinas-de-atencion-presencial/"}
+    ]
+  },
+  {
+    "categoria": "Servicios públicos y salud",
+    "icono": "🏛️",
+    "descripcion": "Orientación para beneficios del Estado, salud y problemas de servicios básicos.",
+    "contactos": [
+      {"nombre": "ChileAtiende", "detalle": "Orientación sobre beneficios, trámites y servicios del Estado", "telefono": "101", "web": "https://www.chileatiende.gob.cl/"},
+      {"nombre": "Salud Responde", "detalle": "Orientación en salud disponible las 24 horas", "telefono": "600 360 77 77", "web": "https://saludresponde.minsal.cl/"},
+      {"nombre": "Ambulancia / SAMU", "detalle": "Emergencias médicas", "telefono": "131", "web": "https://www.senapred.cl/"},
+      {"nombre": "Superintendencia de Servicios Sanitarios", "detalle": "Orientación por cortes de agua y saneamiento", "telefono": "800 381 800", "web": "https://www.siss.gob.cl/"},
+      {"nombre": "Superintendencia de Electricidad y Combustibles", "detalle": "Orientación por cortes de suministro eléctrico", "telefono": "+56 2 2712 7000", "web": "https://www.sec.cl/"}
+    ]
+  },
+  {
+    "categoria": "Apoyo a familias y comunidad",
+    "icono": "🤝",
+    "descripcion": "Canales de orientación y apoyo para familias, niños, niñas y personas afectadas por violencia.",
+    "contactos": [
+      {"nombre": "Fono orientación en violencias de género", "detalle": "Orientación para mujeres que viven o enfrentan situaciones de violencia", "telefono": "1455", "web": "https://www.chileatiende.gob.cl/fichas/33898-fono-orientacion-en-violencia-contra-las-mujeres"},
+      {"nombre": "Fono Niños", "detalle": "Apoyo y orientación para niños, niñas y adolescentes", "telefono": "147", "web": "https://www.carabineros.cl/"},
+      {"nombre": "Fono Familia", "detalle": "Orientación y apoyo a familias", "telefono": "149", "web": "https://www.carabineros.cl/"}
+    ]
+  }
+]

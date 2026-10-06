@@ -8,7 +8,7 @@ title: "Inicio"
 
 ## Información, participación e innovación para fortalecer nuestro barrio.
 
-Esta plataforma busca acercar información pública, fortalecer la participación ciudadana y apoyar el trabajo de las organizaciones comunitarias mediante herramientas digitales simples.
+Esta plataforma está pensada para los hogares que forman parte de proyectos habitacionales DS19. Aquí encontrarás información y herramientas sencillas para organizarte con tus vecinos y vecinas, cuidar y mejorar tu vivienda y barrio con el tiempo, y conocer beneficios públicos vinculados a vivienda, ciudad y desarrollo comunitario.
 
 :::
 
@@ -49,5 +49,17 @@ Revisa respuestas a preguntas frecuentes sobre copropiedad, uso, cuidado y mante
 Busca fondos, concursos y llamados a subsidios, y accede directamente a sus portales de postulación e información.
 
 [Noticias](noticias.qmd)
+:::
+:::::
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+### 🏘️ Proyectos DS19
+
+Busca tu proyecto o comuna para conocer próximas actividades, fechas, horarios y formas de contacto.
+
+[Ver actividades](proyectos_ds19.qmd)
 :::
 :::::

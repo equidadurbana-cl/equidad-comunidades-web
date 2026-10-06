@@ -43,6 +43,7 @@
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>TCIA. CARRET. SAN FELIPE</strong><br><br><strong>Dirección:</strong> RUTA 5 NORTE KM 84", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.940773, -32.851729 ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>SCOM. LLAY LLAY</strong><br><br><strong>Dirección:</strong> SAN FRANCISCO 97", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.955269, -32.842367 ] } },
 { "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Hospital San Francisco (Llaillay)</strong><br><br><strong>Tipo de atención:</strong> Hospital<br><strong>Dirección:</strong>  76", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.95495, -32.84277 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Centro de Salud Familiar Llay Llay</strong><br><br><strong>Tipo de atención:</strong> Centro de Salud Familiar (CESFAM)<br><strong>Dirección:</strong>  76", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.9527, -32.84259 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Centro de Salud Familiar Llay Llay</strong><br><br><strong>Tipo de atención:</strong> Centro de Salud Familiar (CESFAM)<br><strong>Dirección:</strong>  76", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.9527, -32.84259 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Llaillay</strong><br><br><strong>Dirección:</strong> Balmaceda Nº 174<br><strong>Región:</strong> Valparaíso", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.953869, -32.841660000999987 ] } }
 ]
 }

@@ -10,6 +10,7 @@
 { "type": "Feature", "properties": { "capa": "bomberos", "popup": "<strong>Cuerpo de Bomberos</strong><br><br><strong>Dirección:</strong> Bernardo O Higgins 360", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -72.579337776225131, -47.255209372157033 ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>4TA. COM. COCHRANE (F)</strong><br><br><strong>Dirección:</strong> ESMERALDA 522", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -72.571997276002449, -47.253341947963577 ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>RETEN ENTRADA BAKER (F)</strong><br><br><strong>Dirección:</strong> RUTA INTERNACIONAL X-83 KM 83", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -71.973790612999935, -47.183777128999907 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Hospital Lord Cochrane</strong><br><br><strong>Tipo de atención:</strong> Hospital<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -72.57073, -47.25557 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Hospital Lord Cochrane</strong><br><br><strong>Tipo de atención:</strong> Hospital<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -72.57073, -47.25557 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Cochrane</strong><br><br><strong>Dirección:</strong> Esmeralda Nº 398<br><strong>Región:</strong> Aysén del General Carlos Ibáñez del Campo", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -72.572351, -47.254745000999939 ] } }
 ]
 }

@@ -321,6 +321,30 @@ window.iniciarMapaComunas = function (el) {
 
         }
 
+      },
+
+      {
+
+        id: "municipios",
+
+        type: "circle",
+
+        filter: ["==", ["get", "capa"], "municipios"],
+
+        paint: {
+
+          "circle-color": "#6D4C41",
+
+          "circle-radius": 7,
+
+          "circle-opacity": 0.9,
+
+          "circle-stroke-color": "#ffffff",
+
+          "circle-stroke-width": 1.2
+
+        }
+
       }
 
     ];
@@ -531,6 +555,8 @@ window.iniciarMapaComunas = function (el) {
 
       <span style="color:#1976D2;font-size:20px;">●</span> Centros de Salud <br>
 
+      <span style="color:#6D4C41;font-size:20px;">●</span> Municipalidades <br>
+
     `;
 
 
@@ -575,7 +601,9 @@ map.addControl(controlLeyenda, "bottom-right");
 
           ["comisarias", "Carabineros", ["comisarias"]],
 
-          ["salud", "Centros de Salud", ["salud"]]
+          ["salud", "Centros de Salud", ["salud"]],
+
+          ["municipios", "Municipalidades", ["municipios"]]
 
         ];
 
@@ -812,6 +840,10 @@ map.addControl(controlLeyenda, "bottom-right");
 <span class="menu-text">📅 Fondos y convocatorias</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../proyectos_ds19.html"> 
+<span class="menu-text">🏘️ Proyectos DS19</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
 <span class="menu-text">ℹ️ Acerca de</span></a>
   </li>  
@@ -849,13 +881,52 @@ map.addControl(controlLeyenda, "bottom-right");
 </header>
 
 
-<p>Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector.</p>
+<p>Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector. Más abajo encontrarás un directorio con teléfonos y páginas oficiales de apoyo, vivienda, seguridad y servicios públicos.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-70083ad3e55bb749fb12" style="width:100%;height:480px;" class="maplibregl html-widget"></div>
-<script type="application/json" data-for="htmlwidget-70083ad3e55bb749fb12">{"x":{"style":"https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json","center":[-70.65000000000001,-33.45],"zoom":4,"bearing":0,"pitch":0,"projection":"mercator","additional_params":[],"navigation_control":{"show_compass":true,"show_zoom":true,"visualize_pitch":false,"position":"top-right","orientation":"vertical"}},"evals":[],"jsHooks":{"render":[{"code":"function(el) {\n    window.iniciarMapaComunas(el);\n  }","data":null}]}}</script>
+<div id="htmlwidget-f620b8a65eb7eec27855" style="width:100%;height:480px;" class="maplibregl html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f620b8a65eb7eec27855">{"x":{"style":"https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json","center":[-70.65000000000001,-33.45],"zoom":4,"bearing":0,"pitch":0,"projection":"mercator","additional_params":[],"navigation_control":{"show_compass":true,"show_zoom":true,"visualize_pitch":false,"position":"top-right","orientation":"vertical"}},"evals":[],"jsHooks":{"render":[{"code":"function(el) {\n    window.iniciarMapaComunas(el);\n  }","data":null}]}}</script>
 </div>
 </div>
+<section class="directorio-territorial" aria-labelledby="titulo-directorio">
+  <div class="directorio-intro">
+    <h2 id="titulo-directorio" class="anchored">Directorio de apoyo y servicios</h2>
+    <p>Encuentra teléfonos y páginas oficiales para consultas, orientación y emergencias. Ante una emergencia, llama directamente al número correspondiente.</p>
+  </div>
+  <div id="categorias-directorio" class="categorias-directorio"><p class="directorio-cargando">Cargando directorio...</p></div>
+</section>
+
+<style>
+.directorio-territorial { margin:42px 0 10px; padding-top:30px; border-top:2px solid #d6e4e2; }.directorio-intro { max-width:800px; margin:0 0 20px; }.directorio-intro h2 { margin:0 0 8px; color:#174f5a; font-size:28px; }.directorio-intro p { margin:0; color:#526866; line-height:1.6; }
+.contacto-categoria { margin:11px 0; border:1px solid #d6e4e2; border-radius:12px; overflow:hidden; background:#fff; }.contacto-categoria summary { display:flex; align-items:center; gap:12px; padding:16px 19px; cursor:pointer; list-style:none; color:#174f5a; font-size:18px; font-weight:700; background:#f4fbf8; }.contacto-categoria summary::-webkit-details-marker { display:none; }.contacto-categoria summary::after { content:"+"; margin-left:auto; width:26px; height:26px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:#1b6b67; color:#fff; font-size:21px; font-weight:400; }.contacto-categoria[open] summary::after { content:"−"; }.contacto-categoria summary small { display:block; margin-top:3px; color:#5d716f; font-size:13px; font-weight:400; }.contacto-lista { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:11px; padding:17px; }.contacto-item { display:block; min-height:102px; padding:15px; border-radius:9px; border-left:4px solid #d99027; background:#fffaf2; color:#273b3a !important; text-decoration:none !important; }.contacto-item:hover { box-shadow:0 4px 12px rgba(31,83,79,.12); transform:translateY(-1px); }.contacto-item strong { display:block; color:#174f5a; }.contacto-item span { display:block; margin-top:5px; color:#566b68; font-size:13px; line-height:1.4; }.contacto-item b { display:block; margin-top:10px; color:#a65b0a; font-size:17px; }.contacto-enlace { color:#a65b0a !important; font-weight:700; }.directorio-cargando { color:#526866; }
+@media (max-width:700px) { .directorio-territorial { margin-top:28px; }.directorio-intro h2 { font-size:24px; }.contacto-lista { grid-template-columns:1fr; padding:13px; } }
+</style>
+
+<script>
+fetch("datos/directorio_redes.json")
+  .then(function(respuesta) { if (!respuesta.ok) throw new Error("No se encontró el directorio"); return respuesta.json(); })
+  .then(function(categorias) {
+    const destino = document.getElementById("categorias-directorio");
+    destino.innerHTML = "";
+    categorias.forEach(function(categoria) {
+      const bloque = document.createElement("details"); bloque.className = "contacto-categoria";
+      const resumen = document.createElement("summary");
+      resumen.innerHTML = "<span>" + categoria.icono + "</span><span>" + categoria.categoria + "<small>" + categoria.descripcion + "</small></span>";
+      const lista = document.createElement("div"); lista.className = "contacto-lista";
+      categoria.contactos.forEach(function(contacto) {
+        const item = document.createElement("a"); item.className = "contacto-item"; item.href = contacto.web; item.target = "_blank"; item.rel = "noopener noreferrer";
+        const nombre = document.createElement("strong"); nombre.textContent = contacto.nombre;
+        const detalle = document.createElement("span"); detalle.textContent = contacto.detalle;
+        item.append(nombre, detalle);
+        if (contacto.telefono) { const telefono = document.createElement("b"); telefono.textContent = "☎ " + contacto.telefono; item.appendChild(telefono); }
+        const enlace = document.createElement("span"); enlace.className = "contacto-enlace"; enlace.textContent = "Ingresa aquí ↗"; item.appendChild(enlace);
+        lista.appendChild(item);
+      });
+      bloque.append(resumen, lista); destino.appendChild(bloque);
+    });
+  })
+  .catch(function() { document.getElementById("categorias-directorio").innerHTML = "<p class='directorio-cargando'>No fue posible cargar el directorio en este momento.</p>"; });
+</script>
 
 
 

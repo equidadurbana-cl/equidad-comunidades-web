@@ -18,6 +18,7 @@
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>1RA. COM. TALTAL</strong><br><br><strong>Dirección:</strong> SARGENTO ALDEA 502", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.484475, -25.410553 ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>RETEN ALEMANIA (M.C.)</strong><br><br><strong>Dirección:</strong> RUTA 5 NORTE 1144", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.974452870999926, -25.407592029999925 ] } },
 { "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Hospital 21 de Mayo (Taltal)</strong><br><br><strong>Tipo de atención:</strong> Hospital<br><strong>Dirección:</strong>  450", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.48121, -25.40817 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Paposo</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.46516, -25.00953 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Paposo</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.46516, -25.00953 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Taltal</strong><br><br><strong>Dirección:</strong> Prat Nº515<br><strong>Región:</strong> Antofagasta", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.486658, -25.407602000999923 ] } }
 ]
 }

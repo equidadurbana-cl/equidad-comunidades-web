@@ -1,0 +1,88 @@
+---
+title: "Proyectos DS19"
+format: html
+---
+
+Selecciona tu proyecto para conocer las próximas actividades informadas por Equidad Urbana.
+
+```{=html}
+<style>
+.ds19-buscador { max-width: 860px; margin: 28px 0; padding: 24px; border: 1px solid #b9d1ce; border-radius: 14px; background: linear-gradient(120deg, #f4fbf8, #eef6fb); }
+.ds19-buscador label { display:block; margin:0 0 9px; color:#174f5a; font-size:17px; font-weight:700; }.ds19-buscador small { display:block; margin:9px 0 0; color:#526866; line-height:1.45; }
+.ds19-buscador select { width:100%; box-sizing:border-box; padding:13px 15px; border:1px solid #8fb7b1; border-radius:9px; background:#fff; font-size:16px; color:#273b3a; }
+.ds19-aviso { max-width:860px; padding:20px 22px; border-radius:12px; background:#f3f6f5; color:#526866; line-height:1.55; }.ds19-aviso strong { color:#174f5a; }
+.ds19-resultados { max-width:900px; margin-top:22px; }.ds19-tarjeta { margin:0 0 14px; padding:23px 25px; border-radius:13px; border-left:6px solid #df9228; background:#fff; box-shadow:0 2px 9px rgba(31,83,79,.10); }.ds19-tarjeta h2 { margin:0 0 6px; color:#174f5a; font-size:22px; }.ds19-comuna { margin:0 0 15px; color:#647572; font-weight:600; }.ds19-mensaje { margin:0; color:#273b3a; font-size:17px; line-height:1.65; }.ds19-mensaje a { color:#92580a; font-weight:700; }.ds19-sin-resultados { padding:19px 22px; border-radius:12px; background:#fff8ed; color:#735126; line-height:1.5; }
+</style>
+
+<section class="ds19-buscador" aria-label="Seleccionar proyecto DS19">
+  <label for="seleccionar-ds19">Selecciona tu proyecto</label>
+  <select id="seleccionar-ds19"><option value="">Cargando proyectos...</option></select>
+  <small>La información se mostrará solo después de seleccionar un proyecto.</small>
+</section>
+<div id="ds19-aviso" class="ds19-aviso"><strong>Selecciona tu proyecto.</strong> Así podrás revisar próximas actividades, fechas, horarios y datos de contacto.</div>
+<section id="ds19-resultados" class="ds19-resultados" aria-live="polite"></section>
+
+<script>
+(function () {
+  const selector = document.getElementById("seleccionar-ds19");
+  const aviso = document.getElementById("ds19-aviso");
+  const resultados = document.getElementById("ds19-resultados");
+  let actividades = [];
+  let proyectos = [];
+
+  function mostrarProyecto() {
+    const proyectoSeleccionado = selector.value;
+    resultados.innerHTML = "";
+    if (!proyectoSeleccionado) {
+      aviso.className = "ds19-aviso";
+      aviso.innerHTML = "<strong>Selecciona tu proyecto.</strong> Así podrás revisar próximas actividades, fechas, horarios y datos de contacto.";
+      return;
+    }
+    const proyecto = proyectos.find(function (item) { return item.proyecto === proyectoSeleccionado; });
+    const encontrados = actividades.filter(function (item) { return item.proyecto === proyectoSeleccionado; });
+    aviso.className = "ds19-aviso";
+    if (!encontrados.length) {
+      aviso.innerHTML = "<strong>Estimado/a vecino/a:</strong> aún no hay próximos talleres o actividades agendadas para este proyecto.";
+      if (proyecto && proyecto.correo) {
+        const texto = document.createTextNode(" Para más información, escribe a ");
+        const correo = document.createElement("a"); correo.href = "mailto:" + proyecto.correo; correo.textContent = proyecto.correo;
+        aviso.append(texto, correo, ".");
+      }
+      return;
+    }
+    aviso.innerHTML = "<strong>Próximas actividades:</strong> revisa las fechas, horarios y datos de contacto.";
+
+    encontrados.forEach(function (item) {
+      const tarjeta = document.createElement("article"); tarjeta.className = "ds19-tarjeta";
+      const titulo = document.createElement("h2"); titulo.textContent = item.proyecto;
+      const comuna = document.createElement("p"); comuna.className = "ds19-comuna"; comuna.textContent = item.comuna || "Proyecto DS19";
+      const mensaje = document.createElement("p"); mensaje.className = "ds19-mensaje";
+      mensaje.append("Estimado/a vecino/a: la próxima actividad es ");
+      const actividad = document.createElement("strong"); actividad.textContent = item.actividad;
+      mensaje.append(actividad);
+      if (item.fecha) mensaje.append(", el " + item.fecha);
+      if (item.horario) mensaje.append(" a las " + item.horario);
+      mensaje.append(". ¡Esperamos contar con tu asistencia!");
+      if (item.correo) {
+        mensaje.append(" Para más información, escribe a ");
+        const correo = document.createElement("a"); correo.href = "mailto:" + item.correo; correo.textContent = item.correo;
+        mensaje.append(correo, ".");
+      }
+      tarjeta.append(titulo, comuna, mensaje); resultados.appendChild(tarjeta);
+    });
+  }
+
+  fetch("data/proyectos_ds19.json")
+    .then(function (respuesta) { if (!respuesta.ok) throw new Error("Archivo no disponible"); return respuesta.json(); })
+    .then(function (datos) {
+      proyectos = Array.isArray(datos.proyectos) ? datos.proyectos : [];
+      actividades = Array.isArray(datos.actividades) ? datos.actividades : [];
+      selector.innerHTML = "<option value=\"\">Selecciona un proyecto</option>";
+      proyectos.forEach(function (item) { const opcion = document.createElement("option"); opcion.value = item.proyecto; opcion.textContent = item.proyecto + (item.comuna ? " · " + item.comuna : ""); selector.appendChild(opcion); });
+      selector.addEventListener("change", mostrarProyecto);
+      if (!proyectos.length) { selector.innerHTML = "<option value=\"\">No hay proyectos disponibles</option>"; selector.disabled = true; }
+    })
+    .catch(function () { aviso.innerHTML = "<strong>No se pudo cargar la información de proyectos.</strong> Intenta actualizar la página más tarde."; });
+}());
+</script>
+```

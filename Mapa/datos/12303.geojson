@@ -8,6 +8,7 @@
 { "type": "Feature", "properties": { "capa": "colegios", "popup": "<strong>ESCUELA IGNACIO CARRERA PINTO</strong><br><br><strong>Dirección:</strong> CAMERON 0", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.64666, -53.63903 ] } },
 { "type": "Feature", "properties": { "capa": "jardines", "popup": "<strong>TOLKEN HARU</strong><br><br><strong>Dirección:</strong> CAMERON S/N-TIMAUKEL ", "etiqueta": "" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -69.64675, -53.639 ] ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>RETEN PAMPA GUANACO (F)</strong><br><br><strong>Dirección:</strong> RUTA I-85 KM 130", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -68.802055438999886, -54.049263840999913 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Cameron</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.64585, -53.64055 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Cameron</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.64585, -53.64055 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Timaukel</strong><br><br><strong>Dirección:</strong> Villa Cameron s/n<br><strong>Región:</strong> Magallanes y de la Antártica Chilena", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.646217, -53.640197000999926 ] } }
 ]
 }

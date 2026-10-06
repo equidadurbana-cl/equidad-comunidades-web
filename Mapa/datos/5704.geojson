@@ -20,6 +20,7 @@
 { "type": "Feature", "properties": { "capa": "jardines", "popup": "<strong>NA</strong><br><br><strong>Dirección:</strong> NA ", "etiqueta": "" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -70.872535785545722, -32.792400394065965 ] ] } },
 { "type": "Feature", "properties": { "capa": "jardines", "popup": "<strong>NA</strong><br><br><strong>Dirección:</strong> NA ", "etiqueta": "" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -70.85274400040278, -32.78387500026399 ] ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>RETEN PANQUEHUE</strong><br><br><strong>Dirección:</strong> TRONCAL 1158", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.833897271999945, -32.769539028999922 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Centro de Salud Familiar María Elena Peñaloza Morales</strong><br><br><strong>Tipo de atención:</strong> Centro de Salud Familiar (CESFAM)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.83473, -32.76792 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Centro de Salud Familiar María Elena Peñaloza Morales</strong><br><br><strong>Tipo de atención:</strong> Centro de Salud Familiar (CESFAM)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.83473, -32.76792 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Panquehue</strong><br><br><strong>Dirección:</strong> Troncal Nº 1166<br><strong>Región:</strong> Valparaíso", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.834620719999975, -32.770365310999971 ] } }
 ]
 }

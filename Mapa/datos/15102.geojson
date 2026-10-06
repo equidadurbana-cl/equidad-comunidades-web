@@ -17,6 +17,7 @@
 { "type": "Feature", "properties": { "capa": "jardines", "popup": "<strong>SEMILLITAS DE CUYA</strong><br><br><strong>Dirección:</strong> ESCUELA DE CUYA ", "etiqueta": "" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ -70.179941, -19.159978 ] ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>RETEN CODPA</strong><br><br><strong>Dirección:</strong> SANTA ROSA S/N", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.744262733999904, -18.833653145999907 ] } },
 { "type": "Feature", "properties": { "capa": "comisarias", "popup": "<strong>TCIA. CARRET. ARICA</strong><br><br><strong>Dirección:</strong> RUTA 5 NORTE KM 1968", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.179247, -19.160613 ] } },
-{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Codpa</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.74486, -18.83323 ] } }
+{ "type": "Feature", "properties": { "capa": "salud", "popup": "<strong>Posta de Salud Rural Codpa</strong><br><br><strong>Tipo de atención:</strong> Posta de Salud Rural (PSR)<br><strong>Dirección:</strong>  NA", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -69.74486, -18.83323 ] } },
+{ "type": "Feature", "properties": { "capa": "municipios", "popup": "<strong>Municipalidad de Camarones</strong><br><br><strong>Dirección:</strong> Avanzada de Cuya s/n<br><strong>Región:</strong> Arica y Parinacota", "etiqueta": "" }, "geometry": { "type": "Point", "coordinates": [ -70.18, -19.160017000999986 ] } }
 ]
 }
