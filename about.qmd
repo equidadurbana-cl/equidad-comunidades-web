@@ -1,9 +1,76 @@
 ---
-title: "About"
+title: "Acerca de"
+format:
+  html:
+    title-block: false
 ---
 
-About this site
+::: {.about-hero}
+::: {.about-hero-text}
+<p class="eyebrow">Equidad Urbana</p>
 
-```{r}
-1 + 1
-```
+# Información, participación y territorio
+
+Equidad Urbana es una consultora de ciencias sociales especializada en gestión social del hábitat, participación ciudadana y estudios urbanos. Acompañamos proyectos urbanos y habitacionales con una mirada social y territorial, para comprender mejor cada contexto, vincularse con las comunidades y tomar decisiones pertinentes.
+
+[Conoce Equidad Urbana](https://equidadurbana.org/){target="_blank" rel="noopener" .about-button}
+:::
+
+![Visita a la obra en Antofagasta, en el marco de un Plan de Integración Social DS19](https://equidadurbana.org/img/14-pis-terreno.jpg){.about-hero-image}
+:::
+
+::: {.about-intro}
+<p class="eyebrow">Equidad-comunidades</p>
+
+## Una plataforma para acompañar la vida en comunidad
+
+Equidad-comunidades es una plataforma digital dirigida a hogares que forman parte de proyectos habitacionales DS19. Reúne, en un solo lugar, información y herramientas sencillas para organizarse con vecinos y vecinas, cuidar y mejorar la vivienda y el barrio, y conocer beneficios públicos vinculados a vivienda, ciudad y desarrollo comunitario.
+:::
+
+::: {.about-pillars}
+::: {.about-pillar}
+<span aria-hidden="true">🗺️</span>
+
+### Conocer el territorio
+
+Explora redes, servicios y equipamientos cercanos para conectar con las oportunidades del barrio.
+:::
+
+::: {.about-pillar}
+<span aria-hidden="true">🤝</span>
+
+### Fortalecer la comunidad
+
+Accede a contenidos y preguntas frecuentes sobre convivencia, organización y cuidado de los espacios comunes.
+:::
+
+::: {.about-pillar}
+<span aria-hidden="true">📌</span>
+
+### Acceder a oportunidades
+
+Encuentra fondos, llamados públicos e información útil para acompañar iniciativas de las comunidades.
+:::
+:::
+
+::: {.about-story}
+::: {.about-story-image}
+![Taller de codiseño con comunidades](https://equidadurbana.org/img/13-parquemet.jpg)
+:::
+
+::: {.about-story-text}
+<p class="eyebrow">Una herramienta viva</p>
+
+## Información útil, cuando se necesita
+
+La plataforma busca facilitar el acceso a información clara y actualizada. Incluye una biblioteca de documentos, un mapa de redes del territorio, preguntas frecuentes, fondos y convocatorias, y un espacio con actividades de proyectos DS19.
+
+Está pensada como un apoyo para la vida cotidiana de las comunidades y se complementa con los canales oficiales de las instituciones públicas y con el trabajo en terreno de Equidad Urbana.
+:::
+:::
+
+::: {.about-contact}
+### ¿Tienes una consulta o sugerencia?
+
+Escríbenos a [contacto@equidadurbana.org](mailto:contacto@equidadurbana.org). Tu experiencia ayuda a que esta plataforma siga mejorando.
+:::

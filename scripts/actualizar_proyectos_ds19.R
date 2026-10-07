@@ -16,7 +16,7 @@ if (!file.exists(archivo_entrada)) stop("No se encontró ", archivo_entrada)
 
 datos <- readxl::read_excel(archivo_entrada, sheet = "Actividades")
 proyectos <- readxl::read_excel(archivo_entrada, sheet = "Proyectos")
-requeridas <- c("Proyecto DS19", "Comuna", "Próxima actividad", "Fecha", "Horario", "Correo de contacto", "Visible")
+requeridas <- c("Proyecto DS19", "Comuna", "Próxima actividad", "Fecha", "Horario", "Lugar", "Visible")
 faltan_columnas <- setdiff(requeridas, names(datos))
 if (length(faltan_columnas)) {
   stop("Faltan estas columnas en la planilla: ", paste(faltan_columnas, collapse = ", "))
@@ -55,7 +55,7 @@ datos$`Proyecto DS19` <- limpiar(datos$`Proyecto DS19`)
 datos$Comuna <- limpiar(datos$Comuna)
 datos$`Próxima actividad` <- limpiar(datos$`Próxima actividad`)
 datos$Horario <- limpiar(datos$Horario)
-datos$`Correo de contacto` <- limpiar(datos$`Correo de contacto`)
+datos$Lugar <- limpiar(datos$Lugar)
 datos$Visible <- tolower(limpiar(datos$Visible))
 datos$.fecha <- convertir_fecha(datos$Fecha)
 
@@ -85,15 +85,20 @@ datos <- datos[
     !is.na(datos$.fecha), , drop = FALSE
 ]
 
+# Se publica solo la próxima actividad de cada proyecto.
+datos <- datos[order(tolower(datos$`Proyecto DS19`), datos$.fecha), , drop = FALSE]
+datos <- datos[!duplicated(tolower(datos$`Proyecto DS19`)), , drop = FALSE]
+
 publicaciones <- lapply(seq_len(nrow(datos)), function(i) {
   indice_proyecto <- match(tolower(datos$`Proyecto DS19`[[i]]), tolower(proyectos$`Proyecto DS19`))
-  correo_proyecto <- if (!is.na(indice_proyecto)) proyectos$`Correo de contacto`[[indice_proyecto]] else datos$`Correo de contacto`[[i]]
+  correo_proyecto <- if (!is.na(indice_proyecto)) proyectos$`Correo de contacto`[[indice_proyecto]] else ""
   list(
     proyecto = datos$`Proyecto DS19`[[i]],
     comuna = datos$Comuna[[i]],
     actividad = datos$`Próxima actividad`[[i]],
     fecha = format(datos$.fecha[[i]], "%d/%m/%Y"),
     horario = datos$Horario[[i]],
+    lugar = datos$Lugar[[i]],
     correo = correo_proyecto
   )
 })

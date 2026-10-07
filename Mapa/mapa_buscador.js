@@ -5,6 +5,24 @@ window.iniciarMapaComunas = function (el) {
   async function iniciar() {
     let indice;
 
+    const esMovil = window.matchMedia("(max-width: 700px)").matches;
+    const estilos = document.createElement("style");
+    estilos.textContent = `
+      .mapa-control-detalle { font:13px Arial,sans-serif; }
+      .mapa-control-detalle summary { cursor:pointer; list-style:none; font-weight:700; color:#174f5a; }
+      .mapa-control-detalle summary::-webkit-details-marker { display:none; }
+      .mapa-control-detalle summary::after { content:"+"; float:right; margin-left:18px; color:#196774; font-size:18px; line-height:13px; }
+      .mapa-control-detalle[open] summary::after { content:"−"; }
+      .mapa-control-contenido { margin-top:8px; }
+      @media (max-width:700px) {
+        .maplibregl-ctrl-top-left .mapa-buscador input { width:145px !important; }
+        .maplibregl-ctrl-top-left .mapa-capas { max-width:178px; }
+        .maplibregl-ctrl-bottom-right .mapa-leyenda { max-width:190px; }
+        .mapa-control-detalle { font-size:12px; }
+      }
+    `;
+    document.head.appendChild(estilos);
+
     try {
       const respuesta = await fetch("datos/comunas.json");
 
@@ -147,7 +165,7 @@ window.iniciarMapaComunas = function (el) {
     const controlBuscador = {
       onAdd: function () {
         const contenedor = document.createElement("div");
-        contenedor.className = "maplibregl-ctrl";
+        contenedor.className = "maplibregl-ctrl mapa-buscador";
         contenedor.style.cssText =
           "background:#fff;padding:8px;border-radius:4px;" +
           "box-shadow:0 1px 4px rgba(0,0,0,.25);";
@@ -225,14 +243,16 @@ window.iniciarMapaComunas = function (el) {
   onAdd: function () {
     const contenedor = document.createElement("div");
 
-    contenedor.className = "maplibregl-ctrl";
+    contenedor.className = "maplibregl-ctrl mapa-leyenda";
     contenedor.style.cssText =
       "background:#fff;padding:10px 12px;border-radius:4px;" +
       "box-shadow:0 1px 4px rgba(0,0,0,.25);font-size:13px;" +
       "line-height:1.9;";
 
-    contenedor.innerHTML = `
-      <strong>Equipamientos</strong><br>
+    const detalle = document.createElement("details");
+    detalle.className = "mapa-control-detalle";
+    detalle.open = !esMovil;
+    detalle.innerHTML = `<summary>Equipamientos</summary><div class="mapa-control-contenido">
       <span style="color:#007C91;font-size:17px;">■</span> Proyectos DS19<br>
       <span style="color:#f0941f;font-size:20px;">●</span> Educación básica y media<br>
       <span style="color:#7B2CBF;font-size:20px;">●</span> Jardines infantiles Integra y JUNJI<br>
@@ -240,7 +260,8 @@ window.iniciarMapaComunas = function (el) {
       <span style="color:#2e8b57;font-size:20px;">●</span> Carabineros<br>
       <span style="color:#1976D2;font-size:20px;">●</span> Centros de Salud <br>
       <span style="color:#6D4C41;font-size:20px;">●</span> Municipalidades <br>
-    `;
+    </div>`;
+    contenedor.appendChild(detalle);
 
     return contenedor;
   },
@@ -253,9 +274,13 @@ map.addControl(controlLeyenda, "bottom-right");
     const controlCapas = {
       onAdd: function () {
         const contenedor = document.createElement("div");
-        contenedor.className = "maplibregl-ctrl";
+        contenedor.className = "maplibregl-ctrl mapa-capas";
         contenedor.style.cssText = "background:#fff;padding:10px 12px;border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.25);font:13px Arial,sans-serif;min-width:180px;";
-        contenedor.innerHTML = "<strong style='display:block;margin-bottom:3px;'>Filtrar capas</strong><small style='display:block;color:#526866;margin-bottom:6px;'>Activa o desactiva la información que quieres ver.</small>";
+        const detalle = document.createElement("details");
+        detalle.className = "mapa-control-detalle";
+        detalle.open = !esMovil;
+        detalle.innerHTML = "<summary>Filtrar capas</summary><div class='mapa-control-contenido'><small style='display:block;color:#526866;margin-bottom:6px;'>Activa o desactiva la información que quieres ver.</small></div>";
+        const contenido = detalle.querySelector(".mapa-control-contenido");
         const opciones = [
           ["ds19", "Proyectos DS19", ["ds19", "ds19-bordes", "ds19-etiquetas"]],
           ["colegios", "Educación básica y media", ["colegios"]],
@@ -287,8 +312,9 @@ map.addControl(controlLeyenda, "bottom-right");
           casilla.addEventListener("change", function () {
             actualizarVisibilidad(opcion[2], casilla.checked);
           });
-          etiqueta.appendChild(casilla); etiqueta.appendChild(document.createTextNode(opcion[1])); contenedor.appendChild(etiqueta);
+          etiqueta.appendChild(casilla); etiqueta.appendChild(document.createTextNode(opcion[1])); contenido.appendChild(etiqueta);
         });
+        contenedor.appendChild(detalle);
         return contenedor;
       },
       onRemove: function () {}

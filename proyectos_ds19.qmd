@@ -39,7 +39,7 @@ Selecciona tu proyecto para conocer las próximas actividades informadas por Equ
       return;
     }
     const proyecto = proyectos.find(function (item) { return item.proyecto === proyectoSeleccionado; });
-    const encontrados = actividades.filter(function (item) { return item.proyecto === proyectoSeleccionado; });
+    const encontrados = actividades.filter(function (item) { return item.proyecto === proyectoSeleccionado; }).slice(0, 1);
     aviso.className = "ds19-aviso";
     if (!encontrados.length) {
       aviso.innerHTML = "<strong>Estimado/a vecino/a:</strong> aún no hay próximos talleres o actividades agendadas para este proyecto.";
@@ -57,10 +57,11 @@ Selecciona tu proyecto para conocer las próximas actividades informadas por Equ
       const titulo = document.createElement("h2"); titulo.textContent = item.proyecto;
       const comuna = document.createElement("p"); comuna.className = "ds19-comuna"; comuna.textContent = item.comuna || "Proyecto DS19";
       const mensaje = document.createElement("p"); mensaje.className = "ds19-mensaje";
-      mensaje.append("Estimado/a vecino/a: la próxima actividad es ");
+      mensaje.append("Estimado/a vecino/a: la próxima actividad es el taller: ");
       const actividad = document.createElement("strong"); actividad.textContent = item.actividad;
       mensaje.append(actividad);
       if (item.fecha) mensaje.append(", el " + item.fecha);
+      if (item.lugar) mensaje.append(", en " + item.lugar);
       if (item.horario) mensaje.append(" a las " + item.horario);
       mensaje.append(". ¡Esperamos contar con tu asistencia!");
       if (item.correo) {
@@ -75,7 +76,7 @@ Selecciona tu proyecto para conocer las próximas actividades informadas por Equ
   fetch("data/proyectos_ds19.json")
     .then(function (respuesta) { if (!respuesta.ok) throw new Error("Archivo no disponible"); return respuesta.json(); })
     .then(function (datos) {
-      proyectos = Array.isArray(datos.proyectos) ? datos.proyectos : [];
+      proyectos = (Array.isArray(datos.proyectos) ? datos.proyectos : []).sort(function (a, b) { return a.proyecto.localeCompare(b.proyecto, "es"); });
       actividades = Array.isArray(datos.actividades) ? datos.actividades : [];
       selector.innerHTML = "<option value=\"\">Selecciona un proyecto</option>";
       proyectos.forEach(function (item) { const opcion = document.createElement("option"); opcion.value = item.proyecto; opcion.textContent = item.proyecto + (item.comuna ? " · " + item.comuna : ""); selector.appendChild(opcion); });

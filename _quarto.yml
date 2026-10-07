@@ -37,7 +37,7 @@ website:
   title: "Equidad-comunidades"
   page-footer:
     left: |
-      <div class="footer-marca"><img src="assets/logo-equidad-urbana-blanco.png" alt="Equidad Urbana"><span>Información, participación y herramientas para fortalecer la vida en comunidad.</span></div>
+      <div class="footer-marca"><div class="footer-logo" role="img" aria-label="Equidad Urbana"></div><span>Información, participación y herramientas para fortalecer la vida en comunidad.</span></div>
     center: |
       <div class="footer-contacto"><strong>Contacto</strong><a href="mailto:contacto@equidadurbana.org">contacto@equidadurbana.org</a><span>Carlos Antúnez 2616, of. 32<br>Providencia, Santiago</span></div>
     right: |
@@ -58,7 +58,7 @@ website:
         text: ❓ Preguntas frecuentes PIS
 
       - href: noticias.qmd
-        text: 📅 Fondos y convocatorias
+        text: 📅 Fondos y noticias
 
       - href: proyectos_ds19.qmd
         text: 🏘️ Proyectos DS19
@@ -69,6 +69,7 @@ website:
 
 format:
   html:
+    include-in-header: assets/clarity.html
     grid:
       body-width: 1200px
       margin-width: 0px

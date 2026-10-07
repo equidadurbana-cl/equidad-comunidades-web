@@ -23,22 +23,22 @@
     {
       "proyecto": "Pintor Gustavo Cabello",
       "comuna": "Rancagua",
-      "correo": ""
+      "correo": "pintorgustavocabello2@gmail.com"
     },
     {
       "proyecto": "Jardines de San Bernardo 1",
       "comuna": "San Bernardo",
-      "correo": ""
+      "correo": "jardinessb.pis@gmail.com"
     },
     {
       "proyecto": "Pataguas XI",
       "comuna": "Lampa",
-      "correo": "ds19rm@socovesa.cl"
+      "correo": "ds19rm@socovesa.c"
     },
     {
       "proyecto": "Principal 1385",
       "comuna": "Conchalí",
-      "correo": ""
+      "correo": "principal1385@gmail.com"
     },
     {
       "proyecto": "Samuel Román",
@@ -53,12 +53,12 @@
     {
       "proyecto": "Panorámico 1 Torre A",
       "comuna": "Antofagasta",
-      "correo": ""
+      "correo": "panoramico1.pis@gmail.com"
     },
     {
       "proyecto": "Gran Avenida",
       "comuna": "El Bosque",
-      "correo": "Plands19@rvc.cl"
+      "correo": "plands19@rvc.cl"
     },
     {
       "proyecto": "Jardines de San Bernardo 2",
@@ -78,15 +78,8 @@
       "actividad": "Repetición Visita a la obra",
       "fecha": "09/10/2026",
       "horario": "Dos turnos: 15:00 y 16:30 horas",
-      "correo": "Plands19@rvc.cl"
-    },
-    {
-      "proyecto": "Valles de Rengo III Etapa 1",
-      "comuna": "Rengo",
-      "actividad": "Repetición Taller de Organización Comunitaria",
-      "fecha": "15/10/2026",
-      "horario": "",
-      "correo": "vallesderengo3.pis@gmail.com"
+      "lugar": "",
+      "correo": "plands19@rvc.cl"
     },
     {
       "proyecto": "Pataguas XI",
@@ -94,7 +87,8 @@
       "actividad": "Taller de Organización Comunitaria",
       "fecha": "17/10/2026",
       "horario": "Tres turnos:",
-      "correo": "ds19rm@socovesa.cl"
+      "lugar": "",
+      "correo": "ds19rm@socovesa.c"
     },
     {
       "proyecto": "Principal 1385",
@@ -102,7 +96,17 @@
       "actividad": "Redes comunitarias",
       "fecha": "21/10/2026",
       "horario": "18:00 horas",
-      "correo": ""
+      "lugar": "",
+      "correo": "principal1385@gmail.com"
+    },
+    {
+      "proyecto": "Valles de Rengo III Etapa 1",
+      "comuna": "Rengo",
+      "actividad": "Repetición Taller de Organización Comunitaria",
+      "fecha": "15/10/2026",
+      "horario": "",
+      "lugar": "",
+      "correo": "vallesderengo3.pis@gmail.com"
     }
   ]
 }

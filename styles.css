@@ -88,11 +88,11 @@ body {
 .page-footer .nav-footer a:hover, footer.footer .nav-footer a:hover { color: #a8d8d4 !important; text-decoration: none; }
 .page-footer .nav-footer-left, footer.footer .nav-footer-left { justify-self: start; text-align: left !important; }
 .footer-marca { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1.1rem; }
-.footer-marca img { width: 185px; max-width: 100%; height: auto; object-fit: contain; }
+.footer-logo { width: 185px; max-width: 100%; height: 46px; background: url("assets/logo-equidad-urbana-blanco.png") left center / contain no-repeat; }
 .footer-marca span { display: block; max-width: 300px; color: #d4d4d4 !important; font-size: .9rem; line-height: 1.55; }
 .footer-contacto strong, .footer-redes strong { display: block; color: #a8d8d4 !important; margin-bottom: .85rem; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .footer-contacto a, .footer-contacto span, .footer-redes a { display: block; margin: 0 0 .55rem; color: #f8f8f8 !important; font-size: .9rem; line-height: 1.5; }
-@media (max-width: 760px) { .page-footer .nav-footer, footer.footer .nav-footer { grid-template-columns: 1fr; gap: 2.2rem; padding: 3rem 1.5rem 2.5rem; } .footer-marca img { width: 175px; } }
+@media (max-width: 760px) { .page-footer .nav-footer, footer.footer .nav-footer { grid-template-columns: 1fr; gap: 2.2rem; padding: 3rem 1.5rem 2.5rem; } .footer-logo { width: 175px; } }
 
 /* Acerca suavemente el bloque de marca al buscador, sin descentrar la barra. */
 #quarto-search {
@@ -226,6 +226,69 @@ body {
   .hero-inicio { min-height: 210px; padding: 26px 37% 22px 22px; }
   .hero-inicio h1 { font-size: 1.75rem; }
   .hero-inicio h2 { font-size: 1.05rem; }
+}
+
+/* ================================
+   ACERCA DE
+   ================================ */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(310px, .95fr);
+  margin: .4rem 0 3.2rem;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--eu-profundo);
+  box-shadow: 0 12px 28px rgba(15, 78, 89, .16);
+}
+
+.about-hero-text { padding: clamp(2rem, 5vw, 4.35rem); color: #edf8f6; }
+
+.about-hero .eyebrow,
+.about-intro .eyebrow,
+.about-story .eyebrow {
+  margin: 0 0 .7rem;
+  color: var(--eu-ocre);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.about-hero h1 { margin: 0 0 1rem; color: #fff; font-size: clamp(2rem, 3.8vw, 3.35rem); line-height: 1.06; }
+.about-hero-text > p:not(.eyebrow) { max-width: 620px; margin-bottom: 1.65rem; font-size: 1.05rem; line-height: 1.7; }
+
+.about-button { display: inline-block; padding: .68rem 1rem; border-radius: 999px; background: #fff; color: var(--eu-profundo) !important; font-weight: 700; text-decoration: none; transition: transform .16s ease, background .16s ease; }
+.about-button:hover { transform: translateY(-2px); background: #e6f1ef; }
+
+.about-hero-image { width: 100%; height: 100%; min-height: 380px; object-fit: cover; object-position: center; }
+
+.about-intro { max-width: 850px; margin: 0 auto 1.8rem; text-align: center; }
+.about-intro h2, .about-story h2 { color: var(--eu-profundo); font-size: clamp(1.7rem, 3vw, 2.4rem); }
+.about-intro > p:last-child { color: #4c6062; font-size: 1.08rem; line-height: 1.75; }
+
+.about-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 2rem 0 4rem; }
+.about-pillar { padding: 1.45rem 1.4rem; border: 1px solid #d7e6e3; border-top: 4px solid var(--eu-petroleo); border-radius: 13px; background: #fff; box-shadow: 0 4px 12px rgba(21, 67, 74, .06); }
+.about-pillar:nth-child(2) { border-top-color: #d97b1b; }
+.about-pillar:nth-child(3) { border-top-color: #5a988c; }
+.about-pillar > span { display: block; margin-bottom: .55rem; font-size: 1.7rem; }
+.about-pillar h3 { margin: 0 0 .5rem; color: var(--eu-profundo); font-size: 1.12rem; }
+.about-pillar p { margin: 0; color: #59696b; line-height: 1.6; }
+
+.about-story { display: grid; grid-template-columns: minmax(300px, .95fr) minmax(0, 1.05fr); align-items: stretch; overflow: hidden; margin: 0 0 2.25rem; border-radius: 16px; background: #eaf3f1; }
+.about-story-image img { width: 100%; height: 100%; min-height: 330px; object-fit: cover; object-position: center; }
+.about-story-text { padding: clamp(1.7rem, 4vw, 3.2rem); }
+.about-story-text p:last-child { margin: 0; color: #42575a; line-height: 1.72; }
+
+.about-contact { margin: 2rem 0 1rem; padding: 1.3rem 1.5rem; border-left: 5px solid var(--eu-ocre); border-radius: 0 10px 10px 0; background: #fff6e9; }
+.about-contact h3 { margin: 0 0 .35rem; color: var(--eu-profundo); font-size: 1.05rem; }
+.about-contact p { margin: 0; color: #4b5455; }
+
+@media (max-width: 760px) {
+  .about-hero, .about-story { grid-template-columns: 1fr; }
+  .about-hero-image { min-height: 260px; max-height: 330px; }
+  .about-pillars { grid-template-columns: 1fr; }
+  .about-story-image img { min-height: 240px; max-height: 300px; }
 }
 
 /* ================================

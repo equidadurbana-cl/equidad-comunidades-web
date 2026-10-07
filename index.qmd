@@ -18,7 +18,8 @@ Esta plataforma está pensada para los hogares que forman parte de proyectos hab
 ::: {.column width="50%"}
 ### 🗺️ Explora el territorio
 
-Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector.
+Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector. 
+Encuentra los núméros telefónicos y páginas web de diferentes organismos públicos.
 
 [Ir al mapa](Mapa/prueba_mapgl.qmd)
 :::
@@ -44,9 +45,9 @@ Revisa respuestas a preguntas frecuentes sobre copropiedad, uso, cuidado y mante
 :::
 
 ::: {.column width="50%"}
-### 📝 Fondos y convocatorias públicas
+### 📝 Fondos públicos y noticias de interés
 
-Busca fondos, concursos y llamados a subsidios, y accede directamente a sus portales de postulación e información.
+Busca fondos, concursos y llamados a subsidios, y accede directamente a sus portales de postulación e información. Encuentra noticias relacionadas con tu comuna o región. 
 
 [Noticias](noticias.qmd)
 :::
@@ -58,7 +59,7 @@ Busca fondos, concursos y llamados a subsidios, y accede directamente a sus port
 ::: {.column width="50%"}
 ### 🏘️ Proyectos DS19
 
-Busca tu proyecto o comuna para conocer próximas actividades, fechas, horarios y formas de contacto.
+Busca tu proyecto o comuna para conocer las próximas actividades del PIS, sus fechas, horarios, lugar de reunión y email de contacto.
 
 [Ver actividades](proyectos_ds19.qmd)
 :::

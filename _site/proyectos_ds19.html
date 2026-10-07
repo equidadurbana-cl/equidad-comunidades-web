@@ -73,6 +73,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<!-- Microsoft Clarity: analítica de uso y experiencia del sitio -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "yu4nk235ud");
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -117,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./noticias.html"> 
-<span class="menu-text">📅 Fondos y convocatorias</span></a>
+<span class="menu-text">📅 Fondos y noticias</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./proyectos_ds19.html" aria-current="page"> 
@@ -195,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
       return;
     }
     const proyecto = proyectos.find(function (item) { return item.proyecto === proyectoSeleccionado; });
-    const encontrados = actividades.filter(function (item) { return item.proyecto === proyectoSeleccionado; });
+    const encontrados = actividades.filter(function (item) { return item.proyecto === proyectoSeleccionado; }).slice(0, 1);
     aviso.className = "ds19-aviso";
     if (!encontrados.length) {
       aviso.innerHTML = "<strong>Estimado/a vecino/a:</strong> aún no hay próximos talleres o actividades agendadas para este proyecto.";
@@ -213,10 +221,11 @@ ul.task-list li input[type="checkbox"] {
       const titulo = document.createElement("h2"); titulo.textContent = item.proyecto;
       const comuna = document.createElement("p"); comuna.className = "ds19-comuna"; comuna.textContent = item.comuna || "Proyecto DS19";
       const mensaje = document.createElement("p"); mensaje.className = "ds19-mensaje";
-      mensaje.append("Estimado/a vecino/a: la próxima actividad es ");
+      mensaje.append("Estimado/a vecino/a: la próxima actividad es el taller: ");
       const actividad = document.createElement("strong"); actividad.textContent = item.actividad;
       mensaje.append(actividad);
       if (item.fecha) mensaje.append(", el " + item.fecha);
+      if (item.lugar) mensaje.append(", en " + item.lugar);
       if (item.horario) mensaje.append(" a las " + item.horario);
       mensaje.append(". ¡Esperamos contar con tu asistencia!");
       if (item.correo) {
@@ -231,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
   fetch("data/proyectos_ds19.json")
     .then(function (respuesta) { if (!respuesta.ok) throw new Error("Archivo no disponible"); return respuesta.json(); })
     .then(function (datos) {
-      proyectos = Array.isArray(datos.proyectos) ? datos.proyectos : [];
+      proyectos = (Array.isArray(datos.proyectos) ? datos.proyectos : []).sort(function (a, b) { return a.proyecto.localeCompare(b.proyecto, "es"); });
       actividades = Array.isArray(datos.actividades) ? datos.actividades : [];
       selector.innerHTML = "<option value=\"\">Selecciona un proyecto</option>";
       proyectos.forEach(function (item) { const opcion = document.createElement("option"); opcion.value = item.proyecto; opcion.textContent = item.proyecto + (item.comuna ? " · " + item.comuna : ""); selector.appendChild(opcion); });
@@ -650,7 +659,10 @@ ul.task-list li input[type="checkbox"] {
   <div class="nav-footer">
     <div class="nav-footer-left">
 <div class="footer-marca">
-<img src="assets/logo-equidad-urbana-blanco.png" alt="Equidad Urbana"><span>Información, participación y herramientas para fortalecer la vida en comunidad.</span>
+<div class="footer-logo" role="img" aria-label="Equidad Urbana">
+
+</div>
+<span>Información, participación y herramientas para fortalecer la vida en comunidad.</span>
 </div>
 </div>   
     <div class="nav-footer-center">

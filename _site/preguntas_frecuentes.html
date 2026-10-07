@@ -73,6 +73,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<!-- Microsoft Clarity: analítica de uso y experiencia del sitio -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "yu4nk235ud");
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -117,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./noticias.html"> 
-<span class="menu-text">📅 Fondos y convocatorias</span></a>
+<span class="menu-text">📅 Fondos y noticias</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./proyectos_ds19.html"> 
@@ -193,6 +201,7 @@ ul.task-list li input[type="checkbox"] {
 .faq-respuesta p { color: #3f4647; line-height: 1.7; font-size: 16px; margin: 0 0 1.15rem; }
 .faq-ilustracion { width: 100%; margin: 4px 0 25px; border-radius: 10px; border: 1px solid #d9e5e2; }
 .faq-ilustracion-lienzo { height: 260px; object-fit: contain; background: #f5faf8; }
+.faq-simbolo { display:flex; align-items:center; justify-content:center; gap:16px; min-height:126px; margin:4px 0 25px; padding:22px 26px; border:1px solid #d9e5e2; border-radius:10px; background:linear-gradient(120deg,#f3faf8,#eef5f4); color:#174f5a; }.faq-simbolo-icono { display:flex; flex:0 0 68px; width:68px; height:68px; align-items:center; justify-content:center; border-radius:50%; background:#196774; color:#fff; font-size:33px; line-height:1; }.faq-simbolo-texto { max-width:520px; font-size:17px; font-weight:700; line-height:1.35; }
 .faq-garantias { position: relative; margin: 4px 0 25px; }
 .faq-garantias .faq-ilustracion { margin: 0; }
 .faq-plazos { position: absolute; inset: 0; pointer-events: none; }
@@ -205,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 .faq-ayuda strong { display: block; margin-bottom: 4px; color: #174f5a; }
 .faq-ayuda a { color: #0f6672; font-weight: 700; }
 .faq-vacio { color: #666; padding: 20px 4px; text-align: center; }
-@media (max-width: 760px) { .faq-pis { margin: 15px auto; } .faq-controles, .faq-contenido { display: block; } .faq-tema, .faq-buscar { box-sizing: border-box; width: 100%; margin-bottom: 10px; } .faq-lista { max-height: 300px; } .faq-respuesta { padding: 23px; } }
+@media (max-width: 760px) { .faq-pis { margin: 15px auto; } .faq-controles, .faq-contenido { display: block; } .faq-tema, .faq-buscar { box-sizing: border-box; width: 100%; margin-bottom: 10px; } .faq-lista { max-height:none; overflow:visible; } .faq-respuesta { margin:0 0 14px; padding:23px; border:1px solid #d8dddd; border-radius:10px; } .faq-simbolo { min-height:104px; padding:16px; }.faq-simbolo-icono { flex-basis:56px; width:56px; height:56px; font-size:27px; }.faq-simbolo-texto { font-size:15px; } }
 </style>
 
 <div class="faq-pis">
@@ -233,23 +242,25 @@ const imagenesFaq = {
   "4.1 Organizaciones comunitarias": ["assets/flujo-junta-vecinos.png", "Flujo de formación de una junta de vecinos"]
 };
 const imagenesPorTemaFaq = {
-  "0. Introducción": ["assets/tema-introduccion-pis.png", "Plan de Integración Social y comunidad"],
   "1. Visita a la obra": ["assets/flujo-construccion.png", "Proceso constructivo de la obra"],
   "2. Uso, cuidado y mantención": ["assets/flujo-garantias.png", "Uso, cuidado y garantías de la vivienda"],
-  "3. Derechos y deberes": ["assets/tema-derechos-deberes.png", "Derechos y deberes en comunidad"],
   "4. Organización comunitaria": ["assets/flujo-junta-vecinos.png", "Organización comunitaria"]
 };
-Object.assign(imagenesFaq, {
-  "2.2 Sello verde": ["assets/tema-sello-verde.png", "Certificación de sello verde"],
-  "2.3 Gas de las viviendas": ["assets/tema-gas-vivienda.png", "Uso seguro del gas en la vivienda"],
-  "3.1 Patrimonio reservado de la mujer casada": ["assets/tema-patrimonio-reservado.png", "Patrimonio reservado de la mujer casada"],
-  "3.2 Administración del condominio": ["assets/tema-administracion-condominio.png", "Administración del condominio"],
-  "3.3 Asambleas de copropietarios/as": ["assets/tema-asambleas.png", "Asamblea de copropietarios"],
-  "3.4 Comité de Administración": ["assets/tema-derechos-deberes.png", "Comité de Administración"],
-  "3.5 Reglamento de copropiedad": ["assets/tema-reglamento.png", "Reglamento de copropiedad"],
-  "3.6 Gastos comunes": ["assets/tema-gastos-comunes.png", "Gastos comunes"],
-  "4.2 Seguridad comunitaria": ["assets/tema-seguridad-comunitaria.png", "Seguridad comunitaria"]
-});
+const simbolosPorTemaFaq = {
+  "0. Introducción": ["⌂", "Plan de Integración Social y comunidad"],
+  "3. Derechos y deberes": ["⚖", "Derechos y deberes en comunidad"]
+};
+const simbolosFaq = {
+  "2.2 Sello verde": ["♻", "Certificación de sello verde"],
+  "2.3 Gas de las viviendas": ["◉", "Uso seguro del gas en la vivienda"],
+  "3.1 Patrimonio reservado de la mujer casada": ["⌁", "Patrimonio reservado de la mujer casada"],
+  "3.2 Administración del condominio": ["▦", "Administración del condominio"],
+  "3.3 Asambleas de copropietarios/as": ["◎", "Asamblea de copropietarios"],
+  "3.4 Comité de Administración": ["▣", "Comité de Administración"],
+  "3.5 Reglamento de copropiedad": ["☷", "Reglamento de copropiedad"],
+  "3.6 Gastos comunes": ["$", "Gastos comunes"],
+  "4.2 Seguridad comunitaria": ["⌁", "Seguridad comunitaria"]
+};
 
 function normalizarFaq(texto) {
   return String(texto || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -292,6 +303,7 @@ function mostrarRespuesta(item) {
   const titulo = document.createElement("h3"); titulo.textContent = item.pregunta;
   const imagenEspecifica = imagenesFaq[item.subtema];
   const imagen = imagenEspecifica || imagenesPorTemaFaq[item.tema];
+  const simbolo = simbolosFaq[item.subtema] || simbolosPorTemaFaq[item.tema];
   if (imagen) {
     const figura = document.createElement("img"); figura.className = "faq-ilustracion" + (imagenEspecifica ? "" : " faq-ilustracion-lienzo"); figura.src = imagen[0]; figura.alt = imagen[1];
     if (item.subtema === "2.1 Garantías y modificaciones de las viviendas") {
@@ -300,6 +312,10 @@ function mostrarRespuesta(item) {
       [["10 años", "Estructura"], ["5 años", "Instalaciones"], ["3 años", "Terminaciones"]].forEach(function(dato) { const plazo = document.createElement("div"); plazo.className = "faq-plazo"; plazo.innerHTML = "<strong>" + dato[0] + "</strong>" + dato[1]; plazos.appendChild(plazo); });
       garantias.appendChild(plazos); respuestaFaq.appendChild(garantias);
     } else { respuestaFaq.appendChild(figura); }
+  } else if (simbolo) {
+    const figura = document.createElement("div"); figura.className = "faq-simbolo"; figura.setAttribute("role", "img"); figura.setAttribute("aria-label", simbolo[1]);
+    figura.innerHTML = "<span class='faq-simbolo-icono' aria-hidden='true'>" + simbolo[0] + "</span><span class='faq-simbolo-texto'>" + simbolo[1] + "</span>";
+    respuestaFaq.appendChild(figura);
   }
   String(item.respuesta || "").split(/\n\s*\n/).filter(Boolean).forEach(function(bloque) {
     const texto = document.createElement("p"); texto.textContent = bloque.trim();
@@ -310,6 +326,10 @@ function mostrarRespuesta(item) {
   respuestaFaq.appendChild(ayuda);
   respuestaFaq.prepend(etiqueta, titulo);
   mostrarLista();
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    const activa = listaFaq.querySelector(".faq-pregunta.activa");
+    if (activa) activa.insertAdjacentElement("afterend", respuestaFaq);
+  }
 }
 
 function mostrarLista() {
@@ -782,7 +802,10 @@ temaFaq.addEventListener("change", function() { seleccionada = null; mostrarList
   <div class="nav-footer">
     <div class="nav-footer-left">
 <div class="footer-marca">
-<img src="assets/logo-equidad-urbana-blanco.png" alt="Equidad Urbana"><span>Información, participación y herramientas para fortalecer la vida en comunidad.</span>
+<div class="footer-logo" role="img" aria-label="Equidad Urbana">
+
+</div>
+<span>Información, participación y herramientas para fortalecer la vida en comunidad.</span>
 </div>
 </div>   
     <div class="nav-footer-center">
