@@ -12,14 +12,26 @@ Esta plataforma está pensada para los hogares que forman parte de proyectos hab
 
 :::
 
+::: {.encuesta-destacada}
+::: {.encuesta-destacada-texto}
+### 💬 ¿Cómo fue tu experiencia?
+
+Tu opinión nos ayuda a mejorar esta plataforma. Responder toma menos de un minuto.
+:::
+
+[Responder encuesta](https://docs.google.com/forms/d/1OjtGpLEtfJ360bCI90LOX2r84r2vm2JamWJPGIObyoI/viewform){target="_blank" rel="noopener" .encuesta-destacada-boton}
+:::
+
 <br>
+
+::: {.inicio-accesos}
 
 ::::: columns
 ::: {.column width="50%"}
 ### 🗺️ Explora el territorio
 
 Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector. 
-Encuentra los núméros telefónicos y páginas web de diferentes organismos públicos.
+Encuentra los números telefónicos y páginas web de diferentes organismos públicos.
 
 [Ir al mapa](Mapa/prueba_mapgl.qmd)
 :::
@@ -64,3 +76,5 @@ Busca tu proyecto o comuna para conocer las próximas actividades del PIS, sus f
 [Ver actividades](proyectos_ds19.qmd)
 :::
 :::::
+
+:::

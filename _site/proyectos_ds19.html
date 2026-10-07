@@ -221,7 +221,8 @@ ul.task-list li input[type="checkbox"] {
       const titulo = document.createElement("h2"); titulo.textContent = item.proyecto;
       const comuna = document.createElement("p"); comuna.className = "ds19-comuna"; comuna.textContent = item.comuna || "Proyecto DS19";
       const mensaje = document.createElement("p"); mensaje.className = "ds19-mensaje";
-      mensaje.append("Estimado/a vecino/a: la próxima actividad es el taller: ");
+      const articuloActividad = /^visita\b/i.test(String(item.actividad || "").trim()) ? "la" : "el";
+      mensaje.append("Estimado vecino: la próxima actividad es " + articuloActividad + " ");
       const actividad = document.createElement("strong"); actividad.textContent = item.actividad;
       mensaje.append(actividad);
       if (item.fecha) mensaje.append(", el " + item.fecha);
@@ -672,7 +673,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
     <div class="nav-footer-right">
 <div class="footer-redes">
-<strong>Síguenos</strong><a href="https://www.instagram.com/equidad.urbana/" target="_blank" rel="noopener">📷 Instagram · <span class="citation" data-cites="equidad.urbana">@equidad.urbana</span></a><a href="https://cl.linkedin.com/company/equidad-urbana-consultora" target="_blank" rel="noopener">💼 LinkedIn · Equidad Urbana</a><a href="https://equidadurbana.org" target="_blank" rel="noopener">🌐 Página web </a>
+<strong>Síguenos</strong><a href="https://www.instagram.com/equidad.urbana/" target="_blank" rel="noopener">📷 Instagram · <span class="citation" data-cites="equidad.urbana">@equidad.urbana</span></a><a href="https://cl.linkedin.com/company/equidad-urbana-consultora" target="_blank" rel="noopener">💼 LinkedIn · Equidad Urbana</a><a href="https://equidadurbana.org" target="_blank" rel="noopener">🌐 Página web</a><a class="footer-encuesta" href="https://docs.google.com/forms/d/1OjtGpLEtfJ360bCI90LOX2r84r2vm2JamWJPGIObyoI/viewform" target="_blank" rel="noopener">💬 Cuéntanos tu experiencia</a>
 </div>
 </div>
   </div>

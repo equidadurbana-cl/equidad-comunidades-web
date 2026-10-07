@@ -57,7 +57,8 @@ Selecciona tu proyecto para conocer las próximas actividades informadas por Equ
       const titulo = document.createElement("h2"); titulo.textContent = item.proyecto;
       const comuna = document.createElement("p"); comuna.className = "ds19-comuna"; comuna.textContent = item.comuna || "Proyecto DS19";
       const mensaje = document.createElement("p"); mensaje.className = "ds19-mensaje";
-      mensaje.append("Estimado/a vecino/a: la próxima actividad es el taller: ");
+      const articuloActividad = /^visita\b/i.test(String(item.actividad || "").trim()) ? "la" : "el";
+      mensaje.append("Estimado vecino: la próxima actividad es " + articuloActividad + " ");
       const actividad = document.createElement("strong"); actividad.textContent = item.actividad;
       mensaje.append(actividad);
       if (item.fecha) mensaje.append(", el " + item.fecha);

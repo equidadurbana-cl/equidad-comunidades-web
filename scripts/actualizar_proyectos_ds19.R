@@ -50,6 +50,14 @@ convertir_fecha <- function(x) {
   salida
 }
 
+# Fecha legible para las personas visitantes, independiente de la configuración regional de R.
+formatear_fecha_larga <- function(fecha) {
+  meses <- c("enero", "febrero", "marzo", "abril", "mayo", "junio",
+             "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre")
+  paste(as.integer(format(fecha, "%d")), "de", meses[as.integer(format(fecha, "%m"))],
+        "de", format(fecha, "%Y"))
+}
+
 datos <- as.data.frame(datos, stringsAsFactors = FALSE)
 datos$`Proyecto DS19` <- limpiar(datos$`Proyecto DS19`)
 datos$Comuna <- limpiar(datos$Comuna)
@@ -96,7 +104,7 @@ publicaciones <- lapply(seq_len(nrow(datos)), function(i) {
     proyecto = datos$`Proyecto DS19`[[i]],
     comuna = datos$Comuna[[i]],
     actividad = datos$`Próxima actividad`[[i]],
-    fecha = format(datos$.fecha[[i]], "%d/%m/%Y"),
+    fecha = formatear_fecha_larga(datos$.fecha[[i]]),
     horario = datos$Horario[[i]],
     lugar = datos$Lugar[[i]],
     correo = correo_proyecto

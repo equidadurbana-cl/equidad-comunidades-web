@@ -36,6 +36,27 @@ body {
   }
 }
 
+/* En la portada los accesos pasan a una sola columna en teléfono. */
+@media (max-width: 760px) {
+  .inicio-accesos > .columns {
+    display: block !important;
+    margin: .8rem 0 !important;
+  }
+
+  .inicio-accesos > .columns > .column {
+    width: 100% !important;
+    margin: 0 0 .8rem;
+    padding: 1rem 1.05rem !important;
+    border: 1px solid #d8e5e2;
+    border-left: 5px solid var(--eu-petroleo);
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(21, 67, 74, .06);
+  }
+
+  .inicio-accesos > .columns > .column h3 { color: var(--eu-profundo); }
+}
+
 .navbar {
   background: rgba(255, 255, 255, 0.97) !important;
   border-bottom: 1px solid #dbe6e4;
@@ -92,6 +113,8 @@ body {
 .footer-marca span { display: block; max-width: 300px; color: #d4d4d4 !important; font-size: .9rem; line-height: 1.55; }
 .footer-contacto strong, .footer-redes strong { display: block; color: #a8d8d4 !important; margin-bottom: .85rem; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .footer-contacto a, .footer-contacto span, .footer-redes a { display: block; margin: 0 0 .55rem; color: #f8f8f8 !important; font-size: .9rem; line-height: 1.5; }
+.footer-redes .footer-encuesta { display:inline-block; margin-top:.45rem; padding:.5rem .75rem; border:1px solid #a8d8d4; border-radius:999px; color:#fff !important; font-weight:700; }
+.footer-redes .footer-encuesta:hover { background:#a8d8d4; color:#173e46 !important; }
 @media (max-width: 760px) { .page-footer .nav-footer, footer.footer .nav-footer { grid-template-columns: 1fr; gap: 2.2rem; padding: 3rem 1.5rem 2.5rem; } .footer-logo { width: 175px; } }
 
 /* Acerca suavemente el bloque de marca al buscador, sin descentrar la barra. */
@@ -222,10 +245,18 @@ body {
 .hero-inicio h2 { font-size: 1.25rem; font-weight: 500; line-height: 1.4; }
 .hero-inicio p { font-size: 1rem; line-height: 1.6; margin-bottom: 0; }
 
+/* Invitación visible a la encuesta en la portada. */
+.encuesta-destacada { display:flex; align-items:center; justify-content:space-between; gap:1.4rem; margin:1rem 0 1.6rem; padding:1.05rem 1.3rem; border:1px solid #bedbd6; border-left:5px solid var(--eu-ocre); border-radius:12px; background:linear-gradient(100deg,#f3fbf9,#e6f2f0); }
+.encuesta-destacada h3 { margin:0 0 .18rem; color:var(--eu-profundo); font-size:1.06rem; }
+.encuesta-destacada p { margin:0; color:#526866; line-height:1.45; }
+.encuesta-destacada-boton { display:inline-block; flex:0 0 auto; padding:.65rem .9rem; border-radius:999px; background:var(--eu-petroleo); color:#fff !important; font-weight:700; text-decoration:none !important; white-space:nowrap; }
+.encuesta-destacada-boton:hover { background:var(--eu-profundo); color:#fff !important; }
+
 @media (max-width: 700px) {
   .hero-inicio { min-height: 210px; padding: 26px 37% 22px 22px; }
   .hero-inicio h1 { font-size: 1.75rem; }
   .hero-inicio h2 { font-size: 1.05rem; }
+  .encuesta-destacada { display:block; padding:1rem; }.encuesta-destacada-boton { margin-top:.8rem; }
 }
 
 /* ================================
