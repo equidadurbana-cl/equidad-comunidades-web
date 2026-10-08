@@ -171,11 +171,12 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Selecciona tu proyecto para conocer las próximas actividades informadas por Equidad Urbana.</p>
 <style>
-.ds19-buscador { max-width: 860px; margin: 28px 0; padding: 24px; border: 1px solid #b9d1ce; border-radius: 14px; background: linear-gradient(120deg, #f4fbf8, #eef6fb); }
-.ds19-buscador label { display:block; margin:0 0 9px; color:#174f5a; font-size:17px; font-weight:700; }.ds19-buscador small { display:block; margin:9px 0 0; color:#526866; line-height:1.45; }
-.ds19-buscador select { width:100%; box-sizing:border-box; padding:13px 15px; border:1px solid #8fb7b1; border-radius:9px; background:#fff; font-size:16px; color:#273b3a; }
-.ds19-aviso { max-width:860px; padding:20px 22px; border-radius:12px; background:#f3f6f5; color:#526866; line-height:1.55; }.ds19-aviso strong { color:#174f5a; }
-.ds19-resultados { max-width:900px; margin-top:22px; }.ds19-tarjeta { margin:0 0 14px; padding:23px 25px; border-radius:13px; border-left:6px solid #df9228; background:#fff; box-shadow:0 2px 9px rgba(31,83,79,.10); }.ds19-tarjeta h2 { margin:0 0 6px; color:#174f5a; font-size:22px; }.ds19-comuna { margin:0 0 15px; color:#647572; font-weight:600; }.ds19-mensaje { margin:0; color:#273b3a; font-size:17px; line-height:1.65; }.ds19-mensaje a { color:#92580a; font-weight:700; }.ds19-sin-resultados { padding:19px 22px; border-radius:12px; background:#fff8ed; color:#735126; line-height:1.5; }
+.ds19-buscador { max-width:1040px; margin:34px auto 18px; padding:30px; border:1px solid #b9d1ce; border-radius:0; background:#dce9e6; font-family:Archivo,Arial,sans-serif; }
+.ds19-buscador label { display:block; margin:0 0 10px; color:#174f5a; font-family:Newsreader,Georgia,serif; font-size:28px; font-weight:600; }.ds19-buscador small { display:block; margin:10px 0 0; color:#526866; line-height:1.5; font-size:15px; }
+.ds19-buscador select { width:100%; box-sizing:border-box; padding:15px 16px; border:1px solid #8fb7b1; border-radius:0; background:#fff; font-size:17px; color:#273b3a; }
+.ds19-aviso { max-width:1040px; margin:0 auto; padding:22px 25px; border-radius:0; background:#f1f5f3; color:#526866; font-size:17px; line-height:1.6; }.ds19-aviso strong { color:#174f5a; }
+.ds19-resultados { max-width:1040px; margin:24px auto 0; }.ds19-tarjeta { margin:0 0 16px; padding:30px; border-radius:0; border-left:6px solid #c76d4c; background:#fff; box-shadow:0 2px 9px rgba(31,83,79,.10); }.ds19-tarjeta h2 { margin:0 0 7px; color:#174f5a; font-family:Newsreader,Georgia,serif; font-size:32px; }.ds19-comuna { margin:0 0 16px; color:#647572; font-weight:600; }.ds19-mensaje { margin:0; color:#273b3a; font-size:17px; line-height:1.68; }.ds19-mensaje a { color:#92580a; font-weight:700; }.ds19-sin-resultados { padding:20px 22px; border-radius:0; background:#fff8ed; color:#735126; line-height:1.5; }
+@media (max-width:760px) { .ds19-buscador { margin:24px 0 16px; padding:21px; }.ds19-buscador label { font-size:25px; }.ds19-aviso { padding:19px; font-size:16px; }.ds19-tarjeta { padding:22px; }.ds19-tarjeta h2 { font-size:28px; } }
 </style>
 
 <section class="ds19-buscador" aria-label="Seleccionar proyecto DS19">
@@ -221,7 +222,8 @@ ul.task-list li input[type="checkbox"] {
       const titulo = document.createElement("h2"); titulo.textContent = item.proyecto;
       const comuna = document.createElement("p"); comuna.className = "ds19-comuna"; comuna.textContent = item.comuna || "Proyecto DS19";
       const mensaje = document.createElement("p"); mensaje.className = "ds19-mensaje";
-      const articuloActividad = /^visita\b/i.test(String(item.actividad || "").trim()) ? "la" : "el";
+      const actividadTexto = String(item.actividad || "").trim();
+      const articuloActividad = /^(visita\b|repetici[oó]n de la visita\b)/i.test(actividadTexto) ? "la" : "el";
       mensaje.append("Estimado vecino: la próxima actividad es " + articuloActividad + " ");
       const actividad = document.createElement("strong"); actividad.textContent = item.actividad;
       mensaje.append(actividad);
@@ -230,9 +232,9 @@ ul.task-list li input[type="checkbox"] {
       if (item.horario) mensaje.append(" a las " + item.horario);
       mensaje.append(". ¡Esperamos contar con tu asistencia!");
       if (item.correo) {
-        mensaje.append(" Para más información, escribe a ");
+        mensaje.append(" Recuerda que esta información también fue enviada a tu correo personal desde el correo ");
         const correo = document.createElement("a"); correo.href = "mailto:" + item.correo; correo.textContent = item.correo;
-        mensaje.append(correo, ".");
+        mensaje.append(correo, ". Si no la recibiste, revisa tu carpeta de spam. Si tampoco está allí, escríbenos a esa misma dirección.");
       }
       tarjeta.append(titulo, comuna, mensaje); resultados.appendChild(tarjeta);
     });

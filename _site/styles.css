@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap');
+
 /* Identidad visual general */
 
 :root {
@@ -461,4 +463,75 @@ body {
   background: #f4f7f7;
   border-radius: 8px;
   color: #555;
+}
+
+/* Estilo editorial común: portada y secciones de Equidad-comunidades. */
+:root { --eu-azul-editorial:#123d4a; --eu-verde-suave:#dce9e6; --eu-coral:#c76d4c; }
+body { background:#fff; font-family:Archivo,Arial,sans-serif; }
+h1, h2, h3, .quarto-title .title { font-family:Newsreader,Georgia,serif; letter-spacing:-.025em; }
+#title-block-header.quarto-title-block.default { max-width:1200px; margin:2.4rem auto 1.3rem; padding:0 1.5rem; }
+#title-block-header.quarto-title-block.default .quarto-title-banner { padding:0; background:none; border-radius:0; }
+#title-block-header.quarto-title-block.default .title { color:var(--eu-azul-editorial); font-size:clamp(2.15rem,4vw,3.6rem); font-weight:600; }
+.navbar { min-height:72px; border-bottom:1px solid #e3ded5; box-shadow:none; }
+.navbar-brand .navbar-logo { max-height:42px; }
+.navbar-nav .nav-link { font-family:Archivo,Arial,sans-serif; font-size:.84rem; font-weight:600; }
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { background:transparent; color:var(--eu-coral) !important; }
+.page-footer, footer.footer, footer.footer.footer-dark { margin-top:0; }
+body:has(.hero-inicio) main.content, body:has(.hero-inicio) #quarto-document-content { padding-top:0; margin-top:0; }
+
+.hero-inicio { width:100vw; min-height:min(51vh,500px); margin:0 0 3rem; margin-left:calc(50% - 50vw); padding:clamp(1.8rem,5vw,4.5rem); display:flex; flex-direction:column; align-items:flex-start; justify-content:center; border-radius:0; background-position:center 54%; }
+.hero-inicio > * { max-width:710px; }
+.hero-inicio h1 { margin:0 0 .9rem; font-family:Newsreader,Georgia,serif; font-size:clamp(2.35rem,4.65vw,4.25rem); font-weight:600; line-height:.94; letter-spacing:-.055em; }
+.hero-inicio p { max-width:610px; font-size:clamp(.9rem,1.25vw,1rem); line-height:1.55; }
+.hero-inicio .encuesta-destacada { max-width:fit-content; }
+.encuesta-destacada { display:inline-flex; margin:1.15rem 0 0; padding:0; border:0; border-radius:0; background:transparent; }
+.encuesta-destacada-texto { display:none; }
+.encuesta-destacada-boton { padding:.66rem .95rem; border:1px solid rgba(255,255,255,.85); background:#fff; color:var(--eu-azul-editorial) !important; font-size:.86rem; }
+.encuesta-destacada-boton:hover { background:#f5cf92; color:var(--eu-azul-editorial) !important; }
+
+.inicio-accesos { max-width:1040px; margin:0 auto 4rem; }
+.inicio-accesos > .columns { display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin:0 0 1rem !important; }
+.inicio-accesos > .columns > .column { display:flex; flex-direction:column; width:auto !important; min-height:210px; padding:clamp(1.25rem,2.7vw,2.1rem) !important; border:1px solid rgba(18,61,74,.28); border-radius:0; background:var(--eu-verde-suave); }
+.inicio-accesos > .columns > .column h3 { margin:auto 0 .6rem; color:var(--eu-azul-editorial); font-family:Newsreader,Georgia,serif; font-size:clamp(1.7rem,3vw,2.65rem); font-weight:600; line-height:.98; }
+.inicio-accesos > .columns > .column p { color:#456068; font-size:.92rem; line-height:1.5; }
+.inicio-accesos > .columns > .column a { align-self:flex-end; margin-top:auto; color:var(--eu-coral); font-weight:700; text-decoration:none; }
+.inicio-accesos > .columns:last-child { width:calc(50% - .5rem); margin-left:auto !important; margin-right:auto !important; }
+
+.faq-pis, .convocatorias-container, .ds19-buscador, .biblioteca-contenido, .mapa-directorio { font-family:Archivo,Arial,sans-serif !important; }
+.faq-pis h2, .convocatorias-container h2, .ds19-tarjeta h2, .documento h2 { font-family:Newsreader,Georgia,serif !important; }
+@media (max-width:760px) {
+  #title-block-header.quarto-title-block.default { margin:1.7rem auto 1rem; }
+  .hero-inicio { min-height:500px; margin-bottom:2.2rem; padding:2rem 1.4rem; }
+  .inicio-accesos > .columns, .inicio-accesos > .columns:last-child { display:grid !important; grid-template-columns:1fr; width:auto; margin:0 0 .75rem !important; }
+  .inicio-accesos > .columns > .column { min-height:215px; margin:0; border-left:1px solid rgba(18,61,74,.28); }
+}
+
+/* Ajustes de escala finales para igualar la portada a la maqueta aprobada. */
+.navbar .container-fluid { padding-left:clamp(1.35rem,4vw,4.5rem); padding-right:clamp(1.35rem,4vw,4.5rem); }
+.navbar-brand-logo { margin-right:1.4rem !important; }
+.navbar-nav { gap:.35rem; }
+.navbar-nav .nav-link { padding:.65rem .45rem !important; font-size:.94rem; }
+
+.hero-inicio { min-height:min(56vh,560px); padding:clamp(2.2rem,6vw,5.8rem); }
+.hero-inicio h1 { max-width:760px; font-size:clamp(2.85rem,5.3vw,5rem); }
+.hero-inicio p { max-width:660px; font-size:clamp(1rem,1.45vw,1.15rem); line-height:1.62; }
+.hero-inicio .encuesta-destacada-boton { display:inline-flex; margin-top:1.75rem; padding:.82rem 1.1rem; font-size:.96rem; line-height:1.25; }
+
+.inicio-accesos { max-width:1100px; }
+.inicio-accesos > h2 { margin:0 0 2rem; color:var(--eu-azul-editorial); font-family:Newsreader,Georgia,serif; font-size:clamp(2.4rem,4.2vw,4rem); font-weight:600; line-height:1; letter-spacing:-.045em; }
+.inicio-accesos > .columns { gap:1.25rem; margin-bottom:1.25rem !important; }
+.inicio-accesos > .columns > .column { min-height:285px; padding:clamp(1.6rem,3.2vw,2.7rem) !important; }
+.inicio-accesos > .columns > .column h3 { font-size:clamp(2.15rem,3.7vw,3.3rem); margin-bottom:1rem; }
+.inicio-accesos > .columns > .column p { font-size:1rem; line-height:1.58; }
+.inicio-accesos > .columns > .column a { font-size:1rem; }
+.inicio-accesos > .columns:last-child { grid-template-columns:1fr !important; }
+
+@media (max-width:760px) {
+  .navbar .container-fluid { padding-left:1rem; padding-right:1rem; }
+  .navbar-nav .nav-link { font-size:.9rem; }
+  .hero-inicio { min-height:540px; padding:2rem 1.4rem; }
+  .hero-inicio h1 { font-size:2.7rem; }
+  .hero-inicio p { font-size:1rem; }
+  .inicio-accesos > h2 { margin-bottom:1.4rem; font-size:2.5rem; }
+  .inicio-accesos > .columns > .column { min-height:250px; }
 }

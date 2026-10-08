@@ -1,30 +1,21 @@
 ---
-title: "Inicio"
+title: ""
 ---
 
 ::: {.hero-inicio}
 
-# Equidad-comunidades
+# Plataforma informativa para comunidades organizadas.
 
-## Información, participación e innovación para fortalecer nuestro barrio.
+Si eres parte de un conjunto habitacional DS19, este es tu lugar. Encuentra información normativa, resuelve tus dudas, conoce las redes de tu sector y entérate de fondos y beneficios disponibles.
 
-Esta plataforma está pensada para los hogares que forman parte de proyectos habitacionales DS19. Aquí encontrarás información y herramientas sencillas para organizarte con tus vecinos y vecinas, cuidar y mejorar tu vivienda y barrio con el tiempo, y conocer beneficios públicos vinculados a vivienda, ciudad y desarrollo comunitario.
-
-:::
-
-::: {.encuesta-destacada}
-::: {.encuesta-destacada-texto}
-### 💬 ¿Cómo fue tu experiencia?
-
-Tu opinión nos ayuda a mejorar esta plataforma. Responder toma menos de un minuto.
-:::
-
-[Responder encuesta](https://docs.google.com/forms/d/1OjtGpLEtfJ360bCI90LOX2r84r2vm2JamWJPGIObyoI/viewform){target="_blank" rel="noopener" .encuesta-destacada-boton}
+[💬 Cuéntanos qué te pareció la página: responde la encuesta de satisfacción](https://docs.google.com/forms/d/1OjtGpLEtfJ360bCI90LOX2r84r2vm2JamWJPGIObyoI/viewform){target="_blank" rel="noopener" .encuesta-destacada-boton}
 :::
 
 <br>
 
 ::: {.inicio-accesos}
+
+## Comienza a utilizar Equidad-comunidades aquí
 
 ::::: columns
 ::: {.column width="50%"}
@@ -33,7 +24,7 @@ Tu opinión nos ayuda a mejorar esta plataforma. Responder toma menos de un minu
 Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector. 
 Encuentra los números telefónicos y páginas web de diferentes organismos públicos.
 
-[Ir al mapa](Mapa/prueba_mapgl.qmd)
+[Ir al mapa →](Mapa/prueba_mapgl.qmd)
 :::
 
 ::: {.column width="50%"}
@@ -41,7 +32,7 @@ Encuentra los números telefónicos y páginas web de diferentes organismos púb
 
 Accede a leyes, manuales y documentos útiles en materia de vivienda y barrio.
 
-[Ver biblioteca](biblioteca.qmd)
+[Ver biblioteca →](biblioteca.qmd)
 :::
 :::::
 
@@ -53,7 +44,7 @@ Accede a leyes, manuales y documentos útiles en materia de vivienda y barrio.
 
 Revisa respuestas a preguntas frecuentes sobre copropiedad, uso, cuidado y mantención de las viviendas, derechos, deberes y organización comunitaria.
 
-[Consultar](preguntas_frecuentes.qmd)
+[Consultar →](preguntas_frecuentes.qmd)
 :::
 
 ::: {.column width="50%"}
@@ -61,7 +52,7 @@ Revisa respuestas a preguntas frecuentes sobre copropiedad, uso, cuidado y mante
 
 Busca fondos, concursos y llamados a subsidios, y accede directamente a sus portales de postulación e información. Encuentra noticias relacionadas con tu comuna o región. 
 
-[Noticias](noticias.qmd)
+[Ver fondos y noticias →](noticias.qmd)
 :::
 :::::
 
@@ -73,7 +64,7 @@ Busca fondos, concursos y llamados a subsidios, y accede directamente a sus port
 
 Busca tu proyecto o comuna para conocer las próximas actividades del PIS, sus fechas, horarios, lugar de reunión y email de contacto.
 
-[Ver actividades](proyectos_ds19.qmd)
+[Ver actividades →](proyectos_ds19.qmd)
 :::
 :::::
 

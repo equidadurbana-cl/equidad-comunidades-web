@@ -4,6 +4,8 @@ project:
     - "*.qmd"
     - "!chatbot.qmd"
     - "!chatbot.piloto2.qmd"
+    - "!propuesta_diseno.qmd"
+    - "!propuesta_estilo_general.qmd"
   resources:
     - Bilbioteca/indice_biblioteca.json
     - Bilbioteca/4. Subsidios/4.DS52.pdf

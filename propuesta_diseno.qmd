@@ -1,0 +1,65 @@
+---
+title: "Propuesta visual"
+format:
+  html:
+    title-block: false
+    page-layout: full
+---
+
+```{=html}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap');
+
+.propuesta-eu { --tinta:#173f47; --coral:#bd6540; --ocre:#d99a37; --crema:#f4efe6; --verde:#879886; --linea:rgba(23,63,71,.18); width:100vw; max-width:none; margin:0 0 3rem; margin-left:calc(50% - 50vw); overflow:hidden; font-family:Archivo,Arial,sans-serif; color:var(--tinta); }
+.propuesta-aviso { display:inline-flex; margin:1.1rem 0 .6rem 1.5rem; padding:.38rem .7rem; border:1px solid var(--linea); border-radius:999px; background:#fff; color:#607274; font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.propuesta-hero { position:relative; min-height:min(78vh,760px); display:flex; align-items:flex-end; padding:clamp(2rem,7vw,7rem); overflow:hidden; background:linear-gradient(90deg,rgba(13,48,55,.9) 0%,rgba(13,48,55,.65) 44%,rgba(13,48,55,.08) 78%),url('https://equidadurbana.org/img/hero-bg.jpg') center/cover; color:#fff; }
+.propuesta-hero-contenido { max-width:730px; position:relative; z-index:1; }.propuesta-kicker { margin:0 0 1rem; color:#ffd49c; font-size:.75rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+.propuesta-hero h1 { max-width:710px; margin:0 0 1rem; color:#fff; font-family:Newsreader,Georgia,serif; font-size:clamp(2.8rem,6vw,5.6rem); font-weight:600; line-height:.96; letter-spacing:-.04em; }
+.propuesta-hero p { max-width:610px; margin:0; color:#f3f8f5; font-size:clamp(1rem,1.6vw,1.2rem); line-height:1.65; }
+.propuesta-intro { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(250px,.9fr); gap:2rem; padding:4.5rem clamp(1.5rem,6vw,5.5rem) 3.3rem; background:var(--crema); }.propuesta-intro h2 { max-width:690px; margin:0; font-family:Newsreader,Georgia,serif; font-size:clamp(2rem,4vw,3.6rem); font-weight:600; line-height:1.05; letter-spacing:-.035em; }.propuesta-intro p { max-width:420px; margin:.6rem 0 0; color:#526568; line-height:1.7; }
+.propuesta-accesos { display:grid; grid-template-columns:1fr; gap:2px; background:#fff; }.propuesta-acceso { position:relative; display:flex; min-height:clamp(340px,43vw,510px); align-items:flex-end; padding:clamp(1.75rem,7vw,6.5rem); overflow:hidden; color:#fff !important; text-decoration:none !important; background:#164c55 center/cover; isolation:isolate; }.propuesta-acceso::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(10,37,43,.92) 0%,rgba(10,37,43,.56) 38%,rgba(10,37,43,.08) 75%); transition:background .25s ease; }.propuesta-acceso:hover::before { background:linear-gradient(90deg,rgba(10,37,43,.96) 0%,rgba(10,37,43,.66) 42%,rgba(10,37,43,.15) 80%); }.propuesta-acceso:hover .propuesta-flecha { transform:translateX(6px); }.propuesta-acceso:nth-child(1) { background-image:url('https://equidadurbana.org/img/14-pis-terreno.jpg'); }.propuesta-acceso:nth-child(2) { background-image:url('https://equidadurbana.org/img/13-parquemet.jpg'); }.propuesta-acceso:nth-child(3) { background-image:url('assets/tema-administracion-neutra.png'); background-size:cover; }.propuesta-acceso:nth-child(4) { background-image:url('https://equidadurbana.org/img/hero-bg.jpg'); }.propuesta-acceso:nth-child(5) { min-height:clamp(340px,43vw,510px); background-image:linear-gradient(90deg,rgba(15,78,89,.25),rgba(15,78,89,.25)),url('assets/comunidad-portada.jpg'); background-position:center 62%; }
+.propuesta-acceso-contenido { max-width:550px; }.propuesta-acceso small { display:block; margin-bottom:.7rem; color:#ffd49c; font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }.propuesta-acceso h3 { margin:0 0 .7rem; color:#fff; font-family:Newsreader,Georgia,serif; font-size:clamp(2rem,3.7vw,3.45rem); font-weight:600; line-height:1; letter-spacing:-.03em; }.propuesta-acceso p { max-width:470px; margin:0; color:#f4f7f6; line-height:1.55; }.propuesta-flecha { display:inline-block; margin-top:1rem; color:#fff; font-size:1.45rem; transition:transform .2s ease; }
+.propuesta-cierre { display:flex; align-items:center; justify-content:space-between; gap:1.4rem; padding:3rem clamp(1.5rem,6vw,5.5rem); background:#d8e5df; }.propuesta-cierre h2 { max-width:680px; margin:0; font-family:Newsreader,Georgia,serif; font-size:clamp(1.8rem,3.2vw,2.8rem); font-weight:600; line-height:1.05; letter-spacing:-.03em; }.propuesta-cierre a { display:inline-block; flex:0 0 auto; padding:.75rem 1rem; border:1px solid var(--tinta); border-radius:999px; color:var(--tinta) !important; font-weight:700; text-decoration:none !important; }.propuesta-cierre a:hover { background:var(--tinta); color:#fff !important; }
+@media (max-width:760px) { .propuesta-aviso { margin-left:1rem; }.propuesta-hero { min-height:620px; padding:2rem 1.35rem; background-position:59% center; }.propuesta-intro { grid-template-columns:1fr; gap:.5rem; padding:3rem 1.35rem 2.3rem; }.propuesta-acceso { min-height:360px; padding:1.5rem 1.35rem; background-position:center; }.propuesta-acceso:nth-child(5) { min-height:360px; }.propuesta-cierre { display:block; padding:2.2rem 1.35rem; }.propuesta-cierre a { margin-top:1.25rem; } }
+</style>
+
+<main class="propuesta-eu" aria-label="Propuesta de diseño para Equidad-comunidades">
+  <div class="propuesta-aviso">Propuesta visual · La portada actual no cambia</div>
+
+  <section class="propuesta-hero">
+    <div class="propuesta-hero-contenido">
+      <p class="propuesta-kicker">Equidad-comunidades</p>
+      <h1>Información para vivir, cuidar y construir comunidad.</h1>
+      <p>Una plataforma para hogares de proyectos DS19: herramientas claras para conocer el territorio, organizarse con vecinos y vecinas y acceder a oportunidades públicas.</p>
+    </div>
+  </section>
+
+  <section class="propuesta-intro">
+    <h2>Un acceso directo a lo que importa en la vida cotidiana del barrio.</h2>
+    <p>Esta alternativa prioriza una lectura más editorial: menos elementos simultáneos, tipografía con mayor jerarquía y accesos grandes que anticipan el contenido de cada sección.</p>
+  </section>
+
+  <section class="propuesta-accesos" aria-label="Accesos de prueba">
+    <a class="propuesta-acceso" href="Mapa/prueba_mapgl.html">
+      <div class="propuesta-acceso-contenido"><small>01 · Conecta</small><h3>Redes del territorio</h3><p>Ubica tu comuna, sus equipamientos y redes de apoyo relevantes.</p><span class="propuesta-flecha">→</span></div>
+    </a>
+    <a class="propuesta-acceso" href="biblioteca.html">
+      <div class="propuesta-acceso-contenido"><small>02 · Consulta</small><h3>Biblioteca</h3><p>Documentos, manuales y normativa para acompañar la vida en comunidad.</p><span class="propuesta-flecha">→</span></div>
+    </a>
+    <a class="propuesta-acceso" href="preguntas_frecuentes.html">
+      <div class="propuesta-acceso-contenido"><small>03 · Resuelve</small><h3>Preguntas frecuentes</h3><p>Respuestas sobre vivienda, copropiedad, organización y cuidado de los espacios comunes.</p><span class="propuesta-flecha">→</span></div>
+    </a>
+    <a class="propuesta-acceso" href="noticias.html">
+      <div class="propuesta-acceso-contenido"><small>04 · Accede</small><h3>Fondos y convocatorias</h3><p>Portales, llamados y noticias para impulsar iniciativas de las comunidades.</p><span class="propuesta-flecha">→</span></div>
+    </a>
+    <a class="propuesta-acceso" href="proyectos_ds19.html">
+      <div class="propuesta-acceso-contenido"><small>05 · Participa</small><h3>Proyectos DS19</h3><p>Revisa próximas actividades, fechas y lugares de encuentro de tu proyecto.</p><span class="propuesta-flecha">→</span></div>
+    </a>
+  </section>
+
+  <section class="propuesta-cierre">
+    <h2>La información también puede ser una herramienta para fortalecer la comunidad.</h2>
+    <a href="index.html">Volver a la portada actual</a>
+  </section>
+</main>
+```

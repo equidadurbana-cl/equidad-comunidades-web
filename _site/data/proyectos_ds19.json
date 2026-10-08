@@ -75,7 +75,7 @@
     {
       "proyecto": "Gran Avenida",
       "comuna": "El Bosque",
-      "actividad": "Repetición Visita a la obra",
+      "actividad": "Repetición de la Visita a la obra",
       "fecha": "9 de octubre de 2026",
       "horario": "15:00 y 16:30 horas",
       "lugar": "Gran Avenida XXX",
@@ -86,14 +86,14 @@
       "comuna": "Lampa",
       "actividad": "Taller de Organización Comunitaria",
       "fecha": "17 de octubre de 2026",
-      "horario": "Tres turnos:",
+      "horario": "",
       "lugar": "",
       "correo": "ds19rm@socovesa.cl"
     },
     {
       "proyecto": "Principal 1385",
       "comuna": "Conchalí",
-      "actividad": "Redes comunitarias",
+      "actividad": "Taller de Redes",
       "fecha": "21 de octubre de 2026",
       "horario": "18:00 horas",
       "lugar": "",
@@ -102,7 +102,7 @@
     {
       "proyecto": "Valles de Rengo III Etapa 1",
       "comuna": "Rengo",
-      "actividad": "Repetición Taller de Organización Comunitaria",
+      "actividad": "Repetición del Taller de Organización Comunitaria",
       "fecha": "15 de octubre de 2026",
       "horario": "",
       "lugar": "",
