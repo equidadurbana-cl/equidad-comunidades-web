@@ -19,7 +19,7 @@ Si eres parte de un conjunto habitacional DS19, este es tu lugar. Encuentra info
 
 ::::: columns
 ::: {.column width="50%"}
-### 🗺️ Explora el territorio
+### 🗺️ Redes del territorio
 
 Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector. 
 Encuentra los números telefónicos y páginas web de diferentes organismos públicos.

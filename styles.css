@@ -529,9 +529,18 @@ body:has(.hero-inicio) main.content, body:has(.hero-inicio) #quarto-document-con
 @media (max-width:760px) {
   .navbar .container-fluid { padding-left:1rem; padding-right:1rem; }
   .navbar-nav .nav-link { font-size:.9rem; }
-  .hero-inicio { min-height:540px; padding:2rem 1.4rem; }
-  .hero-inicio h1 { font-size:2.7rem; }
-  .hero-inicio p { font-size:1rem; }
+  /* La portada debe adaptarse al contenido: una altura fija hacía que el
+     llamado a la encuesta se saliera de la imagen en teléfonos. */
+  .hero-inicio { min-height:0; padding:2.15rem 1.4rem 2rem; background-position:center center; }
+  .hero-inicio h1 { font-size:2.35rem; line-height:1; }
+  .hero-inicio p { font-size:.98rem; line-height:1.55; }
+  .hero-inicio .encuesta-destacada-boton { max-width:100%; margin-top:1.25rem; padding:.75rem .9rem; font-size:.88rem; white-space:normal; text-align:left; }
   .inicio-accesos > h2 { margin-bottom:1.4rem; font-size:2.5rem; }
   .inicio-accesos > .columns > .column { min-height:250px; }
+}
+
+/* Las páginas sin título Quarto necesitan aire propio bajo la barra. */
+body:has(.buscador-biblioteca) #quarto-document-content { padding-top:2rem; }
+@media (max-width:760px) {
+  body:has(.buscador-biblioteca) #quarto-document-content { padding-top:2.4rem; }
 }
