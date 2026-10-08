@@ -529,9 +529,50 @@ body:has(.hero-inicio) main.content, body:has(.hero-inicio) #quarto-document-con
 @media (max-width:760px) {
   .navbar .container-fluid { padding-left:1rem; padding-right:1rem; }
   .navbar-nav .nav-link { font-size:.9rem; }
-  .hero-inicio { min-height:540px; padding:2rem 1.4rem; }
-  .hero-inicio h1 { font-size:2.7rem; }
-  .hero-inicio p { font-size:1rem; }
+  /* La portada debe adaptarse al contenido: una altura fija hacía que el
+     llamado a la encuesta se saliera de la imagen en teléfonos. */
+  .hero-inicio { min-height:0; padding:2.15rem 1.4rem 2rem; background-position:center center; }
+  .hero-inicio h1 { font-size:2.35rem; line-height:1; }
+  .hero-inicio p { font-size:.98rem; line-height:1.55; }
+  .hero-inicio .encuesta-destacada-boton { display:block; width:100%; box-sizing:border-box; max-width:100%; margin-top:1.25rem; padding:.75rem .9rem; font-size:.88rem; white-space:normal; text-align:left; }
   .inicio-accesos > h2 { margin-bottom:1.4rem; font-size:2.5rem; }
   .inicio-accesos > .columns > .column { min-height:250px; }
+}
+
+/* Las páginas sin título Quarto necesitan aire propio bajo la barra. */
+body:has(.buscador-biblioteca) #quarto-document-content { padding-top:2rem; }
+@media (max-width:760px) {
+  body:has(.buscador-biblioteca) #quarto-document-content { padding-top:2.4rem; }
+}
+
+/* Portada en escritorio: Quarto reserva una columna lateral para el artículo.
+   Al hacer que sus bloques sean ítems directos de la cuadrícula, la imagen se
+   extiende realmente de borde a borde, sin crear desplazamiento horizontal. */
+@media (min-width:761px) {
+  body:has(.hero-inicio) { overflow-x:hidden; }
+  body:has(.hero-inicio) #quarto-document-content { display:contents; }
+  .hero-inicio {
+    grid-column:screen-start / screen-end;
+    width:auto;
+    min-height:470px;
+    margin:0 0 2.8rem;
+    margin-left:0;
+    padding:clamp(2.8rem,4.3vw,4.4rem) clamp(3.2rem,7.5vw,7.5rem);
+  }
+  .hero-inicio h1 { max-width:650px; font-size:clamp(3rem,4.25vw,4.15rem); }
+  .hero-inicio p { max-width:610px; font-size:1rem; }
+  .hero-inicio .encuesta-destacada-boton { margin-top:1.25rem; }
+
+  .inicio-accesos {
+    grid-column:body-content-start / body-content-end;
+    width:100%;
+    max-width:1040px;
+    justify-self:center;
+    margin-bottom:3.5rem;
+  }
+  .inicio-accesos > h2 { margin-bottom:1.5rem; font-size:clamp(2rem,3.25vw,3.15rem); }
+  .inicio-accesos > .columns { gap:1rem; margin-bottom:1rem !important; }
+  .inicio-accesos > .columns > .column { min-height:235px; padding:clamp(1.4rem,2.5vw,2rem) !important; }
+  .inicio-accesos > .columns > .column h3 { margin-bottom:.75rem; font-size:clamp(1.8rem,2.75vw,2.55rem); }
+  .inicio-accesos > .columns > .column p { font-size:.94rem; line-height:1.5; }
 }
