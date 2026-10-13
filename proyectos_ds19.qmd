@@ -59,7 +59,7 @@ Selecciona tu proyecto para conocer las próximas actividades informadas por Equ
       const comuna = document.createElement("p"); comuna.className = "ds19-comuna"; comuna.textContent = item.comuna || "Proyecto DS19";
       const mensaje = document.createElement("p"); mensaje.className = "ds19-mensaje";
       const actividadTexto = String(item.actividad || "").trim();
-      const articuloActividad = /^(visita\b|repetici[oó]n de la visita\b)/i.test(actividadTexto) ? "la" : "el";
+      const articuloActividad = /^(visita\b|repetici[oó]n de la visita\b|actividad de cierre del pis\b)/i.test(actividadTexto) ? "la" : "el";
       mensaje.append("Estimado vecino: la próxima actividad es " + articuloActividad + " ");
       const actividad = document.createElement("strong"); actividad.textContent = item.actividad;
       mensaje.append(actividad);

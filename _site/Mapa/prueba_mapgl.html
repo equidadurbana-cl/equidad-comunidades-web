@@ -40,7 +40,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -944,13 +943,13 @@ map.addControl(controlLeyenda, "bottom-right");
 <p>Busca tu comuna y revisa las redes, equipamientos y proyectos disponibles en el sector. Más abajo encontrarás un directorio con teléfonos y páginas oficiales de apoyo, vivienda, seguridad y servicios públicos.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-2fcb28ae922fd3d26f29" style="width:100%;height:480px;" class="maplibregl html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2fcb28ae922fd3d26f29">{"x":{"style":"https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json","center":[-70.65000000000001,-33.45],"zoom":4,"bearing":0,"pitch":0,"projection":"mercator","additional_params":[],"navigation_control":{"show_compass":true,"show_zoom":true,"visualize_pitch":false,"position":"top-right","orientation":"vertical"}},"evals":[],"jsHooks":{"render":[{"code":"function(el) {\n    window.iniciarMapaComunas(el);\n  }","data":null}]}}</script>
+<div id="htmlwidget-5032546b481694248719" style="width:100%;height:480px;" class="maplibregl html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5032546b481694248719">{"x":{"style":"https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json","center":[-70.65000000000001,-33.45],"zoom":4,"bearing":0,"pitch":0,"projection":"mercator","additional_params":[],"navigation_control":{"show_compass":true,"show_zoom":true,"visualize_pitch":false,"position":"top-right","orientation":"vertical"}},"evals":[],"jsHooks":{"render":[{"code":"function(el) {\n    window.iniciarMapaComunas(el);\n  }","data":null}]}}</script>
 </div>
 </div>
 <section class="directorio-territorial" aria-labelledby="titulo-directorio">
   <div class="directorio-intro">
-    <h2 id="titulo-directorio" class="anchored">Directorio de apoyo y servicios</h2>
+    <h2 id="titulo-directorio">Directorio de apoyo y servicios</h2>
     <p>Encuentra teléfonos y páginas oficiales para consultas, orientación y emergencias. Ante una emergencia, llama directamente al número correspondiente.</p>
   </div>
   <div id="categorias-directorio" class="categorias-directorio"><p class="directorio-cargando">Cargando directorio...</p></div>
@@ -993,13 +992,6 @@ fetch("datos/directorio_redes.json")
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

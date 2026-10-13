@@ -72,6 +72,24 @@
     "link": "https://www.munistgo.cl/fondos/"
   },
   {
+    "titulo": "Nuevo seremi de Vivienda y Urbanismo de la región de Antofagasta",
+    "bajada": "",
+    "fecha": "13/10/2026",
+    "region": "",
+    "comuna": "",
+    "fuente": "MINVU",
+    "link": "https://www.minvu.gob.cl/noticia/nuevo-seremi-de-vivienda-y-urbanismo-de-la-region-de-antofagasta/"
+  },
+  {
+    "titulo": "Ministro Poduje destaca avance de reconstrucción en Biobío y anuncia que este año se alcanzarán las mil viviendas iniciadas",
+    "bajada": "",
+    "fecha": "09/10/2026",
+    "region": "",
+    "comuna": "",
+    "fuente": "MINVU",
+    "link": "https://www.minvu.gob.cl/noticia/ministro-poduje-destaca-avance-de-reconstruccion-en-biobio-y-anuncia-que-este-ano-se-alcanzaran-las-mil-viviendas-iniciadas/"
+  },
+  {
     "titulo": "Minvu recuerda que hay plazo hasta este jueves 8 para postular al Subsidio de Arriendo para Personas Mayores y Personas con Discapacidad",
     "bajada": "",
     "fecha": "06/10/2026",
@@ -88,24 +106,6 @@
     "comuna": "",
     "fuente": "MINVU",
     "link": "https://www.minvu.gob.cl/noticia/ministro-ivan-poduje-entrega-viviendas-en-el-olivar-y-anuncia-entrega-masiva-de-casas-en-el-sector-vinamarino/"
-  },
-  {
-    "titulo": "Minvu informa que más de 6.900 familias fueron seleccionadas en el primer llamado nacional de 2026 al Subsidio para Sectores Medios",
-    "bajada": "",
-    "fecha": "30/09/2026",
-    "region": "",
-    "comuna": "",
-    "fuente": "MINVU",
-    "link": "https://www.minvu.gob.cl/noticia/minvu-informa-que-mas-de-6-900-familias-fueron-seleccionadas-en-el-primer-llamado-nacional-de-2026-al-subsidio-para-sectores-medios/"
-  },
-  {
-    "titulo": "Minvu y CChC acuerdan trabajo conjunto para impulsar la construcción y el empleo en el sector vivienda",
-    "bajada": "",
-    "fecha": "21/09/2026",
-    "region": "",
-    "comuna": "",
-    "fuente": "MINVU",
-    "link": "https://www.minvu.gob.cl/noticia/minvu-y-cchc-acuerdan-trabajo-conjunto-para-impulsar-la-construccion-y-el-empleo-en-el-sector-vivienda/"
   },
   {
     "titulo": "MESAS AMBIENTALES: TRABAJANDO JUNTOS POR UN PUENTE ALTO MÁS SUSTENTABLE",
@@ -144,6 +144,24 @@
     "link": "https://www.mpuentealto.cl/un-mimo-para-el-alma-realizan-jornada-de-autocuidado-para-apoderados-del-liceo-chiloe/"
   },
   {
+    "titulo": "70 familias reciben sus viviendas en Villa Renku II de Rengo",
+    "bajada": "Con alegría se realizó la entrega de 70 viviendas sociales en Villa Renku II, un importante avance que permite a nuevas familias de la comuna cumplir el sueño de la casa propia. La ceremonia contó con la participación del alcalde de Rengo, Enrique del Barrio; el seremi de Vivienda, Christian Villegas; los diputados Fernando Ugarte […]",
+    "fecha": "09/10/2026",
+    "region": "O'Higgins",
+    "comuna": "Rengo",
+    "fuente": "Municipalidad de Rengo",
+    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/70-familias-reciben-sus-viviendas-en-villa-renku-ii-de-rengo/"
+  },
+  {
+    "titulo": "Nuevas fechas de elecciones de organizaciones comunitarias",
+    "bajada": "N° REGISTRO ORGANIZACIÓN FECHA DE ELECCION 84775 JUNTA DE VECINOS SAN JOSE DE CHANQUEAHUE 18.10.2026 85185 CENTRO DE PADRES Y APODERADOS DEL LICEO LUIS URBINA FLORES – DE LA COMUNA DE RENGO 27.10.2026 345840 CLUB ADULTO MAYOR LOS AMANECERES DORADOS 16.10.2026 85060 FONDO SOLIDARIO FAENADORA ROSARIO DE LA COMUNA DE RENGO 20.10.2026 389298 AGRUPACION SOCIO-CULTURAL […]",
+    "fecha": "09/10/2026",
+    "region": "O'Higgins",
+    "comuna": "Rengo",
+    "fuente": "Municipalidad de Rengo",
+    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/nuevas-fechas-de-elecciones-de-organizaciones-comunitarias-8/"
+  },
+  {
     "titulo": "¡El Jardín Infantil Los Naranjitos alcanza un 95% de avance!",
     "bajada": "El alcalde junto a concejales de la comuna, visitaron las instalaciones del Jardín Infantil y Sala Cuna Los Naranjitos, proyecto que comenzó su ejecución en enero de 2026 y contempla una inversión de $1.258.213.679. Durante la visita, el alcalde informó que las obras ya alcanzan un 95% de avance, acercándose a su etapa final. El […]",
     "fecha": "29/09/2026",
@@ -162,22 +180,31 @@
     "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/rengo-conmemoro-sus-195-anos-con-el-tradicional-tedeum-y-desfile/"
   },
   {
-    "titulo": "Rengo avanza: habilitan Av. Alonso de Ercilla para la construcción del nuevo Hospital",
-    "bajada": "El alcalde de Rengo, Enrique del Barrio, junto al gobernador regional Pablo Silva Amaya, visitó el inicio de las obras de construcción del nuevo Hospital de Rengo, un proyecto que marcará un importante paso adelante para la salud y el bienestar de las familias de nuestra comuna. Durante la jornada también se realizó la apertura […]",
-    "fecha": "08/09/2026",
-    "region": "O'Higgins",
-    "comuna": "Rengo",
-    "fuente": "Municipalidad de Rengo",
-    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/rengo-avanza-habilitan-av-alonso-de-ercilla-para-la-construccion-del-nuevo-hospital/"
+    "titulo": "Municipalidad de San Bernardo certifica a emprendedoras y emprendedores del Programa ASEL con histórica inversión 100% municipal",
+    "bajada": "La iniciativa benefició a vecinos y vecinas con un financiamiento de hasta $500.000 destinado a equipamiento y materiales, totalizando una […]",
+    "fecha": "09/10/2026",
+    "region": "Metropolitana de Santiago",
+    "comuna": "San Bernardo",
+    "fuente": "Municipalidad de San Bernardo",
+    "link": "https://www.sanbernardo.cl/municipalidad-de-san-bernardo-certifica-a-emprendedoras-y-emprendedores-del-programa-asel-con-historica-inversion-100-municipal/"
   },
   {
-    "titulo": "Municipalidad de Rengo presenta al CORE proyecto de normalización y modernización del Teatro Municipal",
-    "bajada": "Con una inversión estimada de $3.500 millones, la iniciativa busca transformar el Teatro Municipal Hernán Quintanilla Méndez en un recinto moderno, accesible y acorde a los actuales estándares culturales. El proyecto continuará su tramitación ante el Ministerio de Desarrollo Social y Familia para obtener la Recomendación Satisfactoria (RS) y, posteriormente, será presentado al Consejo Regional […]",
-    "fecha": "08/09/2026",
-    "region": "O'Higgins",
-    "comuna": "Rengo",
-    "fuente": "Municipalidad de Rengo",
-    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/municipalidad-de-rengo-presenta-al-core-proyecto-de-normalizacion-y-modernizacion-del-teatro-municipal/"
+    "titulo": "San Bernardo actualiza su ordenanza municipal para reforzar el cuidado y los derechos de las y los adultos mayores",
+    "bajada": "Las y los vecinos de San Bernardo contarán con una herramienta más cercana y concreta para proteger la tranquilidad y […]",
+    "fecha": "08/10/2026",
+    "region": "Metropolitana de Santiago",
+    "comuna": "San Bernardo",
+    "fuente": "Municipalidad de San Bernardo",
+    "link": "https://www.sanbernardo.cl/san-bernardo-actualiza-su-ordenanza-municipal-para-reforzar-el-cuidado-y-los-derechos-de-las-y-los-adultos-mayores/"
+  },
+  {
+    "titulo": "Alcalde White y vecinos de San Bernardo acompañan sesión del Consejo Regional por el futuro del Parque Metropolitano Cerro Chena",
+    "bajada": "El gobernador Claudio Orrego expuso ante el pleno que todas las observaciones técnicas fueron subsanadas y precisó que, conforme al […]",
+    "fecha": "07/10/2026",
+    "region": "Metropolitana de Santiago",
+    "comuna": "San Bernardo",
+    "fuente": "Municipalidad de San Bernardo",
+    "link": "https://www.sanbernardo.cl/alcalde-white-y-vecinos-de-san-bernardo-acompanan-sesion-del-consejo-regional-por-el-futuro-del-parque-metropolitano-cerro-chena/"
   },
   {
     "titulo": "Plan Rucos en San Bernardo: Municipio presenta balance con 70 espacios recuperados y más de 800 estructuras retiradas",
@@ -187,24 +214,6 @@
     "comuna": "San Bernardo",
     "fuente": "Municipalidad de San Bernardo",
     "link": "https://www.sanbernardo.cl/plan-rucos-en-san-bernardo-municipio-presenta-balance-con-70-espacios-recuperados-y-mas-de-800-estructuras-retiradas/"
-  },
-  {
-    "titulo": "San Bernardo refuerza la seguridad en el centro comercial comunal con más de 300 patrullajes preventivos",
-    "bajada": "El centro de San Bernardo es un espacio clave para el desarrollo local y el tránsito diario de la comunidad. […]",
-    "fecha": "28/09/2026",
-    "region": "Metropolitana de Santiago",
-    "comuna": "San Bernardo",
-    "fuente": "Municipalidad de San Bernardo",
-    "link": "https://www.sanbernardo.cl/san-bernardo-refuerza-la-seguridad-en-el-centro-comercial-comunal-con-mas-de-300-patrullajes-preventivos/"
-  },
-  {
-    "titulo": "San Bernardo fortalece la cultura de los pueblos originarios con nuevos talleres en la Casa de la Cultura",
-    "bajada": "La Oficina de Pueblos Originarios del Departamento de Organizaciones Comunitarias de DIDECO trabaja para visibilizar, promover y fortalecer la cultura […]",
-    "fecha": "24/09/2026",
-    "region": "Metropolitana de Santiago",
-    "comuna": "San Bernardo",
-    "fuente": "Municipalidad de San Bernardo",
-    "link": "https://www.sanbernardo.cl/san-bernardo-fortalece-la-cultura-de-los-pueblos-originarios-con-nuevos-talleres-en-la-casa-de-la-cultura/"
   },
   {
     "titulo": "¡CONFIRMADO! : EL NUEVO HOSPITAL DE LA ZONA NORTE SE CONSTRUIRÁ EN LAMPA TRAS LA COMPRA DEL TERRENO EN VALLE GRANDE",
@@ -270,39 +279,39 @@
     "link": "https://www.municipalidadelbosque.cl/comunidad/escuela-canciller-orlando-letelier-conmemora-50-anos-del-legado-del-exministro-con-un-firme-llamado-a-la-memoria-y-los-derechos-humanos/"
   },
   {
-    "titulo": "Los Andes conmemoró el Día Internacional de las Personas Mayores con reconocimiento a diez dirigentes",
-    "bajada": "Con la participación de cerca de 200 integrantes de organizaciones de personas mayores, la Municipalidad de Los Andes conmemoró el Día Internacional de las…",
-    "fecha": "01/10/2026",
+    "titulo": "Los Andes abre nuevo espacio comunitario con foco en las mujeres y el emprendimiento",
+    "bajada": "La iniciativa es impulsada por el Espacio Urbano en alianza con la Municipalidad de Los Andes. Un nuevo espacio de encuentro, capacitación y participación…",
+    "fecha": "09/10/2026",
     "region": "Valparaíso",
     "comuna": "Los Andes",
     "fuente": "Municipalidad de Los Andes",
-    "link": "https://www.losandes.cl/los-andes-conmemoro-el-dia-internacional-de-las-personas-mayores-con-reconocimiento-a-diez-dirigentes/"
+    "link": "https://www.losandes.cl/los-andes-abre-nuevo-espacio-comunitario-con-foco-en-las-mujeres-y-el-emprendimiento/"
   },
   {
-    "titulo": "Los Andes es sede de importante seminario internacional sobre gestión de sequías",
-    "bajada": "El encuentro es organizado por el Centro Internacional para la Investigación del Fenómeno de El Niño (CIIFEN), en el marco de un estudio que…",
-    "fecha": "01/10/2026",
+    "titulo": "Punto Verde de Los Andes abre sus puertas a estudiantes de la Escuela Especial Valle Andino para prácticas laborales",
+    "bajada": "Alumnos de los cursos laborales realizarán una pasantía durante octubre y noviembre, como parte del proyecto Transición a la Vida Adulta. El Punto Verde…",
+    "fecha": "08/10/2026",
     "region": "Valparaíso",
     "comuna": "Los Andes",
     "fuente": "Municipalidad de Los Andes",
-    "link": "https://www.losandes.cl/los-andes-es-sede-de-importante-seminario-internacional-sobre-gestion-de-sequias/"
+    "link": "https://www.losandes.cl/punto-verde-de-los-andes-abre-sus-puertas-a-estudiantes-de-la-escuela-especial-valle-andino-para-practicas-laborales/"
   },
   {
-    "titulo": "Avanza construcción del gran Polideportivo en Los Andes",
-    "bajada": "Las obras presentan un 18% de avance y se espera que estén finalizadas en marzo de 2027. El proyecto contempla una inversión superior a…",
-    "fecha": "29/09/2026",
+    "titulo": "Los Andes recibe el Nacional de Básquetbol Senior con 22 equipos y entrada gratuita",
+    "bajada": "Entre el miércoles 7 y el domingo 11 de octubre, Los Andes será sede del Nacional de Básquetbol Senior de Chile, organizado por LINBASE.…",
+    "fecha": "08/10/2026",
     "region": "Valparaíso",
     "comuna": "Los Andes",
     "fuente": "Municipalidad de Los Andes",
-    "link": "https://www.losandes.cl/avanza-construccion-del-gran-polideportivo-en-los-andes/"
+    "link": "https://www.losandes.cl/los-andes-recibe-el-nacional-de-basquetbol-senior-con-22-equipos-y-entrada-gratuita/"
   },
   {
-    "titulo": "Fiesta del Guatón Loyola cumplió 25 años con más de 70 mil visitantes",
-    "bajada": "La tradicional celebración de Fiestas Patrias se desarrolló entre el 16 y el 20 de septiembre en el Parque Urbano Ambrosio O’Higgins, consolidándose como…",
-    "fecha": "29/09/2026",
+    "titulo": "Municipalidad de Los Andes entregó renovados espacios a vecinos de la Población Cristo Redentor",
+    "bajada": "El proyecto contempló la recuperación integral de la multicancha y el mejoramiento de las áreas de esparcimiento de su entorno, con una inversión de…",
+    "fecha": "08/10/2026",
     "region": "Valparaíso",
     "comuna": "Los Andes",
     "fuente": "Municipalidad de Los Andes",
-    "link": "https://www.losandes.cl/fiesta-del-guaton-loyola-cumplio-25-anos-con-mas-de-70-mil-visitantes/"
+    "link": "https://www.losandes.cl/municipalidad-de-los-andes-entrego-renovados-espacios-a-vecinos-de-la-poblacion-cristo-redentor/"
   }
 ]

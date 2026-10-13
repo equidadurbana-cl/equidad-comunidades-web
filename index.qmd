@@ -4,7 +4,9 @@ title: ""
 
 ::: {.hero-inicio}
 
-# Plataforma informativa para comunidades organizadas.
+# Equidad-comunidades
+
+## Plataforma informativa para comunidades organizadas.
 
 Si eres parte de un conjunto habitacional DS19, este es tu lugar. Encuentra información normativa, resuelve tus dudas, conoce las redes de tu sector y entérate de fondos y beneficios disponibles.
 
