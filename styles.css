@@ -615,8 +615,8 @@ h1.biblioteca-titulo {
   border-left: 7px solid var(--eu-petroleo);
   background: linear-gradient(105deg, #f3f9f7, #fffdf8);
 }
-.consejo-mensual-icono { display:flex; align-items:center; justify-content:center; width:82px; height:82px; padding:0; overflow:hidden; border-radius:50%; background:var(--eu-petroleo); color:#fff; line-height:1; }
-.consejo-mensual-icono > span { display:block; margin:0; font-size:5.4rem !important; line-height:1; transform:scale(1.12); transform-origin:center; }
+.consejo-mensual-icono { display:flex; align-items:center; justify-content:center; width:82px; height:82px; padding:0; overflow:hidden; border-radius:50%; background:var(--eu-petroleo); }
+.consejo-mensual-icono > svg { display:block; width:68px; height:68px; fill:#ffd36b; }
 .consejo-mensual-contenido > *:last-child { margin-bottom:0; }
 .consejo-mensual-etiqueta { margin:0 0 .35rem; color:var(--eu-coral); font-size:.76rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
 .consejo-mensual h2 { margin:0 0 .55rem; color:var(--eu-azul-editorial); font-family:Newsreader,Georgia,serif; font-size:clamp(1.7rem,2.6vw,2.35rem); font-weight:600; line-height:1.05; }
@@ -631,7 +631,7 @@ h1.biblioteca-titulo {
   .navbar-brand .navbar-logo { display:block; width:auto; max-width:min(48vw,190px); max-height:32px; object-fit:contain; object-position:left center; }
   .consejo-mensual { grid-template-columns:1fr; gap:.8rem; margin:0 0 2.7rem; padding:1.25rem; border-left-width:5px; }
   .consejo-mensual-icono { width:64px; height:64px; padding:0; }
-  .consejo-mensual-icono > span { font-size:4.15rem !important; transform:scale(1.1); }
+  .consejo-mensual-icono > svg { width:53px; height:53px; }
   .consejo-mensual h2 { font-size:1.7rem; }
 }
 

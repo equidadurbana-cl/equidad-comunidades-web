@@ -84,7 +84,7 @@ Busca tu proyecto o comuna para conocer las próximas actividades del PIS, sus f
 
 ::: {.consejo-mensual}
 ::: {.consejo-mensual-icono aria-hidden="true"}
-<span>💡</span>
+<svg viewBox="0 0 24 24" focusable="false"><path d="M9 21h6v-1H9v1zm3-19a7 7 0 0 0-4.91 11.99c.8.77 1.23 1.69 1.23 2.66V18h7.36v-1.35c0-.97.43-1.89 1.23-2.66A7 7 0 0 0 12 2zm3.53 10.55c-1.07 1.03-1.65 2.34-1.65 3.75v.2h-3.76v-.2c0-1.41-.58-2.72-1.65-3.75A5 5 0 1 1 15.53 12.55z"/></svg>
 :::
 
 ::: {.consejo-mensual-contenido}
