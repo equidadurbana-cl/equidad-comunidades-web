@@ -76,9 +76,9 @@
       "proyecto": "Gran Avenida",
       "comuna": "El Bosque",
       "actividad": "Repetición de la Visita a la obra",
-      "fecha": "9 de octubre de 2026",
+      "fecha": "10 de septiembre de 2026",
       "horario": "15:00 y 16:30 horas",
-      "lugar": "Gran Avenida XXX",
+      "lugar": "Gran Avenida #9680",
       "correo": "plands19@rvc.cl"
     },
     {
@@ -86,8 +86,8 @@
       "comuna": "Lampa",
       "actividad": "Taller de Organización Comunitaria",
       "fecha": "17 de octubre de 2026",
-      "horario": "",
-      "lugar": "",
+      "horario": "9:00, 10:30 y 12:00 horas",
+      "lugar": "Casino del Colegio Emprender (Los Halcones 1000, Lampa)",
       "correo": "ds19rm@socovesa.cl"
     },
     {
@@ -104,8 +104,8 @@
       "comuna": "Rengo",
       "actividad": "Repetición del Taller de Organización Comunitaria",
       "fecha": "15 de octubre de 2026",
-      "horario": "",
-      "lugar": "",
+      "horario": "18:00 horas",
+      "lugar": "Sede Junta de Vecinos Libertad (Guangualí Sur #159, Rengo)",
       "correo": "vallesderengo3.pis@gmail.com"
     }
   ]
