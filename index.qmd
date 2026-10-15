@@ -2,6 +2,16 @@
 title: ""
 ---
 
+```{r}
+#| echo: false
+
+# CONSEJO DEL MES: cambia solamente el texto entre comillas y luego renderiza el sitio.
+consejo_titulo <- "Cuida tu vivienda durante la primavera"
+consejo_texto <- "Revisa canaletas, bajadas de agua y sellos de ventanas antes de las lluvias. Una mantención sencilla ayuda a prevenir filtraciones y daños mayores."
+consejo_enlace <- ""
+consejo_enlace_texto <- ""
+```
+
 ::: {.hero-inicio}
 
 # Equidad-comunidades
@@ -70,4 +80,25 @@ Busca tu proyecto o comuna para conocer las próximas actividades del PIS, sus f
 :::
 :::::
 
+:::
+
+::: {.consejo-mensual}
+::: {.consejo-mensual-icono aria-hidden="true"}
+💡
+:::
+
+::: {.consejo-mensual-contenido}
+<p class="consejo-mensual-etiqueta">Información útil del mes</p>
+
+## `r consejo_titulo`
+
+`r consejo_texto`
+
+```{r}
+#| echo: false
+if (nzchar(consejo_enlace) && nzchar(consejo_enlace_texto)) {
+  cat(sprintf('<a class="consejo-mensual-enlace" href="%s" target="_blank" rel="noopener">%s →</a>', consejo_enlace, consejo_enlace_texto))
+}
+```
+:::
 :::

@@ -199,6 +199,8 @@ ul.task-list li input[type="checkbox"] {
 .faq-respuesta h3 { color: #196774; font-size: 24px; line-height: 1.35; margin: 12px 0 18px; }
 .faq-cerrar-respuesta { float:right; margin:0 0 12px 14px; padding:7px 10px; border:1px solid #aac8c4; border-radius:7px; background:#f5faf8; color:#174f5a; font-size:13px; font-weight:700; cursor:pointer; }.faq-cerrar-respuesta:hover { background:#e4f0ee; }
 .faq-respuesta p { color: #3f4647; line-height: 1.7; font-size: 16px; margin: 0 0 1.15rem; }
+.faq-respuesta ul { margin: 0 0 1.15rem 1.2rem; padding: 0; color: #3f4647; }
+.faq-respuesta li { margin: 0 0 .55rem; padding-left: .15rem; line-height: 1.65; font-size: 16px; }
 .faq-ilustracion { width:100%; height:300px; margin:4px 0 25px; border:1px solid #d9e5e2; border-radius:10px; background:#f5faf8; object-fit:contain; }
 .faq-ilustracion-lienzo { height:300px; object-fit:contain; background:#f5faf8; }
 .faq-simbolo { display:flex; align-items:center; justify-content:center; gap:16px; min-height:126px; margin:4px 0 25px; padding:22px 26px; border:1px solid #d9e5e2; border-radius:10px; background:linear-gradient(120deg,#f3faf8,#eef5f4); color:#174f5a; }.faq-simbolo-icono { display:flex; flex:0 0 68px; width:68px; height:68px; align-items:center; justify-content:center; border-radius:50%; background:#196774; color:#fff; font-size:33px; line-height:1; }.faq-simbolo-texto { max-width:520px; font-size:17px; font-weight:700; line-height:1.35; }
@@ -312,7 +314,11 @@ function mostrarRespuesta(item) {
   const etiqueta = document.createElement("div"); etiqueta.className = "faq-etiqueta"; etiqueta.textContent = item.subtema;
   const titulo = document.createElement("h3"); titulo.textContent = item.pregunta;
   const cerrar = document.createElement("button"); cerrar.type = "button"; cerrar.className = "faq-cerrar-respuesta"; cerrar.textContent = "Ocultar respuesta";
-  cerrar.addEventListener("click", function() { seleccionada = null; mostrarLista(); document.querySelector(".faq-contenido").appendChild(respuestaFaq); respuestaFaq.innerHTML = "<div class='faq-vacio'>Selecciona una pregunta para ver su respuesta.</div>"; });
+  cerrar.addEventListener("click", function() {
+    seleccionada = null;
+    respuestaFaq.innerHTML = "<div class='faq-vacio'>Selecciona una pregunta para ver su respuesta.</div>";
+    mostrarLista();
+  });
   const imagenEspecifica = imagenesFaq[item.subtema];
   const imagen = imagenEspecifica || imagenesPorTemaFaq[item.tema];
   const simbolo = simbolosFaq[item.subtema] || simbolosPorTemaFaq[item.tema];
@@ -330,8 +336,15 @@ function mostrarRespuesta(item) {
     respuestaFaq.appendChild(figura);
   }
   String(item.respuesta || "").split(/\n\s*\n/).filter(Boolean).forEach(function(bloque) {
-    const texto = document.createElement("p"); texto.textContent = bloque.trim();
-    respuestaFaq.appendChild(texto);
+    const lineas = bloque.trim().split(/\n+/).map(function(linea) { return linea.trim(); }).filter(Boolean);
+    const esLista = lineas.length > 0 && lineas.every(function(linea) { return /^[-•]\s+/.test(linea); });
+    if (esLista) {
+      const lista = document.createElement("ul");
+      lineas.forEach(function(linea) { const itemLista = document.createElement("li"); itemLista.textContent = linea.replace(/^[-•]\s+/, ""); lista.appendChild(itemLista); });
+      respuestaFaq.appendChild(lista);
+    } else {
+      lineas.forEach(function(linea) { const texto = document.createElement("p"); texto.textContent = linea; respuestaFaq.appendChild(texto); });
+    }
   });
   const ayuda = document.createElement("aside"); ayuda.className = "faq-ayuda";
   ayuda.innerHTML = "<strong>¿No encontraste respuesta a tu duda normativa?</strong> Escríbenos a <a href=\"mailto:contacto@equidadurbana.org\">contacto@equidadurbana.org</a>. Te orientaremos o derivaremos a la institución correspondiente.";

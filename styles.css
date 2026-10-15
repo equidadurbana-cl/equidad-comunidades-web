@@ -592,3 +592,54 @@ body:has(.buscador-biblioteca) #quarto-document-content > h1 { color:var(--eu-az
 @media (min-width:761px) {
   .inicio-accesos > h2 { font-size:clamp(1.7rem,2.55vw,2.65rem); white-space:nowrap; }
 }
+/* Biblioteca no usa el encabezado automático de Quarto: se le asigna
+   explícitamente la misma escala editorial de los títulos principales. */
+h1.biblioteca-titulo {
+  color: var(--eu-azul-editorial) !important;
+  font-family: Newsreader, Georgia, serif !important;
+  font-size: clamp(2.15rem, 4vw, 3.6rem) !important;
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -.025em;
+}
+
+/* Consejo editable en index.qmd. Se ubica después de los accesos principales. */
+.consejo-mensual {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 1.35rem;
+  max-width: 1100px;
+  margin: 0 auto 4.2rem;
+  padding: clamp(1.35rem, 2.6vw, 2rem);
+  border: 1px solid #bfd7d2;
+  border-left: 7px solid var(--eu-petroleo);
+  background: linear-gradient(105deg, #f3f9f7, #fffdf8);
+}
+.consejo-mensual-icono { display:flex; align-items:flex-start; justify-content:center; width:82px; height:82px; padding-top:11px; border-radius:50%; background:var(--eu-petroleo); color:#fff; font-size:2.55rem; line-height:1; }
+.consejo-mensual-contenido > *:last-child { margin-bottom:0; }
+.consejo-mensual-etiqueta { margin:0 0 .35rem; color:var(--eu-coral); font-size:.76rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.consejo-mensual h2 { margin:0 0 .55rem; color:var(--eu-azul-editorial); font-family:Newsreader,Georgia,serif; font-size:clamp(1.7rem,2.6vw,2.35rem); font-weight:600; line-height:1.05; }
+.consejo-mensual p:not(.consejo-mensual-etiqueta) { max-width:800px; margin:0; color:#496269; font-size:1rem; line-height:1.62; }
+.consejo-mensual-enlace { display:inline-block; margin-top:.9rem; color:var(--eu-petroleo); font-weight:700; text-decoration:none; }
+.consejo-mensual-enlace:hover { color:var(--eu-coral); }
+
+/* El logo debe reducirse dentro de la barra en teléfonos, sin recortarse. */
+@media (max-width:760px) {
+  .navbar-brand { min-width:0; margin-right:.45rem; }
+  .navbar-brand-logo { display:flex; min-width:0; margin-right:0 !important; }
+  .navbar-brand .navbar-logo { display:block; width:auto; max-width:min(48vw,190px); max-height:32px; object-fit:contain; object-position:left center; }
+  .consejo-mensual { grid-template-columns:1fr; gap:.8rem; margin:0 0 2.7rem; padding:1.25rem; border-left-width:5px; }
+  .consejo-mensual-icono { width:64px; height:64px; padding-top:9px; font-size:2rem; }
+  .consejo-mensual h2 { font-size:1.7rem; }
+}
+
+/* En escritorio, la portada usa una cuadrícula especial: el consejo debe
+   ocupar expresamente la columna central y no la franja lateral. */
+@media (min-width:761px) {
+  .consejo-mensual {
+    grid-column: body-content-start / body-content-end;
+    width: 100%;
+    box-sizing: border-box;
+    justify-self: center;
+  }
+}

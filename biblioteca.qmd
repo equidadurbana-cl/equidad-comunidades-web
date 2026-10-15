@@ -13,7 +13,7 @@ biblioteca <- read_excel("data/biblioteca.xlsx")
 biblioteca$Categoria <- trimws(biblioteca$Categoria)
 ```
 
-# 📚 Biblioteca Comunitaria
+# 📚 Biblioteca Comunitaria {.biblioteca-titulo}
 
 Encuentra información útil organizada por temas.
 
