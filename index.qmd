@@ -84,7 +84,7 @@ Busca tu proyecto o comuna para conocer las próximas actividades del PIS, sus f
 
 ::: {.consejo-mensual}
 ::: {.consejo-mensual-icono aria-hidden="true"}
-💡
+<span>💡</span>
 :::
 
 ::: {.consejo-mensual-contenido}
