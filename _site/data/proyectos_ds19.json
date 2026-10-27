@@ -73,40 +73,40 @@
   ],
   "actividades": [
     {
-      "proyecto": "Gran Avenida",
-      "comuna": "El Bosque",
-      "actividad": "Repetición de la Visita a la obra",
-      "fecha": "10 de septiembre de 2026",
-      "horario": "15:00 y 16:30 horas",
-      "lugar": "Gran Avenida #9680",
-      "correo": "plands19@rvc.cl"
+      "proyecto": "Jardines de San Bernardo 2",
+      "comuna": "San Bernardo",
+      "actividad": "Taller de Uso, Cuidado y Mantención",
+      "fecha": "11 de noviembre de 2026",
+      "horario": "16:00 horas",
+      "lugar": "Centro Municipal Canelo de Nos Av. Diego Portales #3020 San Bernardo",
+      "correo": "pis.jardinesdesanbernardo2@gmail.com"
     },
     {
-      "proyecto": "Pataguas XI",
-      "comuna": "Lampa",
-      "actividad": "Taller de Organización Comunitaria",
-      "fecha": "17 de octubre de 2026",
-      "horario": "9:00, 10:30 y 12:00 horas",
-      "lugar": "Casino del Colegio Emprender (Los Halcones 1000, Lampa)",
-      "correo": "ds19rm@socovesa.cl"
+      "proyecto": "Panorámico I - Torre A",
+      "comuna": "Antofagasta",
+      "actividad": "Taller de Uso, Cuidado y Mantención",
+      "fecha": "19 de noviembre de 2026",
+      "horario": "18:00 horas",
+      "lugar": "Auditorio INACAP, ubicado en Av. Edmundo Pérez Zujovic N.º 11.092",
+      "correo": ""
     },
     {
       "proyecto": "Principal 1385",
       "comuna": "Conchalí",
       "actividad": "Taller de Redes",
-      "fecha": "21 de octubre de 2026",
+      "fecha": "29 de octubre de 2026",
       "horario": "18:00 horas",
-      "lugar": "",
+      "lugar": "Escuela Unesco de Conchalí ubicada en la calle Tronador N° 1695",
       "correo": "principal1385@gmail.com"
     },
     {
-      "proyecto": "Valles de Rengo III Etapa 1",
+      "proyecto": "Valles de Rengo III Etapa 2",
       "comuna": "Rengo",
-      "actividad": "Repetición del Taller de Organización Comunitaria",
-      "fecha": "15 de octubre de 2026",
-      "horario": "18:00 horas",
-      "lugar": "Sede Junta de Vecinos Libertad (Guangualí Sur #159, Rengo)",
-      "correo": "vallesderengo3.pis@gmail.com"
+      "actividad": "Taller de Uso, Cuidado y Mantención",
+      "fecha": "5 de noviembre de 2026",
+      "horario": "11:00 y 12:30 horas",
+      "lugar": "Local comercial ubicado al interior del proyecto. Ingreso por calle Juan Egenau",
+      "correo": "pisvallesderengo3.2@gmail.com"
     }
   ]
 }

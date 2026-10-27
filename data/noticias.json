@@ -72,6 +72,33 @@
     "link": "https://www.munistgo.cl/fondos/"
   },
   {
+    "titulo": "Requínoa: ministro Poduje afirma que viviendas afectadas por tornado serán recuperadas",
+    "bajada": "",
+    "fecha": "27/10/2026",
+    "region": "",
+    "comuna": "",
+    "fuente": "MINVU",
+    "link": "https://www.minvu.gob.cl/noticia/requinoa-ministro-poduje-afirma-que-viviendas-afectadas-por-tornado-seran-recuperadas/"
+  },
+  {
+    "titulo": "Ministro Poduje autoriza comodato para construir nuevo parque en Puerto Montt en el marco del Plan Sitio Eriazo Cero",
+    "bajada": "",
+    "fecha": "26/10/2026",
+    "region": "",
+    "comuna": "",
+    "fuente": "MINVU",
+    "link": "https://www.minvu.gob.cl/noticia/ministro-poduje-autoriza-comodato-para-construir-nuevo-parque-en-puerto-montt-en-el-marco-del-plan-sitio-eriazo-cero/"
+  },
+  {
+    "titulo": "En el Día Internacional contra el Cambio Climático: Cómo el Minvu impulsa viviendas y ciudades más resilientes",
+    "bajada": "",
+    "fecha": "23/10/2026",
+    "region": "",
+    "comuna": "",
+    "fuente": "MINVU",
+    "link": "https://www.minvu.gob.cl/noticia/en-el-dia-internacional-contra-el-cambio-climatico-como-el-minvu-impulsa-viviendas-y-ciudades-mas-resilientes/"
+  },
+  {
     "titulo": "Nuevo seremi de Vivienda y Urbanismo de la región de Antofagasta",
     "bajada": "",
     "fecha": "13/10/2026",
@@ -79,33 +106,6 @@
     "comuna": "",
     "fuente": "MINVU",
     "link": "https://www.minvu.gob.cl/noticia/nuevo-seremi-de-vivienda-y-urbanismo-de-la-region-de-antofagasta/"
-  },
-  {
-    "titulo": "Ministro Poduje destaca avance de reconstrucción en Biobío y anuncia que este año se alcanzarán las mil viviendas iniciadas",
-    "bajada": "",
-    "fecha": "09/10/2026",
-    "region": "",
-    "comuna": "",
-    "fuente": "MINVU",
-    "link": "https://www.minvu.gob.cl/noticia/ministro-poduje-destaca-avance-de-reconstruccion-en-biobio-y-anuncia-que-este-ano-se-alcanzaran-las-mil-viviendas-iniciadas/"
-  },
-  {
-    "titulo": "Minvu recuerda que hay plazo hasta este jueves 8 para postular al Subsidio de Arriendo para Personas Mayores y Personas con Discapacidad",
-    "bajada": "",
-    "fecha": "06/10/2026",
-    "region": "",
-    "comuna": "",
-    "fuente": "MINVU",
-    "link": "https://www.minvu.gob.cl/noticia/minvu-recuerda-que-hay-plazo-hasta-este-jueves-8-para-postular-al-subsidio-de-arriendo-para-personas-mayores-y-personas-con-discapacidad/"
-  },
-  {
-    "titulo": "Ministro Ivan Poduje entrega viviendas en El Olivar y anuncia entrega masiva de casas en el sector viñamarino",
-    "bajada": "",
-    "fecha": "01/10/2026",
-    "region": "",
-    "comuna": "",
-    "fuente": "MINVU",
-    "link": "https://www.minvu.gob.cl/noticia/ministro-ivan-poduje-entrega-viviendas-en-el-olivar-y-anuncia-entrega-masiva-de-casas-en-el-sector-vinamarino/"
   },
   {
     "titulo": "MESAS AMBIENTALES: TRABAJANDO JUNTOS POR UN PUENTE ALTO MÁS SUSTENTABLE",
@@ -144,76 +144,85 @@
     "link": "https://www.mpuentealto.cl/un-mimo-para-el-alma-realizan-jornada-de-autocuidado-para-apoderados-del-liceo-chiloe/"
   },
   {
-    "titulo": "70 familias reciben sus viviendas en Villa Renku II de Rengo",
-    "bajada": "Con alegría se realizó la entrega de 70 viviendas sociales en Villa Renku II, un importante avance que permite a nuevas familias de la comuna cumplir el sueño de la casa propia. La ceremonia contó con la participación del alcalde de Rengo, Enrique del Barrio; el seremi de Vivienda, Christian Villegas; los diputados Fernando Ugarte […]",
-    "fecha": "09/10/2026",
+    "titulo": "Rengo recibe la Cápsula del Tiempo rumbo al centenario de Carabineros",
+    "bajada": "El alcalde Enrique del Barrio, junto al mayor de la Cuarta Comisaría de Carabineros de Rengo, Juan Ramírez, y concejales de la comuna, recibió este jueves la Cápsula del Tiempo del proyecto “Camino al Centenario 1927–2027”, iniciativa que recorre las comunas todo Chile para rescatar la historia, el patrimonio y la identidad de sus territorios. […]",
+    "fecha": "23/10/2026",
     "region": "O'Higgins",
     "comuna": "Rengo",
     "fuente": "Municipalidad de Rengo",
-    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/70-familias-reciben-sus-viviendas-en-villa-renku-ii-de-rengo/"
+    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/rengo-recibe-la-capsula-del-tiempo-rumbo-al-centenario-de-carabineros/"
   },
   {
-    "titulo": "Nuevas fechas de elecciones de organizaciones comunitarias",
-    "bajada": "N° REGISTRO ORGANIZACIÓN FECHA DE ELECCION 84775 JUNTA DE VECINOS SAN JOSE DE CHANQUEAHUE 18.10.2026 85185 CENTRO DE PADRES Y APODERADOS DEL LICEO LUIS URBINA FLORES – DE LA COMUNA DE RENGO 27.10.2026 345840 CLUB ADULTO MAYOR LOS AMANECERES DORADOS 16.10.2026 85060 FONDO SOLIDARIO FAENADORA ROSARIO DE LA COMUNA DE RENGO 20.10.2026 389298 AGRUPACION SOCIO-CULTURAL […]",
-    "fecha": "09/10/2026",
+    "titulo": "Inscripciones de elecciones de organizaciones comunitarias de noviembre",
+    "bajada": "N° REGISTRO ORGANIZACIÓN FECHA DE ELECCION 1813 CLUB DE ADULTO MAYOR ALMAS JOVENES DE RENGO 05.11.2026 1671 CLUB DEPORTIVO SOCIAL Y CULTURAL CORDILLERANOS DE POPETA 15.11.2026 1204 JUNTA DE VECINOS EL MOLINO 13.11.2026",
+    "fecha": "22/10/2026",
     "region": "O'Higgins",
     "comuna": "Rengo",
     "fuente": "Municipalidad de Rengo",
-    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/nuevas-fechas-de-elecciones-de-organizaciones-comunitarias-8/"
+    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/inscripciones-de-elecciones-de-organizaciones-comunitarias-de-noviembre/"
   },
   {
-    "titulo": "¡El Jardín Infantil Los Naranjitos alcanza un 95% de avance!",
-    "bajada": "El alcalde junto a concejales de la comuna, visitaron las instalaciones del Jardín Infantil y Sala Cuna Los Naranjitos, proyecto que comenzó su ejecución en enero de 2026 y contempla una inversión de $1.258.213.679. Durante la visita, el alcalde informó que las obras ya alcanzan un 95% de avance, acercándose a su etapa final. El […]",
-    "fecha": "29/09/2026",
+    "titulo": "Inscripciones de elecciones de organizaciones comunitarias",
+    "bajada": "N° REGISTRO ORGANIZACIÓN FECHA DE ELECCION 351 CLUB DE RAYUELA VOLCAN RENGO 01.11.2026 131 ASOCIACION DE FUTBOL RURAL DE ROSARIO 10.11.2026 1537 JUNTA DE VECINOS CAMARICO VIÑA MARIA 07.11.2026 1817 GRUPO DE BAILE BAMBARA LATINA 10.11.2026",
+    "fecha": "20/10/2026",
     "region": "O'Higgins",
     "comuna": "Rengo",
     "fuente": "Municipalidad de Rengo",
-    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/el-jardin-infantil-los-naranjitos-alcanza-un-95-de-avance/"
+    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/inscripciones-de-elecciones-de-organizaciones-comunitarias/"
   },
   {
-    "titulo": "Rengo conmemoró sus 195 años con el tradicional Tedeum y desfile",
-    "bajada": "El jueves 17 de septiembre vivimos una jornada llena de tradición y orgullo comunal, con el Tedeum Ecuménico y el tradicional desfile en conmemoración de los 195 años de Rengo. La actividad fue encabezada por el alcalde Enrique del Barrio, junto a autoridades regionales, concejales y la comunidad, quienes se reunieron en la Basílica Santa […]",
-    "fecha": "21/09/2026",
+    "titulo": "CORE aprueba más de $3800 millones para mejoramiento de Av. Bisquertt",
+    "bajada": "La iniciativa contempla nuevas aceras, iluminación, áreas verdes, zonas de juegos y una ciclovía bidireccional, transformando el tramo entre la línea férrea y la rotonda Armando Martínez. La Comisión de Infraestructura del Consejo Regional (CORE), en una sesión realizada este jueves 15 de octubre en dependencias de la Municipalidad de Rengo, aprobó recursos por $3.885 […]",
+    "fecha": "20/10/2026",
     "region": "O'Higgins",
     "comuna": "Rengo",
     "fuente": "Municipalidad de Rengo",
-    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/rengo-conmemoro-sus-195-anos-con-el-tradicional-tedeum-y-desfile/"
+    "link": "https://municipalidadrengo.cl/actualidad/boletin-municipal/core-aprueba-mas-de-3800-millones-para-mejoramiento-de-av-bisquertt/"
   },
   {
-    "titulo": "Experto en seguridad dio charla sobre el avance del crimen organizado a dirigentes vecinales de San Bernardo",
-    "bajada": "Con alta participación e interés, la Municipalidad de San Bernardo realizó el viernes 9 de octubre la charla “Seguridad y […]",
-    "fecha": "13/10/2026",
+    "titulo": "Hospital Parroquial de San Bernardo inaugura Edificio Médico Quirúrgico",
+    "bajada": "Este viernes, el Hospital Parroquial de San Bernardo inauguró oficialmente su Edificio Médico Quirúrgico, infraestructura que funciona desde 2022 y […]",
+    "fecha": "23/10/2026",
     "region": "Metropolitana de Santiago",
     "comuna": "San Bernardo",
     "fuente": "Municipalidad de San Bernardo",
-    "link": "https://www.sanbernardo.cl/experto-en-seguridad-dio-charla-sobre-el-avance-del-crimen-organizado-a-dirigentes-vecinales-de-san-bernardo/"
+    "link": "https://www.sanbernardo.cl/hospital-parroquial-de-san-bernardo-inaugura-edificio-medico-quirurgico/"
   },
   {
-    "titulo": "Municipalidad de San Bernardo certifica a emprendedoras y emprendedores del Programa ASEL con histórica inversión 100% municipal",
-    "bajada": "La iniciativa benefició a vecinos y vecinas con un financiamiento de hasta $500.000 destinado a equipamiento y materiales, totalizando una […]",
-    "fecha": "09/10/2026",
+    "titulo": "Mejora continua para nuestros vecinos: Municipalidad de San Bernardo amplía atención social a los días sábados",
+    "bajada": "Con el firme compromiso de acercar los servicios municipales a la comunidad y responder de manera oportuna a las necesidades […]",
+    "fecha": "22/10/2026",
     "region": "Metropolitana de Santiago",
     "comuna": "San Bernardo",
     "fuente": "Municipalidad de San Bernardo",
-    "link": "https://www.sanbernardo.cl/municipalidad-de-san-bernardo-certifica-a-emprendedoras-y-emprendedores-del-programa-asel-con-historica-inversion-100-municipal/"
+    "link": "https://www.sanbernardo.cl/municipalidad-de-san-bernardo-amplia-atencion-social-a-los-dias-sabados-para-apoyar-a-las-familias-de-la-comuna/"
   },
   {
-    "titulo": "San Bernardo actualiza su ordenanza municipal para reforzar el cuidado y los derechos de las y los adultos mayores",
-    "bajada": "Las y los vecinos de San Bernardo contarán con una herramienta más cercana y concreta para proteger la tranquilidad y […]",
-    "fecha": "08/10/2026",
+    "titulo": "Histórica inversión de $10.000 millones del MINVU dará vida al nuevo Parque Pulmón Verde y 300 viviendas sociales en San Bernardo",
+    "bajada": "Un espacio que por años funcionó como un potrero en San Bernardo comenzará una transformación histórica. A través de un […]",
+    "fecha": "16/10/2026",
     "region": "Metropolitana de Santiago",
     "comuna": "San Bernardo",
     "fuente": "Municipalidad de San Bernardo",
-    "link": "https://www.sanbernardo.cl/san-bernardo-actualiza-su-ordenanza-municipal-para-reforzar-el-cuidado-y-los-derechos-de-las-y-los-adultos-mayores/"
+    "link": "https://www.sanbernardo.cl/historica-inversion-de-10-000-millones-del-minvu-dara-vida-al-nuevo-parque-pulmon-verde-y-300-viviendas-sociales-en-san-bernardo/"
   },
   {
-    "titulo": "Alcalde White y vecinos de San Bernardo acompañan sesión del Consejo Regional por el futuro del Parque Metropolitano Cerro Chena",
-    "bajada": "El gobernador Claudio Orrego expuso ante el pleno que todas las observaciones técnicas fueron subsanadas y precisó que, conforme al […]",
-    "fecha": "07/10/2026",
+    "titulo": "Atención: Farmacia Comunal de San Bernardo se traslada a nueva ubicación y confirma que mantendrá sus servicios",
+    "bajada": "La Farmacia Comunal de San Bernardo continuará funcionando para las y los vecinos de la comuna, iniciando una nueva etapa […]",
+    "fecha": "16/10/2026",
     "region": "Metropolitana de Santiago",
     "comuna": "San Bernardo",
     "fuente": "Municipalidad de San Bernardo",
-    "link": "https://www.sanbernardo.cl/alcalde-white-y-vecinos-de-san-bernardo-acompanan-sesion-del-consejo-regional-por-el-futuro-del-parque-metropolitano-cerro-chena/"
+    "link": "https://www.sanbernardo.cl/atencion-farmacia-comunal-de-san-bernardo-se-traslada-a-nueva-ubicacion-y-confirma-que-mantendra-sus-servicios/"
+  },
+  {
+    "titulo": "RUTA INCLUSIVA: MUNICIPALIDAD DE LAMPA ENTREGA AYUDAS TÉCNICAS DE ALTO COSTO PARA MEJORAR LA CALIDAD DE VIDA DE SUS VECINOS",
+    "bajada": "La iniciativa, impulsada a través del Centro de Cuidados Torcaza y el Programa Red Local de Apoyos y Cuidados, beneficia a personas con dependencia moderada o severa y sus familias, facilitando el acceso a implementos… Leer más",
+    "fecha": "23/10/2026",
+    "region": "Metropolitana de Santiago",
+    "comuna": "Lampa",
+    "fuente": "Municipalidad de Lampa",
+    "link": "https://lampa.cl/noticias/ruta-inclusiva-municipalidad-de-lampa-entrega-ayudas-tecnicas-de-alto-costo-para-mejorar-la-calidad-de-vida-de-sus-vecinos/"
   },
   {
     "titulo": "¡CONFIRMADO! : EL NUEVO HOSPITAL DE LA ZONA NORTE SE CONSTRUIRÁ EN LAMPA TRAS LA COMPRA DEL TERRENO EN VALLE GRANDE",
@@ -243,6 +252,24 @@
     "link": "https://lampa.cl/noticias/lampa-avanza-en-solucion-habitacional-223-familias-reciben-subsidios-para-el-proyecto-brisas-de-lampa/"
   },
   {
+    "titulo": "Comuna realiza con éxito jornada de concientización y prevención del cáncer de mama",
+    "bajada": "En el marco del Día de la Prevención del Cáncer de Mama, la Municipalidad de El Bosque llevó a cabo una destacada jornada enfocada en las vecinas de la comuna, con el objetivo central de promover la prevención, la detección temprana y el autocuidado de la salud integral. El encuentro se desarrolló en las dependencias […]",
+    "fecha": "16/10/2026",
+    "region": "Metropolitana de Santiago",
+    "comuna": "El Bosque",
+    "fuente": "Municipalidad de El Bosque",
+    "link": "https://www.municipalidadelbosque.cl/salud/comuna-realiza-con-exito-jornada-de-concientizacion-y-prevencion-del-cancer-de-mama/"
+  },
+  {
+    "titulo": "Con juegos inclusivos, nuevas áreas verdes y accesibilidad: Municipalidad de El Bosque inaugura la renovada Plaza Eduardo Frei Montalva",
+    "bajada": "Con gran alegría y la asistencia de decenas de vecinos y vecinas, la Municipalidad de El Bosque inauguró oficialmente las obras de recuperación y transformación de la Plaza Eduardo Frei Montalva, un anhelado proyecto que busca revitalizar el espacio público y consolidarse como un punto de encuentro e integración para toda la comunidad del sector. […]",
+    "fecha": "15/10/2026",
+    "region": "Metropolitana de Santiago",
+    "comuna": "El Bosque",
+    "fuente": "Municipalidad de El Bosque",
+    "link": "https://www.municipalidadelbosque.cl/desarrollo-urbano/con-juegos-inclusivos-nuevas-areas-verdes-y-accesibilidad-municipalidad-de-el-bosque-inaugura-la-renovada-plaza-eduardo-frei-montalva/"
+  },
+  {
     "titulo": "Así Cambia El Bosque: Inauguramos renovada Sede Social Almendro I",
     "bajada": "El 8 de octubre, la Municipalidad de El Bosque entregó oficialmente a la comunidad las obras de mejoramiento de la Sede Social Almendro I, un renovado punto de encuentro pensado para el desarrollo comunitario y el bienestar de las vecinas y vecinos del sector. El proyecto, impulsado a través del trabajo conjunto entre el municipio […]",
     "fecha": "14/10/2026",
@@ -261,22 +288,31 @@
     "link": "https://www.municipalidadelbosque.cl/cartelera-de-eventos/sonidos-en-resistencia-la-saxofonista-jessica-milena-lara-se-presenta-de-forma-gratuita-en-el-bosque/"
   },
   {
-    "titulo": "1000 personas participaron de La Corrida Familiar por la Prevención del Cáncer de Mama en El Bosque",
-    "bajada": "Bajo el lema «¡La meta es prevenir!», vecinas y vecinos de todas las edades llenaron de color rosado y morado las calles de la comuna en una jornada deportiva y de concientización comunitaria. En un ambiente festivo y deportivo, la Municipalidad de El Bosque en colaboración con Mall Arauco El Bosque, dieron el puntapié inicial […]",
-    "fecha": "05/10/2026",
-    "region": "Metropolitana de Santiago",
-    "comuna": "El Bosque",
-    "fuente": "Municipalidad de El Bosque",
-    "link": "https://www.municipalidadelbosque.cl/comunidad/1000-personas-participaron-de-la-corrida-familiar-por-la-prevencion-del-cancer-de-mama-en-el-bosque/"
+    "titulo": "Buscan solución a estacionamiento de camiones que afecta a vecinos de El Sauce",
+    "bajada": "El municipio andino y la Dirección de Vialidad realizaron una visita a terreno para evaluar alternativas que permitan mejorar la circulación y evitar dificultades…",
+    "fecha": "20/10/2026",
+    "region": "Valparaíso",
+    "comuna": "Los Andes",
+    "fuente": "Municipalidad de Los Andes",
+    "link": "https://www.losandes.cl/buscan-solucion-a-estacionamiento-de-camiones-que-afecta-a-vecinos-de-el-sauce/"
   },
   {
-    "titulo": "El Bosque se prepara para una nueva jornada de «Arte x el Arte 5» en la Casa de la Cultura Anselmo Cádiz",
-    "bajada": "Un nutrido panorama cultural aguarda a la comunidad este sábado 3 de octubre de 2026, cuando a partir de las 16:00 horas se lleve a cabo la quinta edición de «Arte x el Arte», un espacio concebido para la creación, difusión y encuentro de artistas visuales locales y de comunas aledañas. La actividad, que se […]",
-    "fecha": "29/09/2026",
-    "region": "Metropolitana de Santiago",
-    "comuna": "El Bosque",
-    "fuente": "Municipalidad de El Bosque",
-    "link": "https://www.municipalidadelbosque.cl/cartelera-de-eventos/el-bosque-se-prepara-para-una-nueva-jornada-de-arte-x-el-arte-5-en-la-casa-de-la-cultura-anselmo-cadiz/"
+    "titulo": "Festival del Guatón Loyola se realizará el 27 y 28 de noviembre con transmisión de Chilevisión",
+    "bajada": "El evento reunirá el folclore y la fiesta costumbrista en el Parque Urbano Ambrosio O’Higgins, ofreciendo una vitrina nacional para los artistas, emprendedores y…",
+    "fecha": "15/10/2026",
+    "region": "Valparaíso",
+    "comuna": "Los Andes",
+    "fuente": "Municipalidad de Los Andes",
+    "link": "https://www.losandes.cl/festival-del-guaton-loyola-se-realizara-el-27-y-28-de-noviembre-con-transmision-de-chilevision/"
+  },
+  {
+    "titulo": "Los Andes contará con dos nuevos recorridos de transporte público para sectores rurales",
+    "bajada": "Los servicios beneficiarán a vecinos de San Rafael, La Tordilla y Los Villares, entre otros sectores rurales de la comuna, gracias a un financiamiento…",
+    "fecha": "15/10/2026",
+    "region": "Valparaíso",
+    "comuna": "Los Andes",
+    "fuente": "Municipalidad de Los Andes",
+    "link": "https://www.losandes.cl/los-andes-contara-con-dos-nuevos-recorridos-de-transporte-publico-para-sectores-rurales/"
   },
   {
     "titulo": "Los Andes abre nuevo espacio comunitario con foco en las mujeres y el emprendimiento",
@@ -286,32 +322,5 @@
     "comuna": "Los Andes",
     "fuente": "Municipalidad de Los Andes",
     "link": "https://www.losandes.cl/los-andes-abre-nuevo-espacio-comunitario-con-foco-en-las-mujeres-y-el-emprendimiento/"
-  },
-  {
-    "titulo": "Punto Verde de Los Andes abre sus puertas a estudiantes de la Escuela Especial Valle Andino para prácticas laborales",
-    "bajada": "Alumnos de los cursos laborales realizarán una pasantía durante octubre y noviembre, como parte del proyecto Transición a la Vida Adulta. El Punto Verde…",
-    "fecha": "08/10/2026",
-    "region": "Valparaíso",
-    "comuna": "Los Andes",
-    "fuente": "Municipalidad de Los Andes",
-    "link": "https://www.losandes.cl/punto-verde-de-los-andes-abre-sus-puertas-a-estudiantes-de-la-escuela-especial-valle-andino-para-practicas-laborales/"
-  },
-  {
-    "titulo": "Los Andes recibe el Nacional de Básquetbol Senior con 22 equipos y entrada gratuita",
-    "bajada": "Entre el miércoles 7 y el domingo 11 de octubre, Los Andes será sede del Nacional de Básquetbol Senior de Chile, organizado por LINBASE.…",
-    "fecha": "08/10/2026",
-    "region": "Valparaíso",
-    "comuna": "Los Andes",
-    "fuente": "Municipalidad de Los Andes",
-    "link": "https://www.losandes.cl/los-andes-recibe-el-nacional-de-basquetbol-senior-con-22-equipos-y-entrada-gratuita/"
-  },
-  {
-    "titulo": "Municipalidad de Los Andes entregó renovados espacios a vecinos de la Población Cristo Redentor",
-    "bajada": "El proyecto contempló la recuperación integral de la multicancha y el mejoramiento de las áreas de esparcimiento de su entorno, con una inversión de…",
-    "fecha": "08/10/2026",
-    "region": "Valparaíso",
-    "comuna": "Los Andes",
-    "fuente": "Municipalidad de Los Andes",
-    "link": "https://www.losandes.cl/municipalidad-de-los-andes-entrego-renovados-espacios-a-vecinos-de-la-poblacion-cristo-redentor/"
   }
 ]
