@@ -6,7 +6,7 @@ title: ""
 #| echo: false
 
 # CONSEJO DEL MES: cambia solamente el texto entre comillas y luego renderiza el sitio.
-consejo_titulo <- "Cuida tu vivienda durante la primavera"
+consejo_titulo <- "Cuida tu vivienda durante las lluvias"
 consejo_texto <- "Revisa canaletas, bajadas de agua y sellos de ventanas antes de las lluvias. Una mantención sencilla ayuda a prevenir filtraciones y daños mayores."
 consejo_enlace <- ""
 consejo_enlace_texto <- ""
