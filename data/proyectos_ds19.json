@@ -73,22 +73,49 @@
   ],
   "actividades": [
     {
-      "proyecto": "Jardines de San Bernardo 2",
-      "comuna": "San Bernardo",
+      "proyecto": "Gran Avenida",
+      "comuna": "El Bosque",
       "actividad": "Taller de Uso, Cuidado y Mantención",
-      "fecha": "11 de noviembre de 2026",
-      "horario": "16:00 horas",
-      "lugar": "Centro Municipal Canelo de Nos Av. Diego Portales #3020 San Bernardo",
-      "correo": "pis.jardinesdesanbernardo2@gmail.com"
+      "fecha": "27 de noviembre de 2026",
+      "horario": "14:00 y 15:30 horas",
+      "lugar": "Club de Leones la Cisterna, Ines Rivas #048",
+      "correo": "plands19@rvc.cl"
     },
     {
-      "proyecto": "Panorámico I - Torre A",
+      "proyecto": "Panorámico 1 Torre A",
       "comuna": "Antofagasta",
       "actividad": "Taller de Uso, Cuidado y Mantención",
       "fecha": "19 de noviembre de 2026",
       "horario": "18:00 horas",
       "lugar": "Auditorio INACAP, ubicado en Av. Edmundo Pérez Zujovic N.º 11.092",
-      "correo": ""
+      "correo": "panoramico1.pis@gmail.com"
+    },
+    {
+      "proyecto": "Pintor Gustavo Cabello",
+      "comuna": "Rancagua",
+      "actividad": "Actividad de cierre del PIS",
+      "fecha": "28 de noviembre de 2026",
+      "horario": "15:00 horas",
+      "lugar": "Condominio Pintor Gustavo Cabello II",
+      "correo": "pintorgustavocabello2@gmail.com"
+    },
+    {
+      "proyecto": "Samuel Román",
+      "comuna": "Rancagua",
+      "actividad": "Actividad de cierre del PIS",
+      "fecha": "12 de diciembre de 2026",
+      "horario": "10:00 y 14:00 horas",
+      "lugar": "Sala Multiuso Condominio Don Samuel I",
+      "correo": "samuelromanrojas.pis@gmail.com"
+    },
+    {
+      "proyecto": "Valles de Rengo III Etapa 2",
+      "comuna": "Rengo",
+      "actividad": "Taller de Derechos y Deberes",
+      "fecha": "3 de diciembre de 2026",
+      "horario": "9:30 y 11:00 horas",
+      "lugar": "Guanguali Sur #159 Rengo",
+      "correo": "pisvallesderengo3.2@gmail.com"
     }
   ]
 }

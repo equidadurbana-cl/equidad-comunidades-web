@@ -6,8 +6,8 @@ title: ""
 #| echo: false
 
 # CONSEJO DEL MES: cambia solamente el texto entre comillas y luego renderiza el sitio.
-consejo_titulo <- "Cuida tu vivienda durante las lluvias"
-consejo_texto <- "Revisa canaletas, bajadas de agua y sellos de ventanas antes de las lluvias. Una mantención sencilla ayuda a prevenir filtraciones y daños mayores."
+consejo_titulo <- "MINVU cuenta con cupos disponibles en proyectos DS19"
+consejo_texto <- "Si tienes un subsidio DS49 o DS01 puedes postular a proyectos DS19 de la RM entre el 17 y el 23 de noviembre en la página de MINVU"
 consejo_enlace <- ""
 consejo_enlace_texto <- ""
 ```
